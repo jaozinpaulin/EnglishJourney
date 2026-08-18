@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import 'flag-icons/css/flag-icons.min.css';
+
+:root {
+    font-family: Inter, system-ui, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
