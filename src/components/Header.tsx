@@ -14,7 +14,7 @@ function Header({ isMenuOpen, onMenuToggle }: HeaderProps) {
     })
 
     return (
-        <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-[#2B2B2B] bg-[#151515]">
+        <header className="fixed md:hidden inset-x-0 top-0 z-50 h-16 border-b border-[#2B2B2B] bg-[#151515]">
             <div className=" flex h-full  items-center justify-between px-5 lb:px-6">
 
                 <div className="flex min-w-0 items-center gap-3 sm:gap-4">

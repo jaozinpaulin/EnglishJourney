@@ -1,0 +1,315 @@
+================================================================================
+                    ENGLISH JOURNEY — MASTER DOCUMENTATION
+                   C1 CURRICULUM MAP, UNITS & C1+ v1.0
+================================================================================
+
+ÍNDICE GERAL:
+├── 1. VISÃO GERAL DO NÍVEL C1
+│   ├── Papel Pedagógico e Salto Qualitativo (B2 → B2+ → C1)
+│   └── A Mudança de Paradigma: Nuance, Controle e Precisão
+├── 2. AS 10 UNITS DO C1 (MAPEAMENTO COMPLETO DE TODAS AS LESSONS)
+│   ├── Unit 1: Identity, Experience & Perspective (Lessons 1 a 10)
+│   ├── Unit 2: Complex Stories & Narrative (Lessons 1 a 10)
+│   ├── Unit 3: Professional & Academic Communication (Lessons 1 a 10)
+│   ├── Unit 4: Ideas, Knowledge & Learning (Lessons 1 a 10)
+│   ├── Unit 5: Society, Change & Human Behavior (Lessons 1 a 10)
+│   ├── Unit 6: Media, Information & Critical Thinking (Lessons 1 a 10)
+│   ├── Unit 7: Culture, Language & Global Perspectives (Lessons 1 a 10)
+│   ├── Unit 8: Argumentation & Discussion (Lessons 1 a 10)
+│   ├── Unit 9: Negotiation, Decisions & Leadership (Lessons 1 a 10)
+│   └── Unit 10: Autonomous Communication (Lessons 1 a 10)
+├── 3. C1 CONSOLIDATION (INTEGRATED CHECK — AS 5 DIMENSÕES)
+├── 4. CAMADA DE EXTENSÃO: C1+ (OS 6 MÓDULOS & REAL-WORLD COMPLEX SIMULATION)
+└── 5. A GRANDE ESCADA UNIFICADA DO ENGLISH JOURNEY (A1 A C1+)
+
+================================================================================
+1. VISÃO GERAL DO NÍVEL C1
+================================================================================
+
+No B2, o aluno desenvolve ideias, sustenta argumentos e negocia decisões com fluidez.
+No C1, o objetivo é atingir comunicação eficaz, flexível e precisa sobre 
+situações complexas e ideias abstratas, dominando nuances e estilo:
+- Refletir profundamente sobre identidade, valores e decisões de vida.
+- Controlar foco narrativo, ênfase e múltiplos pontos de vista simultâneos.
+- Adaptar registros para ambientes acadêmicos e profissionais de alta exigência[cite: 4].
+- Explicar conceitos abstratos e técnicos de forma acessível e estruturada[cite: 4].
+- Analisar criticamente informações, pressupostos subjacentes e linhas de viés[cite: 4].
+- Qualificar argumentos com precisão cirúrgica sem polarização simplista[cite: 4].
+- Liderar negociações complexas com múltiplos interesses e trade-offs[cite: 4].
+
+EVOLUÇÃO DO FLUXO DE PENSAMENTO (B2 vs. C1):
+• No B2: Opinion → Reason → Example → Counterargument → Conclusion[cite: 4].
+• No C1: Idea → Context → Nuance → Evidence → Perspective → Implication → 
+         Counterargument → Conclusion[cite: 4].
+
+================================================================================
+2. AS 10 UNITS DO C1 (MAPEAMENTO COMPLETO DE TODAS AS LESSONS)
+================================================================================
+
+--------------------------------------------------------------------------------
+🪜 UNIT 1 — IDENTITY, EXPERIENCE & PERSPECTIVE
+--------------------------------------------------------------------------------
+• Função Pedagógica: Transição da descrição de mudanças (B2) para a autorreflexão sobre como experiências moldaram a visão de mundo e a tomada de decisão[cite: 4].
+• Salto Qualitativo: De "I can explain how my life has changed" (B2) para "I can reflect on how my experiences have influenced the way I see myself and the decisions I make" (C1)[cite: 4].
+• Can-Do Principal: "I can reflect deeply on how personal experiences, values, and turning points have shaped my identity, beliefs, and perspective on life."[cite: 4]
+• Core Language: Linguagem de autorreflexão, ponderação de valores, avaliação de impacto de decisões críticas[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Who I Have Become (Análise da construção da própria identidade)[cite: 4]
+  - Lesson 2: Experiences That Shaped Me (Eventos formativos e marcas de trajetória)[cite: 4]
+  - Lesson 3: Personal Values (Princípios orientadores e linhas éticas)[cite: 4]
+  - Lesson 4: Beliefs & Perspectives (Origem e evolução das convicções pessoais)[cite: 4]
+  - Lesson 5: Life Decisions (Reflexão analítica sobre caminhos escolhidos e renunciados)[cite: 4]
+  - Lesson 6: Changing Priorities (Como a maturidade redefine prioridades)[cite: 4]
+  - Lesson 7: Identity & Society (Tensão entre autenticidade individual e expectativas sociais)[cite: 4]
+  - Lesson 8: Reflecting on Experience (Extração de significado a partir de vivências passadas)[cite: 4]
+  - Lesson 9: Explaining My Perspective (Defesa fundamentada e matizada da visão pessoal)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360° com a IA)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 2 — COMPLEX STORIES & NARRATIVE
+--------------------------------------------------------------------------------
+• Função Pedagógica: Construir narrativas avançadas com controle deliberado de perspectiva, ênfase dramática, subtexto e interpretação de causas[cite: 4].
+• Can-Do Principal: "I can construct and deliver complex, engaging narratives, controlling perspective, emphasis, and subtle cause-and-effect relationships."[cite: 4]
+• Core Language: Inversão enfática, marcadores discursivos de alto nível, modulação de foco narrativo e recontagem sob múltiplos prismas[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Building Complex Stories (Arquitetura e ritmo de narrativas longas)[cite: 4]
+  - Lesson 2: Setting the Context (Criação de atmosfera e subtexto inicial)[cite: 4]
+  - Lesson 3: Multiple Perspectives (Relato simultâneo de diferentes personagens)[cite: 4]
+  - Lesson 4: Unexpected Developments (Introdução orgânica de reviravoltas complexas)[cite: 4]
+  - Lesson 5: Cause & Consequence (Relações causais sutis e indiretas)[cite: 4]
+  - Lesson 6: Narrative Focus (Uso intencional de ênfase e detalhes seletivos)[cite: 4]
+  - Lesson 7: Interpreting Events (Análise do significado simbólico e impacto dos fatos)[cite: 4]
+  - Lesson 8: Retelling With Perspective (Reenquadramento de histórias sob novas óticas)[cite: 4]
+  - Lesson 9: Advanced Storytelling (Produção contínua de narrativa sofisticada)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 3 — PROFESSIONAL & ACADEMIC COMMUNICATION
+--------------------------------------------------------------------------------
+• Função Pedagógica: Comunicação de alta precisão em ambientes corporativos e acadêmicos exigentes, adaptando tom, densidade e registro ao interlocutor[cite: 4].
+• Can-Do Principal: "I can present complex ideas, write executive reports, lead professional discussions, and handle rigorous questions with authority."[cite: 4]
+• Core Language: Registro acadêmico/executivo, síntese de processos complexos, linguagem diplomática e moderação de debates técnicos[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Professional Communication (Registro executivo e assertividade estratégica)[cite: 4]
+  - Lesson 2: Academic Communication (Estrutura de artigo, citação e rigor conceitual)[cite: 4]
+  - Lesson 3: Presenting Complex Ideas (Didatização de tópicos densos sem perda de precisão)[cite: 4]
+  - Lesson 4: Explaining Processes (Mapeamento e detalhamento de fluxos operacionais)[cite: 4]
+  - Lesson 5: Writing for a Purpose (Adequação estilística ao objetivo e destinatário)[cite: 4]
+  - Lesson 6: Reports & Summaries (Produção de sínteses executivas de alto impacto)[cite: 4]
+  - Lesson 7: Meetings & Discussions (Condução de alinhamentos estratégicos de liderança)[cite: 4]
+  - Lesson 8: Professional Presentations (Exposições formais com encadeamento impecável)[cite: 4]
+  - Lesson 9: Handling Questions (Respostas a perguntas difíceis e sabatinas técnicas)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 4 — IDEAS, KNOWLEDGE & LEARNING
+--------------------------------------------------------------------------------
+• Função Pedagógica: Didatizar e avaliar conceitos abstratos, conectando campos do saber e explicando tópicos complexos de forma clara para terceiros[cite: 4].
+• Habilidade Central: "Explaining something complex in a way another person can understand."[cite: 4]
+• Can-Do Principal: "I can explain abstract concepts clearly to diverse audiences, connect interdisciplinary ideas, and critically evaluate methodologies."[cite: 4]
+• Core Language: Metacognição, epistemologia prática, analogias explicativas, avaliação de evidências teóricas e empíricas[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: How We Learn (Processos cognitivos e aquisição de conhecimento)[cite: 4]
+  - Lesson 2: Knowledge & Experience (A relação entre teoria acadêmica e vivência prática)[cite: 4]
+  - Lesson 3: Different Approaches (Comparação epistemológica de metodologias)[cite: 4]
+  - Lesson 4: Learning & Motivation (Fatores psicológicos que sustentam a excelência)[cite: 4]
+  - Lesson 5: Evaluating Ideas (Critérios de validação de teses e teorias)[cite: 4]
+  - Lesson 6: Explaining Complex Concepts (Uso de analogias e clareza expositiva)[cite: 4]
+  - Lesson 7: Connecting Ideas (Pontes interdisciplinares entre conceitos distintos)[cite: 4]
+  - Lesson 8: Discussing Evidence (Análise de solidez de dados científicos e pesquisas)[cite: 4]
+  - Lesson 9: Reflecting on Learning (Autoavaliação contínua do desenvolvimento intelectual)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 5 — SOCIETY, CHANGE & HUMAN BEHAVIOR
+--------------------------------------------------------------------------------
+• Função Pedagógica: Analisar dinâmicas sociológicas, causas de transformações culturais e padrões de comportamento coletivo sob múltiplas lentes[cite: 4].
+• Estrutura de Análise: Causa + Consequência + Perspectiva + Avaliação Crítica[cite: 4].
+• Can-Do Principal: "I can analyze modern social trends, evaluate causes and consequences of cultural shifts, and discuss human behavior with depth."[cite: 4]
+• Core Language: Sociologia aplicada, análise de impacto institucional, expectativas normativas, avaliação de políticas públicas[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Modern Society (Tensões e contradições do estilo de vida atual)[cite: 4]
+  - Lesson 2: Social Change (Vetores que impulsionam transformações de valores)[cite: 4]
+  - Lesson 3: Human Behavior (Padrões psicológicos e condicionamentos sociais)[cite: 4]
+  - Lesson 4: Communities (Novas formas de associação e pertencimento cívico)[cite: 4]
+  - Lesson 5: Social Expectations (Impacto das normas culturais na conduta individual)[cite: 4]
+  - Lesson 6: Causes of Change (Fatores econômicos, tecnológicos e demográficos)[cite: 4]
+  - Lesson 7: Consequences (Desdobramentos imprevistos de mudanças sociais)[cite: 4]
+  - Lesson 8: Different Perspectives (Confronto de visões progressistas, conservadoras e pragmáticas)[cite: 4]
+  - Lesson 9: Discussing Social Change (Debate estruturado sobre o rumo da sociedade)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 6 — MEDIA, INFORMATION & CRITICAL THINKING
+--------------------------------------------------------------------------------
+• Função Pedagógica: Investigação crítica de narrativas, desconstrução de premissas ocultas, detecção de viés e avaliação de validade de alegações[cite: 4].
+• Perguntas Norteadoras:
+  * "What is the evidence?"[cite: 4]
+  * "What assumptions are being made?"[cite: 4]
+  * "Is there another way to interpret this?"[cite: 4]
+• Can-Do Principal: "I can deconstruct media narratives, identify hidden biases and assumptions, and evaluate the credibility of claims critically."[cite: 4]
+• Core Language: Lógica formal básica, falácias argumentativas, enquadramento jornalístico, desinformação, epistemologia da informação[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Information & Knowledge (Diferença entre excesso de dados e compreensão)[cite: 4]
+  - Lesson 2: Media Perspectives (Linhas editoriais e enquadramento de fatos)[cite: 4]
+  - Lesson 3: Evaluating Sources (Metodologia de checagem e credibilidade documental)[cite: 4]
+  - Lesson 4: Bias & Perspective (Identificação de vieses ideológicos e econômicos)[cite: 4]
+  - Lesson 5: Interpreting Information (Leitura crítica de estatísticas e correlações)[cite: 4]
+  - Lesson 6: Arguments & Evidence (Distinção entre opinião, alegação e fato comprovado)[cite: 4]
+  - Lesson 7: Misinformation (Mecanismos de propagação de narrativas falsas)[cite: 4]
+  - Lesson 8: Critical Analysis (Desconstrução passo a passo de um artigo denso)[cite: 4]
+  - Lesson 9: Evaluating a Claim (Sabatina argumentativa sobre uma declaração polêmica)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 7 — CULTURE, LANGUAGE & GLOBAL PERSPECTIVES
+--------------------------------------------------------------------------------
+• Função Pedagógica: Comunicação intercultural profunda, adaptando o estilo e o registro às expectativas implícitas de diferentes matrizes culturais[cite: 4].
+• Competência Central: Adaptar a forma de comunicação ao contexto cultural e social sem atrito comunicativo[cite: 4].
+• Can-Do Principal: "I can navigate complex intercultural communication, adapt my discourse to implicit cultural norms, and mediate cross-cultural issues."[cite: 4]
+• Core Language: Relativismo linguístico, normas culturais implícitas, comunicação de alto vs. baixo contexto, mediação de ruídos[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Culture & Identity (A cultura como lente formadora da percepção)[cite: 4]
+  - Lesson 2: Language & Culture (Como a estrutura do idioma reflete valores sociais)[cite: 4]
+  - Lesson 3: Cultural Expectations (Normas não-ditas de etiqueta, tempo e hierarquia)[cite: 4]
+  - Lesson 4: Communication Across Cultures (Padrões de comunicação direta e indireta)[cite: 4]
+  - Lesson 5: Different Worldviews (Análise de filosofias de vida ocidentais e orientais)[cite: 4]
+  - Lesson 6: Misunderstandings (Resolução diplomática de ruídos interculturais)[cite: 4]
+  - Lesson 7: Adapting Communication (Ajuste ativo de tom, assertividade e postura)[cite: 4]
+  - Lesson 8: Cultural Perspectives (Desconstrução de noções etnocêntricas)[cite: 4]
+  - Lesson 9: Global Communication (O inglês como língua franca internacional neutra)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 8 — ARGUMENTATION & DISCUSSION
+--------------------------------------------------------------------------------
+• Função Pedagógica: Domínio de qualificação, ressalvas e contra-argumentação sofisticada para debates avançados[cite: 4].
+• Marcadores de Nuance:
+  - "It could be argued that..."[cite: 4]
+  - "To some extent..."[cite: 4]
+  - "That may be true, although..."[cite: 4]
+  - "From another perspective..."[cite: 4]
+• Can-Do Principal: "I can formulate highly nuanced arguments, challenge opposing views constructively, and qualify claims with precision."[cite: 4]
+• Core Language: Hedges, qualificadores modais, concessões elegantes, refutação de premissas sem agressividade discursiva[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Building an Argument (Estruturação lógica de teses complexas)[cite: 4]
+  - Lesson 2: Supporting a Position (Sustentação com dados, precedentes e lógica)[cite: 4]
+  - Lesson 3: Evidence & Examples (Seleção estratégica de evidências de alto impacto)[cite: 4]
+  - Lesson 4: Counterarguments (Mapeamento e antecipação de objeções fortes)[cite: 4]
+  - Lesson 5: Challenging an Idea (Ataque às premissas de uma tese oposta)[cite: 4]
+  - Lesson 6: Responding to Criticism (Defesa sob questionamento rigoroso)[cite: 4]
+  - Lesson 7: Nuance & Qualification (Uso de 'to a certain degree', 'largely', 'partially')[cite: 4]
+  - Lesson 8: Structured Discussion (Manutenção de alto nível dialético em grupo)[cite: 4]
+  - Lesson 9: Advanced Debate (Enfrentamento de posições inconciliáveis)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 9 — NEGOTIATION, DECISIONS & LEADERSHIP
+--------------------------------------------------------------------------------
+• Função Pedagógica: Liderança comunicativa sob desacordo profundo, construindo consensos e tomando decisões estratégicas[cite: 4].
+• Fluxo Operacional:
+  Understand → Clarify → Present → Listen → Respond → Negotiate → Find Common Ground → Decide[cite: 4]
+• Can-Do Principal: "I can lead high-stakes negotiations, mediate strong conflict, persuade diverse stakeholders, and align teams around strategic decisions."[cite: 4]
+• Core Language: Persuasão executiva, concessão condicional, alinhamento de interesses conflitantes, formalização de acordos complexos[cite: 4].
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Complex Decisions (Mapeamento de cenários com múltiplos trade-offs)[cite: 4]
+  - Lesson 2: Priorities (Definição de objetivos inegociáveis vs. flexíveis)[cite: 4]
+  - Lesson 3: Negotiation (Táticas de persuasão ética e concessões mútuas)[cite: 4]
+  - Lesson 4: Conflict Resolution (Mediação de atritos interpessoais e de equipe)[cite: 4]
+  - Lesson 5: Finding Common Ground (Identificação de metas e valores compartilhados)[cite: 4]
+  - Lesson 6: Persuasion (Retórica avançada: apelo lógico, ético e prático)[cite: 4]
+  - Lesson 7: Leadership Communication (Comunicação inspiradora e alinhamento de visão)[cite: 4]
+  - Lesson 8: Managing Disagreement (Condução de reuniões com posições polarizadas)[cite: 4]
+  - Lesson 9: Reaching a Decision (Fechamento e governança de acordos finais)[cite: 4]
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)[cite: 4]
+
+--------------------------------------------------------------------------------
+🪜 UNIT 10 — AUTONOMOUS COMMUNICATION
+--------------------------------------------------------------------------------
+• Função Pedagógica: Autonomia e controle total do discurso. A IA atua como interlocutora sofisticada em debates abertos, avaliando adaptação e naturalidade[cite: 4].
+• Can-Do Principal: "I can engage effortlessly in complex, spontaneous, and abstract discussions, adapting register, tone, and strategy in real time."[cite: 4]
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Extended Discussion (Sustentação de diálogos densos sem fadiga comunicativa)[cite: 4]
+  - Lesson 2: Complex Conversations (Trânsito fluido entre temas abstratos e técnicos)[cite: 4]
+  - Lesson 3: Developing an Argument (Construção espontânea de raciocínio de longo alcance)[cite: 4]
+  - Lesson 4: Explaining Abstract Ideas (Metáforas e precisão conceitual ao vivo)[cite: 4]
+  - Lesson 5: Handling Unexpected Questions (Improvisação rápida e elegante sob sabatina)[cite: 4]
+  - Lesson 6: Clarifying & Reformulating (Ajuste fino de significado sem perda de ritmo)[cite: 4]
+  - Lesson 7: Adapting to the Listener (Modulação em tempo real do nível de detalhe e tom)[cite: 4]
+  - Lesson 8: Presenting a Position (Defesa oral completa sem apoio de roteiro)[cite: 4]
+  - Lesson 9: Real-World C1 Challenge (Simulação aberta de alta complexidade)[cite: 4]
+  - Lesson 10: C1 Unit Checkpoint (Demonstração prática final do nível C1)[cite: 4]
+
+================================================================================
+3. C1 CONSOLIDATION (INTEGRATED CHECK)
+================================================================================
+
+Após a Unit 10, o aluno passa pelo C1 Integrated Check para validação de proficiência:
+• 🗣️ Speaking: Apresentação e defesa de uma posição sobre tema controverso, seguida de sabatina com perguntas incisivas da IA[cite: 4].
+• 👂 Listening: Compreensão de palestras acadêmicas e entrevistas densas, identificando intenção, atitude implícita e linhas de raciocínio[cite: 4].
+• 📖 Reading: Análise de ensaios complexos, artigos científicos e textos literários/críticos, extraindo o subtexto ("why", "how" e implicações)[cite: 4].
+• ✍️ Writing: Produção de ensaios argumentativos, relatórios executivos e análises críticas com alto controle de coesão e vocabulário[cite: 4].
+• 🤝 Interaction: Conversação bilateral com a IA introduzindo discordâncias, pedidos de esclarecimento e contra-argumentos espontâneos[cite: 4].
+
+================================================================================
+4. CAMADA DE EXTENSÃO: C1+ (TRANSIÇÃO PARA NÍVEIS SUPERIORES)
+================================================================================
+
+O C1+ não é C2; é o domínio pleno do C1 com altíssimo controle de nuances, 
+precisão contextual, capacidade persuasiva e adaptação camaleônica de registro[cite: 4].
+
+OS 6 MÓDULOS DE AUTONOMIA DO C1+:
+• MÓDULO C1+.1 — Nuance & Precision:
+  - Controle cirúrgico de certeza, intensidade e ressalvas.
+  - Salto:
+    * B2: "I think this is a good idea."[cite: 4]
+    * C1: "I think this could be an effective approach, although its success would depend largely on how it is implemented."[cite: 4]
+    * C1+: "While the approach appears promising, its effectiveness may be somewhat overstated unless the underlying practical constraints are taken into account."[cite: 4]
+• MÓDULO C1+.2 — Advanced Discussion & Challenge:
+  - Enfrentamento dialético de alta complexidade: defender, reconsiderar, qualificar, reformular, conceder e contra-atacar elegantemente[cite: 4].
+  - De "I disagree" para "I see the reasoning behind that position, but I would question the assumption that..."[cite: 4]
+• MÓDULO C1+.3 — Complex Problem Solving:
+  Problem → Causes → Constraints → Options → Trade-offs → Consequences → Decision → Justification[cite: 4].
+• MÓDULO C1+.4 — Presentation & Persuasion:
+  Context → Problem → Position → Evidence → Alternative → Response → Conclusion → Q&A[cite: 4].
+• MÓDULO C1+.5 — Adaptive Communication (Camaleão Discursivo):
+  - Modulação instantânea para 4 perfis de interlocutores:
+    1. Especialista técnico (jargão e precisão máxima)[cite: 4].
+    2. Leigo completo (analogias e clareza simplificada)[cite: 4].
+    3. Interlocutor resistente/hostil (diplomacia e desarmamento)[cite: 4].
+    4. Executivo com tempo escasso (síntese e foco em resultados)[cite: 4].
+• MÓDULO C1+.6 — Next-Level Bridge:
+  - Consolidação de naturalidade idiomática, controle discursivo sofisticado e autonomia em tópicos altamente abstratos[cite: 4].
+
+C1+ FINAL CHALLENGE (REAL-WORLD COMPLEX SIMULATION):
+Simulação imersiva aberta: "Leading a task force to solve a major crisis with conflicting stakeholder interests and limited resources"[cite: 4]
+1. Understand the situation → 2. Ask for clarification → 3. Identify the core problem → 
+4. Analyze perspectives → 5. Present your position → 6. Respond to disagreement → 
+7. Evaluate alternatives → 8. Negotiate → 9. Reach a decision → 
+10. Justify the decision → 11. Respond to unexpected questions → 12. Reflect on the result[cite: 4].
+
+================================================================================
+5. A GRANDE ESCADA UNIFICADA DO ENGLISH JOURNEY (A1 A C1+)
+================================================================================
+
+PROGRESSÃO MACRO DO SISTEMA:
+• 🇺🇸 A1  | INFORM (Comunicação básica e dados imediatos)[cite: 4]
+• 🔥 A1+ | CONSOLIDATE (Autonomia e integração inicial)[cite: 4]
+• 🇺🇸 A2  | DESCRIBE / RELATE (Situações familiares e rotinas)[cite: 4]
+• 🔥 A2+ | FLEXIBLE FAMILIAR (Flexibilidade e narrativa conectada)[cite: 4]
+• 🇺🇸 B1  | EXPLAIN / DEVELOP (Comunicação independente e justificativas)[cite: 4]
+• 🔥 B1+ | EXTEND & ADAPT (Autonomia discursiva e resolução prática)[cite: 4]
+• 🇺🇸 B2  | DISCUSS / EVALUATE (Argumentação, crítica e negociação)[cite: 4]
+• 🔥 B2+ | ANALYTICAL & STRATEGIC (Flexibilidade em problemas complexos)[cite: 4]
+• 🇺🇸 C1  | ANALYZE / ADAPT / CONTROL (Precisão, nuance e complexidade)[cite: 4]
+• 🔥 C1+ | NUANCE / PERSUADE / SYNTHESIZE (Liderança e controle discursivo total)[cite: 4]
+
+REGRA UNIFICADA DO LEARNING ENGINE:
+"O currículo define o que precisa ser desenvolvido. A IA decide o caminho de 
+prática necessário para produzir evidências."[cite: 4, 5, 6]
+O mesmo motor adaptativo opera de ponta a ponta (A1 a C1+), alterando apenas 
+os objetivos, as competências, a complexidade, a autonomia e os critérios de domínio[cite: 4, 5, 6].
+
+================================================================================
+                 FIM DO DOCUMENTO — C1 / C1+ CURRICULUM MAP v1.0
+================================================================================

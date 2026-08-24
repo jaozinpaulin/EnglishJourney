@@ -1,0 +1,838 @@
+🇺🇸 ENGLISH JOURNEY
+🧠 LEARNING ENGINE — V1
+
+O English Journey utiliza um currículo estruturado, mas oferece uma jornada de aprendizagem adaptativa.
+
+O currículo define as competências que o aluno precisa desenvolver. A IA observa evidências de aprendizagem e adapta a prática, o ritmo, a dificuldade, os contextos e as áreas de atenção de acordo com as necessidades de cada aluno.
+
+1. 🏗️ A arquitetura geral
+
+Primeiro, precisamos separar duas coisas:
+
+O que é FIXO
+
+É definido pelo currículo.
+
+LEVEL
+  ↓
+UNIT
+  ↓
+CAN-DO
+  ↓
+LESSON
+  ↓
+LEARNING OBJECTIVES
+  ↓
+MASTERY CRITERIA
+
+Isso cria a estrada.
+
+O que é ADAPTATIVO
+
+É definido pela jornada do aluno.
+
+ATIVIDADES
+CONTEXTOS
+DIFICULDADE
+QUANTIDADE DE PRÁTICA
+REVISÕES
+SKILLS PRIORITÁRIAS
+TIPOS DE EXERCÍCIO
+RITMO
+
+Isso define como o aluno percorre a estrada.
+
+2. 🎯 A IA não escolhe o que ensinar do nada
+
+Essa é uma regra fundamental.
+
+A IA não pode simplesmente pensar:
+
+"Hoje vou ensinar Present Perfect."
+
+😂
+
+Ela recebe o currículo.
+
+Por exemplo:
+
+Unit 1
+↓
+Can-Do
+"I can introduce myself."
+↓
+Lesson
+"Introducing Myself"
+↓
+Objetivos
+"I am / I'm"
+"My name is..."
+
+Então a IA sabe:
+
+É isso que precisa ser desenvolvido.
+
+O que ela decide é:
+
+Qual é a melhor experiência para este aluno desenvolver isso?
+
+3. 👤 O aluno possui um Learning Profile
+
+Cada aluno terá um estado de aprendizagem.
+
+Não simplesmente:
+
+Unit 3 — 72%
+
+Isso seria muito pobre.
+
+Teremos algo mais próximo de:
+
+VOCABULARY
+████████░░ 82%
+
+GRAMMAR
+███████░░░ 74%
+
+LISTENING
+█████░░░░░ 56%
+
+READING
+████████░░ 81%
+
+WRITING
+███████░░░ 70%
+
+SPEAKING
+████░░░░░░ 45%
+
+PRONUNCIATION
+██████░░░░ 63%
+
+INTERACTION
+█████░░░░░ 52%
+
+Mas esses números também não serão a verdade absoluta.
+
+Eles representam evidências acumuladas.
+
+4. 🧠 A IA observa várias dimensões
+
+Quando o aluno responde uma atividade, a IA não pergunta apenas:
+
+Acertou?
+
+Ela observa:
+
+Accuracy
+
+Ele acertou?
+
+Comprehension
+
+Ele entendeu?
+
+Production
+
+Conseguiu produzir?
+
+Independence
+
+Precisou de ajuda?
+
+Speed / Fluency
+
+Conseguiu responder com relativa naturalidade?
+
+Retention
+
+Ele consegue fazer novamente depois?
+
+Transfer
+
+Consegue fazer em outro contexto?
+
+Consistency
+
+O desempenho se mantém?
+
+5. 🔄 Um erro não significa automaticamente "não aprendeu"
+
+Isso é muito importante.
+
+Imagine:
+
+What's your name?
+
+Aluno:
+
+My name João.
+
+Erro.
+
+A IA não deveria imediatamente concluir:
+
+❌ Grammar failed.
+
+Ela precisa observar o contexto.
+
+Talvez:
+
+ele soubesse a estrutura;
+tenha cometido um erro de produção;
+estivesse falando rapidamente;
+tenha entendido a pergunta;
+tenha acertado outras vezes.
+
+Então a evidência é agregada.
+
+6. 📊 A IA trabalha com evidências
+
+Podemos pensar assim:
+
+Tentativa 1
+❌
+
+Tentativa 2
+✅
+
+Listening
+✅
+
+Writing
+✅
+
+Speaking
+⚠️
+
+Novo contexto
+❌
+
+Retenção
+⚠️
+
+A conclusão não será simplesmente:
+
+3 acertos / 5 = 60%.
+
+A IA interpreta o conjunto.
+
+7. 🧩 Cada competência possui um estado
+
+Eu criaria algo assim:
+
+NOT_STARTED
+     ↓
+INTRODUCED
+     ↓
+LEARNING
+     ↓
+DEVELOPING
+     ↓
+CONSOLIDATING
+     ↓
+MASTERED
+
+E existe outra possibilidade:
+
+MASTERED
+   ↓
+WEAKENING
+   ↓
+REVIEW NEEDED
+
+Isso resolve uma coisa fundamental:
+
+Aprender não significa lembrar para sempre.
+
+8. 🔄 O conhecimento antigo nunca desaparece
+
+Essa será uma das maiores regras do English Journey.
+
+Quando o aluno chega à Unit 5, a Unit 1 não fica abandonada.
+
+Mas também não vamos dizer:
+
+"Vamos voltar para a Unit 1 e fazer tudo novamente."
+
+Não.
+
+O conhecimento retorna dentro de novos contextos.
+
+Por exemplo:
+
+Unit 1:
+
+I'm João.
+
+Unit 3:
+
+My brother is Pedro.
+
+Unit 5:
+
+He is a teacher.
+
+Unit 7:
+
+He works at a school.
+
+Unit 10:
+
+He has worked there for five years.
+
+O conhecimento antigo vai sendo reutilizado e expandido.
+
+9. ♻️ Sistema de Recycling
+
+A IA terá três motivos para trazer algo antigo:
+
+1. Weakness
+
+O aluno está tendo dificuldade.
+
+2. Retention
+
+Está na hora de verificar se ainda lembra.
+
+3. Natural recycling
+
+O conteúdo combina naturalmente com o conteúdo atual.
+
+Essa terceira é importantíssima.
+
+Nem toda revisão precisa parecer revisão.
+
+10. 🧠 A IA identifica o ponto de atenção
+
+Imagine:
+
+Vocabulary     91%
+Grammar        89%
+Reading        93%
+Writing        87%
+Listening      61%
+Speaking       58%
+
+A IA não precisa distribuir:
+
+20% Vocabulary
+20% Grammar
+20% Reading
+20% Writing
+20% Listening
+20% Speaking
+
+Isso seria artificial.
+
+Ela pode decidir:
+
+Listening  → prioridade alta
+Speaking   → prioridade alta
+Grammar    → manutenção
+Vocabulary → manutenção
+Reading    → manutenção
+Writing    → manutenção
+11. 🎯 Mas ela não abandona as outras áreas
+
+Outro ponto importante.
+
+Se Speaking está baixo:
+
+❌ Não fazemos:
+
+100 atividades de Speaking.
+
+Podemos trabalhar:
+
+Speaking
++
+Listening
++
+Vocabulary
++
+Grammar
+
+juntos.
+
+Por exemplo:
+
+Listen to Sarah introducing herself.
+
+Depois:
+
+What is her name?
+
+Depois:
+
+Introduce yourself.
+
+Isso trabalha várias competências simultaneamente.
+
+12. 📈 A dificuldade também é adaptativa
+
+A IA pode variar:
+
+Fácil
+What's your name?
+Médio
+What is your name?
+Contextualizado
+
+You meet a new classmate. Ask their name.
+
+Mais aberto
+
+Introduce yourself to your new classmate.
+
+Transferência
+
+You meet someone online. Start a conversation.
+
+O conteúdo linguístico pode ser semelhante.
+
+Mas a demanda cognitiva e comunicativa aumenta.
+
+13. 🪜 Progressão de dificuldade
+
+Podemos usar uma escada:
+
+RECOGNIZE
+   ↓
+UNDERSTAND
+   ↓
+SELECT
+   ↓
+COMPLETE
+   ↓
+PRODUCE WITH SUPPORT
+   ↓
+PRODUCE INDEPENDENTLY
+   ↓
+USE IN CONTEXT
+   ↓
+TRANSFER
+
+Isso vale para praticamente tudo.
+
+14. 📚 Exemplo com Vocabulary
+
+Palavra:
+
+mother
+
+Nível 1
+
+Reconhecer:
+
+Which word means "mãe"?
+
+Nível 2
+
+Compreender:
+
+This is my mother.
+
+Quem é?
+
+Nível 3
+
+Selecionar:
+
+My ___ is a teacher.
+
+Nível 4
+
+Produzir:
+
+Who is she?
+
+She's my mother.
+
+Nível 5
+
+Contexto:
+
+Tell me about someone in your family.
+
+Agora a palavra deixou de ser apenas "conhecida".
+
+Ela está sendo usada.
+
+15. 🧩 Exemplo com Grammar
+
+Estrutura:
+
+I'm from Brazil.
+
+A progressão poderia ser:
+
+Recognize
+↓
+I am / I'm
+
+Understand
+↓
+I'm from Brazil.
+
+Controlled Practice
+↓
+I'm from ___.
+
+Guided Production
+↓
+I'm from Brazil.
+
+Independent Production
+↓
+Tell me where you're from.
+
+Context
+↓
+Meet someone from another country.
+
+Transfer
+↓
+Introduce yourself to a new person.
+16. 👂 Exemplo com Listening
+
+Não vamos medir apenas:
+
+"Acertou a questão?"
+
+Podemos verificar:
+
+Identifica palavras-chave?
+       ↓
+Entende a ideia principal?
+       ↓
+Identifica informações específicas?
+       ↓
+Entende perguntas?
+       ↓
+Entende diferentes vozes?
+       ↓
+Entende diferentes velocidades?
+       ↓
+Consegue responder?
+17. 🗣️ Speaking
+
+Speaking terá uma lógica diferente.
+
+A IA poderá observar:
+
+Accuracy
+
+A estrutura está correta?
+
+Pronunciation
+
+A fala é inteligível?
+
+Fluency
+
+Consegue produzir sem travar excessivamente?
+
+Vocabulary
+
+Tem recursos suficientes?
+
+Interaction
+
+Consegue responder ao interlocutor?
+
+Independence
+
+Precisa de modelo?
+
+Isso é muito mais rico que simplesmente:
+
+"Falou = passou."
+
+18. ✍️ Writing
+
+Também:
+
+Copy
+↓
+Complete
+↓
+Build sentence
+↓
+Answer
+↓
+Produce
+↓
+Connect ideas
+↓
+Create independently
+
+E a dificuldade aumenta conforme o nível.
+
+19. 🤖 A IA escolhe a próxima atividade
+
+Agora chegamos ao coração do sistema.
+
+Depois de cada conjunto de evidências:
+
+Aluno responde
+      ↓
+Sistema registra
+      ↓
+Analisa competência
+      ↓
+Atualiza Learning Profile
+      ↓
+Identifica strengths
+      ↓
+Identifica weaknesses
+      ↓
+Verifica retention
+      ↓
+Verifica transfer
+      ↓
+Decide próximo passo
+
+O próximo passo pode ser:
+
+A — Avançar
+Next objective
+B — Consolidar
+More practice
+C — Recuperar
+Review
+D — Mudar abordagem
+Different activity type
+E — Aumentar dificuldade
+Challenge
+F — Reduzir dificuldade
+Scaffold
+20. 🪜 A IA também pode voltar
+
+Isso é importante.
+
+A jornada não é:
+
+Lesson 1
+↓
+Lesson 2
+↓
+Lesson 3
+↓
+Lesson 4
+
+sempre em linha reta.
+
+Pode ser:
+
+Lesson 3
+   ↓
+Speaking difficulty
+   ↓
+Review Lesson 2 concept
+   ↓
+Targeted practice
+   ↓
+Return to Lesson 3
+
+Mas sem "voltar de fase" de maneira frustrante.
+
+O aluno continua avançando.
+
+21. 🟡 A1+
+
+Agora entra nosso conceito.
+
+A IA pode perceber:
+
+A1 mastery
+██████████ 95%
+
+A2 emerging skills
+████░░░░░░ 40%
+
+Então:
+
+A1+
+
+O aluno ainda está dentro da trajetória A1, mas começa a receber desafios que fazem ponte para A2.
+
+Isso torna a transição gradual.
+
+22. 🏁 Quando o aluno pode terminar uma Unit?
+
+Não:
+
+"Fez todas as Lessons."
+
+E também não:
+
+"Fez 100 exercícios."
+
+A Unit termina quando ele apresenta evidência suficiente de domínio dos objetivos definidos para aquela Unit.
+
+Por exemplo:
+
+CAN-DO
+     ↓
+Evidence
+     ↓
+Practice
+     ↓
+Retention
+     ↓
+Transfer
+     ↓
+Performance
+     ↓
+Mastery
+23. 🚦 Três resultados possíveis
+
+No final de uma Unit:
+
+🟢 Mastered
+
+Pronto para avançar.
+
+🟡 Developing
+
+Pode avançar em algumas partes, mas precisa continuar recebendo reforço.
+
+🔴 Needs Support
+
+Existem lacunas importantes.
+
+A IA cria um caminho de recuperação.
+
+24. ♾️ E finalmente: atividades potencialmente infinitas
+
+Aqui está a filosofia que você trouxe e que eu acho que deve entrar oficialmente na documentação:
+
+O English Journey não possui uma quantidade máxima fixa de prática por competência.
+
+Mas:
+
+A prática infinita não significa repetição infinita.
+
+A IA deve variar:
+
+contexto;
+vocabulário;
+formato;
+dificuldade;
+interlocutor;
+situação;
+habilidade combinada;
+tipo de resposta;
+nível de suporte;
+ordem das informações.
+
+Então:
+
+What's your name?
+
+não precisa aparecer 50 vezes.
+
+Ele pode aparecer naturalmente em:
+
+School
+Work
+Travel
+Online conversation
+Meeting a friend
+Meeting a neighbor
+International conversation
+Speaking task
+Listening
+Role-play
+🧠 25. A grande fórmula
+
+Eu colocaria essa como fórmula central do English Journey:
+
+CURRICULUM
+     +
+LEARNING SCIENCE
+     +
+STUDENT EVIDENCE
+     +
+ADAPTIVE PRACTICE
+     +
+SPACED RECALL
+     +
+RECYCLING
+     +
+TRANSFER
+     +
+PERFORMANCE
+     ↓
+PERSONALIZED JOURNEY
+
+Ou, de forma ainda mais simples:
+
+Currículo define o destino.
+
+A IA adapta o caminho.
+
+As evidências mostram se o aluno está realmente avançando.
+
+🏗️ E isso vai servir para TODAS as áreas
+
+Não vamos criar um motor diferente para cada parte.
+
+Teremos um Learning Engine central.
+
+E cada habilidade terá suas particularidades.
+
+                 LEARNING ENGINE
+                       │
+       ┌───────────────┼────────────────┐
+       ↓               ↓                ↓
+   Vocabulary       Grammar          Listening
+       ↓               ↓                ↓
+    Speaking        Writing          Reading
+       ↓               ↓                ↓
+   Pronunciation    Interaction      Review
+
+O molde da Lesson permanece.
+
+O que muda é como aquela habilidade produz evidência.
+
+Isso é muito importante para nossa futura implementação.
+
+🔥 Então eu fecharia a V1 assim
+
+Temos agora 3 camadas:
+
+🏛️ CAMADA 1 — CURRICULUM
+
+Define:
+
+O que ensinar.
+
+🧠 CAMADA 2 — LESSON
+
+Define:
+
+O que desenvolver agora e através de quais experiências.
+
+🤖 CAMADA 3 — LEARNING ENGINE
+
+Define:
+
+Como adaptar a jornada daquele aluno.
+
+E depois temos:
+
+📊 ASSESSMENT
+
+Que responde:
+
+"Ele realmente consegue fazer?"
+
+E:
+
+🗺️ PROGRESS
+
+Que responde:
+
+"Onde ele está na jornada?"

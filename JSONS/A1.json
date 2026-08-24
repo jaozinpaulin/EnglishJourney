@@ -1,0 +1,3549 @@
+{
+    "level": "A1",
+    "units": [
+        {
+            "id": "A1_U01",
+            "unit_number": 1,
+            "title": "Meeting People",
+            "communicative_goal": "Participar de uma interação básica de apresentação pessoal (cumprimentar, dizer/perguntar nome, origem, residência, ocupação, responder e encerrar a conversa).",
+            "main_can_do": "I can introduce myself and ask basic information about another person.",
+            "lessons": [
+                {
+                    "id": "A1_U01_L01",
+                    "lesson_number": 1,
+                    "title": "Greetings",
+                    "objective": "Reconhecer, compreender e produzir cumprimentos e despedidas simples adequados ao período do dia e ao contexto social.",
+                    "learning_targets": [
+                        "Reconhecer 'Hello' e 'Hi'",
+                        "Diferenciar cumprimentos por horário (Good morning, Good afternoon, Good evening)",
+                        "Identificar e produzir despedidas (Goodbye, Bye, See you)",
+                        "Iniciar e encerrar uma troca comunicativa simples"
+                    ],
+                    "core_vocabulary": [
+                        "hello",
+                        "hi",
+                        "good",
+                        "morning",
+                        "afternoon",
+                        "evening",
+                        "goodbye",
+                        "bye",
+                        "see you"
+                    ],
+                    "grammar": "Chunks funcionais sem análise sintática formal.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L01_Q01",
+                            "objective_id": "A1_U01_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "It is 8:00 AM. You meet your teacher at school. What is the most appropriate greeting?",
+                            "options": [
+                                "Good morning",
+                                "Good afternoon",
+                                "Good evening",
+                                "Goodbye"
+                            ],
+                            "correct_answer": "Good morning",
+                            "acceptable_answers": ["Good morning"],
+                            "evidence_target": "comprehension"
+                        },
+                        {
+                            "id": "A1_U01_L01_Q02",
+                            "objective_id": "A1_U01_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "You are leaving a friend's house at the end of the day. What do you say?",
+                            "options": [
+                                "Hello",
+                                "Good morning",
+                                "Bye! See you!",
+                                "Hi"
+                            ],
+                            "correct_answer": "Bye! See you!",
+                            "acceptable_answers": ["Bye! See you!"],
+                            "evidence_target": "recognition"
+                        },
+                        {
+                            "id": "A1_U01_L01_Q03",
+                            "objective_id": "A1_U01_L01_OBJ02",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Complete the greeting used at 3:00 PM: Good ________.",
+                            "options": [],
+                            "correct_answer": "afternoon",
+                            "acceptable_answers": ["afternoon", "Afternoon"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L01_Q04",
+                            "objective_id": "A1_U01_L01_OBJ03",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor says: 'Hi! Good morning!' How do you respond?",
+                            "options": [],
+                            "correct_answer": "Good morning!",
+                            "acceptable_answers": [
+                                "Good morning",
+                                "Good morning!",
+                                "Hi! Good morning!",
+                                "Hello! Good morning!"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L02",
+                    "lesson_number": 2,
+                    "title": "Introducing Yourself",
+                    "objective": "Dizer o próprio nome, perguntar o nome de outra pessoa e reagir socialmente a uma apresentação.",
+                    "learning_targets": [
+                        "Produzir 'My name is...' e 'I'm...'",
+                        "Formular a pergunta 'What's your name?'",
+                        "Responder a 'Nice to meet you' com 'Nice to meet you too'"
+                    ],
+                    "core_vocabulary": [
+                        "name",
+                        "my",
+                        "your",
+                        "nice",
+                        "meet",
+                        "too",
+                        "what",
+                        "is"
+                    ],
+                    "grammar": "Contrações básicas (What is -> What's, I am -> I'm).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L02_Q01",
+                            "objective_id": "A1_U01_L02_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Which question is used to ask someone's name?",
+                            "options": [
+                                "Where are you from?",
+                                "What's your name?",
+                                "How are you?",
+                                "Where do you live?"
+                            ],
+                            "correct_answer": "What's your name?",
+                            "acceptable_answers": ["What's your name?"],
+                            "evidence_target": "recognition"
+                        },
+                        {
+                            "id": "A1_U01_L02_Q02",
+                            "objective_id": "A1_U01_L02_OBJ02",
+                            "skill": "writing",
+                            "type": "reorder_words",
+                            "prompt": "Reorder the words to form a correct sentence: [meet / Nice / you / to]",
+                            "options": [],
+                            "correct_answer": "Nice to meet you",
+                            "acceptable_answers": [
+                                "Nice to meet you",
+                                "Nice to meet you."
+                            ],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L02_Q03",
+                            "objective_id": "A1_U01_L02_OBJ03",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Hi! What's your name?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "I'm João",
+                            "acceptable_answers": [
+                                "I'm João",
+                                "My name is João",
+                                "I am João"
+                            ],
+                            "evidence_target": "production"
+                        },
+                        {
+                            "id": "A1_U01_L02_Q04",
+                            "objective_id": "A1_U01_L02_OBJ04",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Nice to meet you!' You: '________.'",
+                            "options": [],
+                            "correct_answer": "Nice to meet you too",
+                            "acceptable_answers": [
+                                "Nice to meet you too",
+                                "Nice to meet you too!",
+                                "Nice to meet you, too."
+                            ],
+                            "evidence_target": "recall"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L03",
+                    "lesson_number": 3,
+                    "title": "Asking Basic Information",
+                    "objective": "Perguntar e responder sobre país de origem e associar perguntas de identificação a suas respostas.",
+                    "learning_targets": [
+                        "Perguntar 'Where are you from?'",
+                        "Responder 'I'm from [Country]'",
+                        "Extrair país de origem em diálogos curtos"
+                    ],
+                    "core_vocabulary": [
+                        "where",
+                        "from",
+                        "Brazil",
+                        "Canada",
+                        "Japan",
+                        "United States",
+                        "country"
+                    ],
+                    "grammar": "Uso da preposição 'from' para indicar procedência.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L03_Q01",
+                            "objective_id": "A1_U01_L03_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "If someone asks 'Where are you from?', what information do they want?",
+                            "options": [
+                                "Your job",
+                                "Your country or city of origin",
+                                "Your name",
+                                "Your age"
+                            ],
+                            "correct_answer": "Your country or city of origin",
+                            "acceptable_answers": [
+                                "Your country or city of origin"
+                            ],
+                            "evidence_target": "comprehension"
+                        },
+                        {
+                            "id": "A1_U01_L03_Q02",
+                            "objective_id": "A1_U01_L03_OBJ02",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Complete: I'm ________ Brazil.",
+                            "options": [],
+                            "correct_answer": "from",
+                            "acceptable_answers": ["from"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L03_Q03",
+                            "objective_id": "A1_U01_L03_OBJ03",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Where are you from?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "I'm from Brazil",
+                            "acceptable_answers": [
+                                "I'm from Brazil",
+                                "I am from Brazil",
+                                "I'm from Brazil."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L04",
+                    "lesson_number": 4,
+                    "title": "To Be in Basic Introductions",
+                    "objective": "Compreender e produzir frases afirmativas simples utilizando pronomes pessoais e formas contraídas de 'to be'.",
+                    "learning_targets": [
+                        "Associar I -> am ('m), You -> are ('re), He/She -> is ('s)",
+                        "Diferenciar he de she em frases descritivas básicas",
+                        "Formar sentenças afirmativas de identificação"
+                    ],
+                    "core_vocabulary": [
+                        "I",
+                        "you",
+                        "he",
+                        "she",
+                        "we",
+                        "they",
+                        "am",
+                        "are",
+                        "is"
+                    ],
+                    "grammar": "Verb to be (afirmativo) e pronomes pessoais.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L04_Q01",
+                            "objective_id": "A1_U01_L04_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct form: She ________ from Canada.",
+                            "options": ["am", "is", "are", "be"],
+                            "correct_answer": "is",
+                            "acceptable_answers": ["is"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L04_Q02",
+                            "objective_id": "A1_U01_L04_OBJ02",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct form: You and Lucas ________ friends.",
+                            "options": ["am", "is", "are", "'m"],
+                            "correct_answer": "are",
+                            "acceptable_answers": ["are"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L04_Q03",
+                            "objective_id": "A1_U01_L04_OBJ03",
+                            "skill": "writing",
+                            "type": "transformation",
+                            "prompt": "Rewrite using a contraction: 'I am from Brazil.'",
+                            "options": [],
+                            "correct_answer": "I'm from Brazil.",
+                            "acceptable_answers": [
+                                "I'm from Brazil",
+                                "I'm from Brazil."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L05",
+                    "lesson_number": 5,
+                    "title": "Questions & Answers",
+                    "objective": "Responder e formular perguntas fechadas (Yes/No questions) com o verbo 'to be'.",
+                    "learning_targets": [
+                        "Compreender a pergunta 'Are you a student?'",
+                        "Responder com respostas curtas: 'Yes, I am' / 'No, I'm not'",
+                        "Inverter a estrutura para perguntar a ocupação de alguém"
+                    ],
+                    "core_vocabulary": [
+                        "yes",
+                        "no",
+                        "not",
+                        "student",
+                        "teacher",
+                        "programmer",
+                        "are"
+                    ],
+                    "grammar": "Yes/No questions com to be e respostas curtas.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L05_Q01",
+                            "objective_id": "A1_U01_L05_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Complete the question: '________ you a student?'",
+                            "options": ["Is", "Am", "Are", "Do"],
+                            "correct_answer": "Are",
+                            "acceptable_answers": ["Are"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L05_Q02",
+                            "objective_id": "A1_U01_L05_OBJ02",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Are you a teacher?' (Negative response). You: '________.'",
+                            "options": [],
+                            "correct_answer": "No, I'm not",
+                            "acceptable_answers": [
+                                "No, I'm not",
+                                "No, I'm not.",
+                                "No, I am not."
+                            ],
+                            "evidence_target": "production"
+                        },
+                        {
+                            "id": "A1_U01_L05_Q03",
+                            "objective_id": "A1_U01_L05_OBJ03",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Are you a student?' (Affirmative response). You: '________.'",
+                            "options": [],
+                            "correct_answer": "Yes, I am",
+                            "acceptable_answers": [
+                                "Yes, I am",
+                                "Yes, I am.",
+                                "Yes I am"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L06",
+                    "lesson_number": 6,
+                    "title": "Personal Information",
+                    "objective": "Fornecer e solicitar ocupações e dados pessoais combinando múltiplos blocos de informação.",
+                    "learning_targets": [
+                        "Integrar nome, país e ocupação em um único discurso",
+                        "Fazer perguntas sobre a ocupação de outras pessoas",
+                        "Extrair múltiplos dados de um perfil de apresentação"
+                    ],
+                    "core_vocabulary": [
+                        "student",
+                        "teacher",
+                        "programmer",
+                        "city",
+                        "country",
+                        "job",
+                        "friend"
+                    ],
+                    "grammar": "Artigo indefinido 'a' antes de ocupações (a student, a teacher).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L06_Q01",
+                            "objective_id": "A1_U01_L06_OBJ01",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Complete with the correct article: I'm ________ student.",
+                            "options": [],
+                            "correct_answer": "a",
+                            "acceptable_answers": ["a"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L06_Q02",
+                            "objective_id": "A1_U01_L06_OBJ02",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'Hi! I'm David. I'm from Canada and I'm a programmer.' What is David's job?",
+                            "options": [
+                                "Teacher",
+                                "Student",
+                                "Programmer",
+                                "Doctor"
+                            ],
+                            "correct_answer": "Programmer",
+                            "acceptable_answers": ["Programmer"],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L07",
+                    "lesson_number": 7,
+                    "title": "Where Do You Live?",
+                    "objective": "Dizer e perguntar o local de residência e diferenciar semanticamente origem ('from') de moradia ('live in').",
+                    "learning_targets": [
+                        "Perguntar 'Where do you live?'",
+                        "Responder 'I live in [City/Country]'",
+                        "Diferenciar 'I'm from X' de 'I live in Y'"
+                    ],
+                    "core_vocabulary": [
+                        "live",
+                        "in",
+                        "city",
+                        "Piracicaba",
+                        "São Paulo",
+                        "Toronto",
+                        "where"
+                    ],
+                    "grammar": "Uso comunicativo de 'Where do you live?' e preposição 'in' para cidades/países.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L07_Q01",
+                            "objective_id": "A1_U01_L07_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Which sentence indicates current residence?",
+                            "options": [
+                                "I'm from Brazil.",
+                                "I live in Piracicaba.",
+                                "My name is João.",
+                                "I'm a programmer."
+                            ],
+                            "correct_answer": "I live in Piracicaba.",
+                            "acceptable_answers": ["I live in Piracicaba."],
+                            "evidence_target": "comprehension"
+                        },
+                        {
+                            "id": "A1_U01_L07_Q02",
+                            "objective_id": "A1_U01_L07_OBJ02",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Complete: I live ________ São Paulo.",
+                            "options": [],
+                            "correct_answer": "in",
+                            "acceptable_answers": ["in"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U01_L07_Q03",
+                            "objective_id": "A1_U01_L07_OBJ03",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Where do you live?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "I live in Piracicaba",
+                            "acceptable_answers": [
+                                "I live in Piracicaba",
+                                "I live in Piracicaba.",
+                                "I live in Brazil."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L08",
+                    "lesson_number": 8,
+                    "title": "Telling People About Yourself",
+                    "objective": "Integrar todas as informações pessoais em um discurso contínuo utilizando o conectivo 'and'.",
+                    "learning_targets": [
+                        "Conectar 4 frases pessoais contínuas (cumprimento, nome, origem/residência, profissão)",
+                        "Manter uma conversa simulada bilateral respondendo e fazendo perguntas"
+                    ],
+                    "core_vocabulary": [
+                        "and",
+                        "nice",
+                        "meet",
+                        "student",
+                        "from",
+                        "live",
+                        "name"
+                    ],
+                    "grammar": "Uso de conjunção aditiva 'and' para encadeamento de frases simples.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L08_Q01",
+                            "objective_id": "A1_U01_L08_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write 4 continuous sentences introducing yourself: Greeting + Name + Origin/City + Job.",
+                            "options": [],
+                            "correct_answer": "Hi! My name is João. I'm from Brazil and I live in Piracicaba. I'm a student.",
+                            "acceptable_answers": [
+                                "Hi! My name is João. I'm from Brazil and I live in Piracicaba. I'm a student.",
+                                "Hello! I'm João. I'm from Brazil and I live in Piracicaba. I'm a student."
+                            ],
+                            "evidence_target": "production"
+                        },
+                        {
+                            "id": "A1_U01_L08_Q02",
+                            "objective_id": "A1_U01_L08_OBJ02",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'Hello! I'm Emma, I'm from Canada, I live in Toronto and I'm a teacher.' Identify the correct data:",
+                            "options": [
+                                "Emma / Canada / Toronto / Teacher",
+                                "Emma / Brazil / São Paulo / Student",
+                                "Sarah / Canada / Toronto / Doctor"
+                            ],
+                            "correct_answer": "Emma / Canada / Toronto / Teacher",
+                            "acceptable_answers": [
+                                "Emma / Canada / Toronto / Teacher"
+                            ],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U01_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 1 Checkpoint",
+                    "objective": "Demonstrar domínio integrado e autônomo de todas as competências da Unit 1 em uma simulação sem apoio de modelos.",
+                    "learning_targets": [
+                        "Compreender áudio e texto de apresentação completa",
+                        "Produzir apresentação oral e escrita independente",
+                        "Sustentar diálogo bilateral completo (iniciar, responder, perguntar e encerrar)"
+                    ],
+                    "core_vocabulary": [
+                        "hello",
+                        "name",
+                        "from",
+                        "live",
+                        "student",
+                        "teacher",
+                        "bye"
+                    ],
+                    "grammar": "Consolidação de to be, pronomes, perguntas com What/Where/Are you.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U01_L09_Q01",
+                            "objective_id": "A1_U01_L09_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'Hi! I'm Alex. I live in Toronto, but I'm from Canada. I'm a student.' Is Alex a teacher?",
+                            "options": ["Yes, he is.", "No, he's not."],
+                            "correct_answer": "No, he's not.",
+                            "acceptable_answers": [
+                                "No, he's not.",
+                                "No, he is not."
+                            ],
+                            "evidence_target": "comprehension"
+                        },
+                        {
+                            "id": "A1_U01_L09_Q02",
+                            "objective_id": "A1_U01_L09_OBJ02",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Engage in a live simulated dialogue: Greet -> Give name -> State origin -> State city.",
+                            "options": [],
+                            "correct_answer": "Hi! I'm João. I'm from Brazil and I live in Piracicaba.",
+                            "acceptable_answers": [
+                                "Hi! I'm João. I'm from Brazil and I live in Piracicaba.",
+                                "Hello! My name is João. I'm from Brazil and I live in Piracicaba."
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U02",
+            "unit_number": 2,
+            "title": "My World",
+            "communicative_goal": "Falar sobre pessoas próximas, membros da família, posses e ambiente imediato.",
+            "main_can_do": "I can talk about my family, friends, and things in my immediate world.",
+            "lessons": [
+                {
+                    "id": "A1_U02_L01",
+                    "lesson_number": 1,
+                    "title": "People Around Me",
+                    "objective": "Identificar e nomear pessoas do convívio imediato e círculos sociais próximos.",
+                    "learning_targets": [
+                        "Nomear friend, coworker, classmate",
+                        "Identificar pessoas em fotos e situações cotidianas"
+                    ],
+                    "core_vocabulary": [
+                        "friend",
+                        "coworker",
+                        "classmate",
+                        "person",
+                        "people"
+                    ],
+                    "grammar": "Uso de demonstrativo 'This is...'",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L01_Q01",
+                            "objective_id": "A1_U02_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "You are introducing a person you study with. You say: 'This is my ________.'",
+                            "options": [
+                                "classmate",
+                                "mother",
+                                "father",
+                                "phone"
+                            ],
+                            "correct_answer": "classmate",
+                            "acceptable_answers": ["classmate"],
+                            "evidence_target": "comprehension"
+                        },
+                        {
+                            "id": "A1_U02_L01_Q02",
+                            "objective_id": "A1_U02_L01_OBJ02",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Introduce your friend Lucas to the teacher.",
+                            "options": [],
+                            "correct_answer": "This is my friend Lucas.",
+                            "acceptable_answers": [
+                                "This is my friend Lucas",
+                                "This is my friend, Lucas.",
+                                "This is Lucas, my friend."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L02",
+                    "lesson_number": 2,
+                    "title": "My Family",
+                    "objective": "Nomear membros centrais da família e descrever relações familiares diretas.",
+                    "learning_targets": [
+                        "Identificar mother, father, brother, sister, parents",
+                        "Falar sobre a própria família"
+                    ],
+                    "core_vocabulary": [
+                        "mother",
+                        "father",
+                        "brother",
+                        "sister",
+                        "parents",
+                        "family",
+                        "son",
+                        "daughter"
+                    ],
+                    "grammar": "Singular e plural de substantivos familiares (brother/brothers, parent/parents).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L02_Q01",
+                            "objective_id": "A1_U02_L02_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Which word means mother and father together?",
+                            "options": [
+                                "Parents",
+                                "Brothers",
+                                "Sisters",
+                                "Friends"
+                            ],
+                            "correct_answer": "Parents",
+                            "acceptable_answers": ["Parents"],
+                            "evidence_target": "recognition"
+                        },
+                        {
+                            "id": "A1_U02_L02_Q02",
+                            "objective_id": "A1_U02_L02_OBJ02",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Complete: This is my ________ (mãe), Maria.",
+                            "options": [],
+                            "correct_answer": "mother",
+                            "acceptable_answers": ["mother", "mom"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L03",
+                    "lesson_number": 3,
+                    "title": "He and She",
+                    "objective": "Utilizar os pronomes de terceira pessoa 'he' e 'she' com precisão em descrições familiares.",
+                    "learning_targets": [
+                        "Aplicar 'he' para homens/meninos",
+                        "Aplicar 'she' para mulheres/meninas",
+                        "Combinar com 'is'/'s"
+                    ],
+                    "core_vocabulary": [
+                        "he",
+                        "she",
+                        "he's",
+                        "she's",
+                        "brother",
+                        "sister"
+                    ],
+                    "grammar": "Pronomes pessoais de 3ª pessoa do singular e contrações (He's / She's).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L03_Q01",
+                            "objective_id": "A1_U02_L03_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct pronoun: 'This is my sister. ________ is a student.'",
+                            "options": ["He", "She", "I", "They"],
+                            "correct_answer": "She",
+                            "acceptable_answers": ["She"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U02_L03_Q02",
+                            "objective_id": "A1_U02_L03_OBJ02",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Rewrite: 'Lucas is my brother. He is from Brazil.' using contraction:",
+                            "options": [],
+                            "correct_answer": "He's from Brazil.",
+                            "acceptable_answers": [
+                                "He's from Brazil.",
+                                "He's from Brazil"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L04",
+                    "lesson_number": 4,
+                    "title": "My and Your",
+                    "objective": "Expressar posse e identificar relações pessoais utilizando os possessivos 'my' e 'your'.",
+                    "learning_targets": [
+                        "Diferenciar 'my' de 'your'",
+                        "Associar possessivos a objetos e pessoas"
+                    ],
+                    "core_vocabulary": [
+                        "my",
+                        "your",
+                        "phone",
+                        "house",
+                        "car",
+                        "book",
+                        "name"
+                    ],
+                    "grammar": "Possessive adjectives (My, Your).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L04_Q01",
+                            "objective_id": "A1_U02_L04_OBJ01",
+                            "skill": "grammar",
+                            "type": "fill_in_the_blank",
+                            "prompt": "What is ________ (seu) phone number?",
+                            "options": [],
+                            "correct_answer": "your",
+                            "acceptable_answers": ["your"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U02_L04_Q02",
+                            "objective_id": "A1_U02_L04_OBJ02",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "'This is my car.' Who owns the car?",
+                            "options": [
+                                "The speaker (me)",
+                                "The listener (you)",
+                                "Another person (he)",
+                                "Nobody"
+                            ],
+                            "correct_answer": "The speaker (me)",
+                            "acceptable_answers": ["The speaker (me)"],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L05",
+                    "lesson_number": 5,
+                    "title": "This Is...",
+                    "objective": "Apresentar objetos e pessoas próximas apontando ou indicando com 'This is...'.",
+                    "learning_targets": [
+                        "Usar 'This is my...' para apresentar pessoas",
+                        "Usar 'This is my...' para identificar posses"
+                    ],
+                    "core_vocabulary": [
+                        "this",
+                        "is",
+                        "friend",
+                        "family",
+                        "house",
+                        "school"
+                    ],
+                    "grammar": "Demonstrative pronoun (This).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L05_Q01",
+                            "objective_id": "A1_U02_L05_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Build a sentence introducing your brother Lucas using 'This':",
+                            "options": [],
+                            "correct_answer": "This is my brother Lucas.",
+                            "acceptable_answers": [
+                                "This is my brother Lucas",
+                                "This is my brother, Lucas."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L06",
+                    "lesson_number": 6,
+                    "title": "His and Her",
+                    "objective": "Referir-se a posses, nomes e atributos de terceiros utilizando 'his' e 'her'.",
+                    "learning_targets": [
+                        "Aplicar 'his' para posses masculinas",
+                        "Aplicar 'her' para posses femininas",
+                        "Perguntar 'What's his/her name?'"
+                    ],
+                    "core_vocabulary": [
+                        "his",
+                        "her",
+                        "name",
+                        "job",
+                        "phone",
+                        "friend"
+                    ],
+                    "grammar": "Possessive adjectives (His, Her).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L06_Q01",
+                            "objective_id": "A1_U02_L06_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct word: 'This is Maria. ________ car is red.'",
+                            "options": ["His", "Her", "My", "Your"],
+                            "correct_answer": "Her",
+                            "acceptable_answers": ["Her"],
+                            "evidence_target": "accuracy"
+                        },
+                        {
+                            "id": "A1_U02_L06_Q02",
+                            "objective_id": "A1_U02_L06_OBJ02",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor asks about your father: 'What's his name?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "His name is Carlos",
+                            "acceptable_answers": [
+                                "His name is Carlos",
+                                "His name is Carlos.",
+                                "He is Carlos."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L07",
+                    "lesson_number": 7,
+                    "title": "Describing People Simply",
+                    "objective": "Fornecer dados simples sobre familiares e amigos combinando idade, ocupação e origem.",
+                    "learning_targets": [
+                        "Informar ocupação de terceiros ('She's a teacher')",
+                        "Informar origem de terceiros ('He's from Brazil')"
+                    ],
+                    "core_vocabulary": [
+                        "teacher",
+                        "student",
+                        "doctor",
+                        "years old",
+                        "from",
+                        "live"
+                    ],
+                    "grammar": "Combinação de to be + profissão/idade para terceiros.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L07_Q01",
+                            "objective_id": "A1_U02_L07_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'This is my brother, Pedro. He's 22 years old and he's a programmer.' How old is Pedro?",
+                            "options": ["20", "22", "25", "18"],
+                            "correct_answer": "22",
+                            "acceptable_answers": ["22"],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L08",
+                    "lesson_number": 8,
+                    "title": "Talking About My Family",
+                    "objective": "Produzir uma descrição contínua de fotos ou membros da família encadeando frases.",
+                    "learning_targets": [
+                        "Apresentar 2 ou 3 membros da família em sequência",
+                        "Conectar frases com 'and' e possessivos"
+                    ],
+                    "core_vocabulary": [
+                        "family",
+                        "mother",
+                        "father",
+                        "brother",
+                        "sister",
+                        "and",
+                        "live"
+                    ],
+                    "grammar": "Reciclagem e integração de pronomes, possessivos e to be.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L08_Q01",
+                            "objective_id": "A1_U02_L08_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write sentences introducing your mother Ana (a teacher) and brother Lucas:",
+                            "options": [],
+                            "correct_answer": "This is my mother. Her name is Ana and she is a teacher. This is my brother, Lucas.",
+                            "acceptable_answers": [
+                                "This is my mother. Her name is Ana and she is a teacher. This is my brother, Lucas.",
+                                "This is my mother Ana, a teacher, and my brother Lucas."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U02_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 2 Checkpoint",
+                    "objective": "Demonstrar domínio na apresentação e descrição de amigos, familiares e posses em uma simulação integrada.",
+                    "learning_targets": [
+                        "Apresentar outra pessoa oralmente e por escrito",
+                        "Diferenciar his/her e he/she sem hesitação",
+                        "Responder a perguntas sobre familiares em diálogo dinâmico"
+                    ],
+                    "core_vocabulary": [
+                        "mother",
+                        "father",
+                        "brother",
+                        "sister",
+                        "friend",
+                        "his",
+                        "her"
+                    ],
+                    "grammar": "Consolidação de possessivos e pronomes de 3ª pessoa.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U02_L09_Q01",
+                            "objective_id": "A1_U02_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Introduce your sister Maria: state her name, age (20), and that she is a student.",
+                            "options": [],
+                            "correct_answer": "This is my sister Maria. She is 20 years old and she is a student.",
+                            "acceptable_answers": [
+                                "This is my sister Maria. She is 20 years old and she is a student.",
+                                "This is my sister, Maria. She's 20 and she's a student."
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U03",
+            "unit_number": 3,
+            "title": "Daily Life",
+            "communicative_goal": "Expressar ações cotidianas, hábitos simples e rotinas em Simple Present.",
+            "main_can_do": "I can talk about simple things I do every day.",
+            "lessons": [
+                {
+                    "id": "A1_U03_L01",
+                    "lesson_number": 1,
+                    "title": "Everyday Actions",
+                    "objective": "Reconhecer e nomear verbos de ação cotidiana imediata.",
+                    "learning_targets": [
+                        "Identificar wake up, work, study, eat, sleep, go",
+                        "Associar verbos a ações reais"
+                    ],
+                    "core_vocabulary": [
+                        "wake up",
+                        "work",
+                        "study",
+                        "eat",
+                        "sleep",
+                        "go",
+                        "read"
+                    ],
+                    "grammar": "Verbos em sua forma base.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L01_Q01",
+                            "objective_id": "A1_U03_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Which verb describes what you do in bed at night?",
+                            "options": ["Work", "Sleep", "Study", "Eat"],
+                            "correct_answer": "Sleep",
+                            "acceptable_answers": ["Sleep"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L02",
+                    "lesson_number": 2,
+                    "title": "My Day",
+                    "objective": "Descrever uma sequência básica de atividades diárias na primeira pessoa.",
+                    "learning_targets": [
+                        "Produzir 'I wake up', 'I work', 'I study'",
+                        "Encadear ações matinais e noturnas"
+                    ],
+                    "core_vocabulary": [
+                        "day",
+                        "morning",
+                        "night",
+                        "every day",
+                        "breakfast"
+                    ],
+                    "grammar": "Simple Present com sujeito 'I'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L02_Q01",
+                            "objective_id": "A1_U03_L02_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write a sentence saying you study every day:",
+                            "options": [],
+                            "correct_answer": "I study every day.",
+                            "acceptable_answers": [
+                                "I study every day",
+                                "I study every day."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L03",
+                    "lesson_number": 3,
+                    "title": "I Work / I Study",
+                    "objective": "Construir frases afirmativas e negativas simples sobre rotina com 'don't'.",
+                    "learning_targets": [
+                        "Produzir 'I work' e 'I don't work'",
+                        "Diferenciar afirmativa de negativa"
+                    ],
+                    "core_vocabulary": [
+                        "don't",
+                        "work",
+                        "study",
+                        "play",
+                        "school",
+                        "office"
+                    ],
+                    "grammar": "Simple Present negativo com 'don't'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L03_Q01",
+                            "objective_id": "A1_U03_L03_OBJ01",
+                            "skill": "grammar",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Make it negative: I ________ (not work) on Sundays.",
+                            "options": [],
+                            "correct_answer": "don't work",
+                            "acceptable_answers": ["don't work", "do not work"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L04",
+                    "lesson_number": 4,
+                    "title": "He Works / She Studies",
+                    "objective": "Reconhecer e aplicar a desinência '-s/-es' na 3ª pessoa do singular em Simple Present.",
+                    "learning_targets": [
+                        "Reconhecer he works, she studies",
+                        "Compreender a rotina de terceiros"
+                    ],
+                    "core_vocabulary": [
+                        "works",
+                        "studies",
+                        "eats",
+                        "sleeps",
+                        "goes"
+                    ],
+                    "grammar": "Simple Present (3ª pessoa do singular -s/-es).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L04_Q01",
+                            "objective_id": "A1_U03_L04_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct form: 'My brother ________ in an office.'",
+                            "options": ["work", "works", "working", "is work"],
+                            "correct_answer": "works",
+                            "acceptable_answers": ["works"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L05",
+                    "lesson_number": 5,
+                    "title": "Do You...?",
+                    "objective": "Formular perguntas fechadas sobre hábitos diários utilizando o auxiliar 'do'.",
+                    "learning_targets": [
+                        "Produzir 'Do you work?'",
+                        "Produzir 'Do you study English?'"
+                    ],
+                    "core_vocabulary": [
+                        "do",
+                        "you",
+                        "English",
+                        "coffee",
+                        "every day"
+                    ],
+                    "grammar": "Simple Present interrogativo com 'Do you...?'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L05_Q01",
+                            "objective_id": "A1_U03_L05_OBJ01",
+                            "skill": "writing",
+                            "type": "reorder_words",
+                            "prompt": "Reorder: [you / study / Do / English / ?]",
+                            "options": [],
+                            "correct_answer": "Do you study English?",
+                            "acceptable_answers": ["Do you study English?"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L06",
+                    "lesson_number": 6,
+                    "title": "Yes, I Do / No, I Don't",
+                    "objective": "Responder a perguntas de rotina utilizando respostas curtas padronizadas.",
+                    "learning_targets": [
+                        "Produzir 'Yes, I do' e 'No, I don't' com fluidez",
+                        "Reagir a perguntas diretas"
+                    ],
+                    "core_vocabulary": ["yes", "no", "do", "don't"],
+                    "grammar": "Short answers com 'do/don't'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L06_Q01",
+                            "objective_id": "A1_U03_L06_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Do you drink coffee in the morning?' (Affirmative response). You: '________.'",
+                            "options": [],
+                            "correct_answer": "Yes, I do",
+                            "acceptable_answers": [
+                                "Yes, I do",
+                                "Yes, I do.",
+                                "Yes I do"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L07",
+                    "lesson_number": 7,
+                    "title": "Talking About My Routine",
+                    "objective": "Estruturar um relato contínuo de hábitos matinais, de trabalho e noturnos.",
+                    "learning_targets": [
+                        "Conectar 3 ou 4 ações diárias",
+                        "Informar hábitos de estudo e lazer"
+                    ],
+                    "core_vocabulary": [
+                        "morning",
+                        "afternoon",
+                        "night",
+                        "then",
+                        "and"
+                    ],
+                    "grammar": "Simple Present integrado.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L07_Q01",
+                            "objective_id": "A1_U03_L07_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write a short paragraph describing your routine (wake up, study/work, sleep):",
+                            "options": [],
+                            "correct_answer": "I wake up in the morning. I study English and I work in the afternoon. I sleep at night.",
+                            "acceptable_answers": [
+                                "I wake up in the morning. I study English and I work in the afternoon. I sleep at night.",
+                                "I wake up, I work and I sleep."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L08",
+                    "lesson_number": 8,
+                    "title": "Asking About Someone's Day",
+                    "objective": "Conduzir uma entrevista simples sobre o dia a dia de outra pessoa.",
+                    "learning_targets": [
+                        "Alternar entre perguntar e responder sobre rotina",
+                        "Extrair hábitos do interlocutor"
+                    ],
+                    "core_vocabulary": ["what", "when", "time", "routine"],
+                    "grammar": "Perguntas de rotina com Do you / What do you.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L08_Q01",
+                            "objective_id": "A1_U03_L08_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Ask your classmate if they study English every day:",
+                            "options": [],
+                            "correct_answer": "Do you study English every day?",
+                            "acceptable_answers": [
+                                "Do you study English every day?",
+                                "Do you study English every day"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U03_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 3 Checkpoint",
+                    "objective": "Demonstrar capacidade de narrar e trocar informações sobre rotinas diárias e hábitos em simulação completa.",
+                    "learning_targets": [
+                        "Descrever a própria rotina sem pistas",
+                        "Entrevistar alguém sobre hábitos diários",
+                        "Compreender áudio sobre o dia de alguém"
+                    ],
+                    "core_vocabulary": [
+                        "wake up",
+                        "work",
+                        "study",
+                        "eat",
+                        "sleep",
+                        "do you"
+                    ],
+                    "grammar": "Consolidação de Simple Present afirmativo, negativo e interrogativo.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U03_L09_Q01",
+                            "objective_id": "A1_U03_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Tell 2 things you do every day and ask the other person if they work:",
+                            "options": [],
+                            "correct_answer": "I wake up early and study English. Do you work?",
+                            "acceptable_answers": [
+                                "I wake up early and study English. Do you work?",
+                                "I work and study every day. Do you work?"
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U04",
+            "unit_number": 4,
+            "title": "Likes & Preferences",
+            "communicative_goal": "Expressar gostos, desgostos e preferências pessoais simples.",
+            "main_can_do": "I can talk about things I like and dislike and ask someone about their preferences.",
+            "lessons": [
+                {
+                    "id": "A1_U04_L01",
+                    "lesson_number": 1,
+                    "title": "Things I Like",
+                    "objective": "Expressar preferências afirmativas sobre itens concretos do cotidiano.",
+                    "learning_targets": [
+                        "Produzir 'I like coffee', 'I like music'",
+                        "Identificar preferências em mensagens"
+                    ],
+                    "core_vocabulary": [
+                        "like",
+                        "coffee",
+                        "tea",
+                        "music",
+                        "games",
+                        "books"
+                    ],
+                    "grammar": "Simple Present com verbo 'like' + substantivo.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L01_Q01",
+                            "objective_id": "A1_U04_L01_OBJ01",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Complete: I ________ (gosto) music.",
+                            "options": [],
+                            "correct_answer": "like",
+                            "acceptable_answers": ["like"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L02",
+                    "lesson_number": 2,
+                    "title": "I Like / I Don't Like",
+                    "objective": "Contrastar afirmativas e negativas de preferências utilizando 'don't like'.",
+                    "learning_targets": [
+                        "Produzir 'I don't like tea'",
+                        "Contrastar gostos com 'but'"
+                    ],
+                    "core_vocabulary": [
+                        "don't like",
+                        "but",
+                        "soda",
+                        "sports",
+                        "movies"
+                    ],
+                    "grammar": "I like X, but I don't like Y.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L02_Q01",
+                            "objective_id": "A1_U04_L02_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Build a sentence saying you like coffee, but you don't like tea:",
+                            "options": [],
+                            "correct_answer": "I like coffee, but I don't like tea.",
+                            "acceptable_answers": [
+                                "I like coffee, but I don't like tea",
+                                "I like coffee but I don't like tea."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L03",
+                    "lesson_number": 3,
+                    "title": "Do You Like...?",
+                    "objective": "Perguntar sobre as preferências de outra pessoa utilizando 'Do you like...?'.",
+                    "learning_targets": [
+                        "Formular perguntas de gosto",
+                        "Responder com 'Yes, I do' / 'No, I don't'"
+                    ],
+                    "core_vocabulary": [
+                        "do you like",
+                        "rock",
+                        "pop",
+                        "pizza",
+                        "chocolate"
+                    ],
+                    "grammar": "Do you like + noun?",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L03_Q01",
+                            "objective_id": "A1_U04_L03_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Ask your friend if they like pizza:",
+                            "options": [],
+                            "correct_answer": "Do you like pizza?",
+                            "acceptable_answers": ["Do you like pizza?"],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L04",
+                    "lesson_number": 4,
+                    "title": "Food & Drinks",
+                    "objective": "Nomear alimentos e bebidas comuns e expressar preferências gastronômicas básicas.",
+                    "learning_targets": [
+                        "Identificar water, juice, bread, rice, salad",
+                        "Falar sobre o que gosta de comer e beber"
+                    ],
+                    "core_vocabulary": [
+                        "water",
+                        "juice",
+                        "bread",
+                        "rice",
+                        "salad",
+                        "meat",
+                        "fruit"
+                    ],
+                    "grammar": "Vocabulário temático aplicado ao verbo like/eat/drink.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L04_Q01",
+                            "objective_id": "A1_U04_L04_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Which of these is a drink?",
+                            "options": ["Bread", "Juice", "Salad", "Rice"],
+                            "correct_answer": "Juice",
+                            "acceptable_answers": ["Juice"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L05",
+                    "lesson_number": 5,
+                    "title": "Music & Entertainment",
+                    "objective": "Conversar sobre preferências de entretenimento, estilos musicais e filmes.",
+                    "learning_targets": [
+                        "Falar sobre filmes e músicas favoritos",
+                        "Expressar 'I love' / 'I like'"
+                    ],
+                    "core_vocabulary": [
+                        "movie",
+                        "song",
+                        "listen",
+                        "watch",
+                        "rock",
+                        "pop",
+                        "series"
+                    ],
+                    "grammar": "Verbos like, listen to, watch.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L05_Q01",
+                            "objective_id": "A1_U04_L05_OBJ01",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "I listen ________ music every day.",
+                            "options": [],
+                            "correct_answer": "to",
+                            "acceptable_answers": ["to"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L06",
+                    "lesson_number": 6,
+                    "title": "Hobbies & Free Time",
+                    "objective": "Nomear passatempos comuns e falar sobre o que faz no tempo livre.",
+                    "learning_targets": [
+                        "Identificar play games, read books, watch TV, walk",
+                        "Falar sobre lazer"
+                    ],
+                    "core_vocabulary": [
+                        "hobby",
+                        "free time",
+                        "play",
+                        "read",
+                        "walk",
+                        "relax"
+                    ],
+                    "grammar": "Simple Present aplicado a atividades de lazer.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L06_Q01",
+                            "objective_id": "A1_U04_L06_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'In my free time, I play video games and read books.' What are the speaker's hobbies?",
+                            "options": [
+                                "Playing games and reading",
+                                "Cooking and dancing",
+                                "Working and sleeping"
+                            ],
+                            "correct_answer": "Playing games and reading",
+                            "acceptable_answers": ["Playing games and reading"],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L07",
+                    "lesson_number": 7,
+                    "title": "Asking About Preferences",
+                    "objective": "Manter uma troca bilateral de perguntas e respostas sobre gostos variados.",
+                    "learning_targets": [
+                        "Perguntar 'What music do you like?'",
+                        "Perguntar 'What food do you like?'"
+                    ],
+                    "core_vocabulary": [
+                        "what",
+                        "favorite",
+                        "kind of",
+                        "food",
+                        "music"
+                    ],
+                    "grammar": "What + noun + do you like?",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L07_Q01",
+                            "objective_id": "A1_U04_L07_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'What kind of music do you like?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "I like rock music",
+                            "acceptable_answers": [
+                                "I like rock music",
+                                "I like pop music",
+                                "I like rock",
+                                "I like pop"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L08",
+                    "lesson_number": 8,
+                    "title": "Talking About What I Like",
+                    "objective": "Estruturar uma apresentação curta e contínua sobre interesses, gostos e lazer.",
+                    "learning_targets": [
+                        "Encadear 3 frases sobre comidas, músicas e hobbies favoritos"
+                    ],
+                    "core_vocabulary": [
+                        "favorite",
+                        "like",
+                        "love",
+                        "and",
+                        "because"
+                    ],
+                    "grammar": "Integração discursiva de preferências.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L08_Q01",
+                            "objective_id": "A1_U04_L08_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write sentences mentioning your favorite food, drink, and hobby:",
+                            "options": [],
+                            "correct_answer": "I like pizza and I drink coffee every day. In my free time, I like to read books.",
+                            "acceptable_answers": [
+                                "I like pizza and I drink coffee every day. In my free time, I like to read books.",
+                                "I like pizza and coffee. I play games in my free time."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U04_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 4 Checkpoint",
+                    "objective": "Demonstrar domínio em expressar, contrastar e perguntar preferências em simulação social integrada.",
+                    "learning_targets": [
+                        "Participar de conversa sobre gostos",
+                        "Extrair preferências de um diálogo"
+                    ],
+                    "core_vocabulary": [
+                        "like",
+                        "don't like",
+                        "favorite",
+                        "pizza",
+                        "music",
+                        "games"
+                    ],
+                    "grammar": "Consolidação de like, don't like, do you like.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U04_L09_Q01",
+                            "objective_id": "A1_U04_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "State what food you like, what drink you don't like, and ask if the person likes coffee:",
+                            "options": [],
+                            "correct_answer": "I like pizza, but I don't like soda. Do you like coffee?",
+                            "acceptable_answers": [
+                                "I like pizza, but I don't like soda. Do you like coffee?",
+                                "I like pizza, but I don't like tea. Do you like coffee?"
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U05",
+            "unit_number": 5,
+            "title": "People & Places",
+            "communicative_goal": "Descrever características físicas/pessoais simples e indicar localização no espaço com 'There is / There are'.",
+            "main_can_do": "I can describe people, places, and things using simple words and expressions.",
+            "lessons": [
+                {
+                    "id": "A1_U05_L01",
+                    "lesson_number": 1,
+                    "title": "Describing People",
+                    "objective": "Descrever atributos físicos e de personalidade simples utilizando adjetivos básicos.",
+                    "learning_targets": [
+                        "Aplicar tall, short, friendly, nice",
+                        "Construir 'He is tall' / 'She is friendly'"
+                    ],
+                    "core_vocabulary": [
+                        "tall",
+                        "short",
+                        "friendly",
+                        "nice",
+                        "young",
+                        "old"
+                    ],
+                    "grammar": "To be + adjetivo.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L01_Q01",
+                            "objective_id": "A1_U05_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Opposite of 'tall':",
+                            "options": ["Short", "Big", "Friendly", "Young"],
+                            "correct_answer": "Short",
+                            "acceptable_answers": ["Short"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L02",
+                    "lesson_number": 2,
+                    "title": "Describing Things",
+                    "objective": "Descrever objetos e lugares utilizando adjetivos de tamanho, estado e qualidade.",
+                    "learning_targets": [
+                        "Aplicar big, small, new, old, clean",
+                        "Descrever a casa ou o quarto"
+                    ],
+                    "core_vocabulary": [
+                        "big",
+                        "small",
+                        "new",
+                        "old",
+                        "clean",
+                        "beautiful"
+                    ],
+                    "grammar": "Posição do adjetivo (antes do substantivo ou após to be).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L02_Q01",
+                            "objective_id": "A1_U05_L02_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Build a sentence saying your house is big:",
+                            "options": [],
+                            "correct_answer": "My house is big.",
+                            "acceptable_answers": [
+                                "My house is big",
+                                "My house is big."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L03",
+                    "lesson_number": 3,
+                    "title": "Colors",
+                    "objective": "Identificar cores e utilizá-las para descrever roupas e objetos pessoais.",
+                    "learning_targets": [
+                        "Nomear red, blue, green, black, white, yellow",
+                        "Construir 'a blue car'"
+                    ],
+                    "core_vocabulary": [
+                        "red",
+                        "blue",
+                        "green",
+                        "black",
+                        "white",
+                        "yellow",
+                        "color"
+                    ],
+                    "grammar": "Adjetivo de cor antes do substantivo (a red car).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L03_Q01",
+                            "objective_id": "A1_U05_L03_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct order:",
+                            "options": ["a car red", "a red car", "red a car"],
+                            "correct_answer": "a red car",
+                            "acceptable_answers": ["a red car"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L04",
+                    "lesson_number": 4,
+                    "title": "Big and Small",
+                    "objective": "Contrastar proporções e dimensões de cidades, casas e objetos.",
+                    "learning_targets": [
+                        "Diferenciar 'a big city' de 'a small town'"
+                    ],
+                    "core_vocabulary": [
+                        "city",
+                        "town",
+                        "apartment",
+                        "room",
+                        "size"
+                    ],
+                    "grammar": "Contraste descritivo com 'and' / 'but'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L04_Q01",
+                            "objective_id": "A1_U05_L04_OBJ01",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "São Paulo is a ________ (grande) city.",
+                            "options": [],
+                            "correct_answer": "big",
+                            "acceptable_answers": ["big"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L05",
+                    "lesson_number": 5,
+                    "title": "Places Around",
+                    "objective": "Nomear locais comuns do bairro e da cidade.",
+                    "learning_targets": [
+                        "Identificar park, store, supermarket, school, bank"
+                    ],
+                    "core_vocabulary": [
+                        "park",
+                        "store",
+                        "supermarket",
+                        "school",
+                        "bank",
+                        "restaurant"
+                    ],
+                    "grammar": "Substantivos de locais urbanos.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L05_Q01",
+                            "objective_id": "A1_U05_L05_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Where do you go to buy food?",
+                            "options": [
+                                "Supermarket",
+                                "Bank",
+                                "Park",
+                                "School"
+                            ],
+                            "correct_answer": "Supermarket",
+                            "acceptable_answers": ["Supermarket"],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L06",
+                    "lesson_number": 6,
+                    "title": "Where Is It?",
+                    "objective": "Indicar localização espacial básica com preposições de lugar simples.",
+                    "learning_targets": [
+                        "Aplicar in, on, near, next to",
+                        "Responder 'Where is the park?'"
+                    ],
+                    "core_vocabulary": [
+                        "in",
+                        "on",
+                        "near",
+                        "next to",
+                        "here",
+                        "there"
+                    ],
+                    "grammar": "Preposições de lugar.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L06_Q01",
+                            "objective_id": "A1_U05_L06_OBJ01",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "The park is ________ (perto) my house.",
+                            "options": [],
+                            "correct_answer": "near",
+                            "acceptable_answers": ["near"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L07",
+                    "lesson_number": 7,
+                    "title": "There Is / There Are",
+                    "objective": "Indicar existência no singular e plural no espaço urbano ou doméstico.",
+                    "learning_targets": [
+                        "Produzir 'There is a park'",
+                        "Produzir 'There are two stores'"
+                    ],
+                    "core_vocabulary": [
+                        "there is",
+                        "there are",
+                        "one",
+                        "two",
+                        "many"
+                    ],
+                    "grammar": "There is (singular) vs. There are (plural).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L07_Q01",
+                            "objective_id": "A1_U05_L07_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose: '________ two schools near my house.'",
+                            "options": [
+                                "There is",
+                                "There are",
+                                "It is",
+                                "They are"
+                            ],
+                            "correct_answer": "There are",
+                            "acceptable_answers": ["There are"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L08",
+                    "lesson_number": 8,
+                    "title": "Describing My Place",
+                    "objective": "Produzir uma descrição integrada da própria casa, quarto ou bairro.",
+                    "learning_targets": [
+                        "Combinar adjetivos e 'there is/are' em um relato contínuo"
+                    ],
+                    "core_vocabulary": [
+                        "house",
+                        "bedroom",
+                        "neighborhood",
+                        "quiet",
+                        "busy"
+                    ],
+                    "grammar": "Integração descritiva espacial.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L08_Q01",
+                            "objective_id": "A1_U05_L08_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Describe your house (size, a feature, and location):",
+                            "options": [],
+                            "correct_answer": "My house is small and quiet. There is a park near my house.",
+                            "acceptable_answers": [
+                                "My house is small and quiet. There is a park near my house.",
+                                "My house is big. There is a store near my house."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U05_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 5 Checkpoint",
+                    "objective": "Demonstrar domínio em descrever pessoas, objetos e localizações espaciais em simulação completa.",
+                    "learning_targets": [
+                        "Descrever uma pessoa e um local",
+                        "Utilizar 'there is/are' com precisão"
+                    ],
+                    "core_vocabulary": [
+                        "tall",
+                        "friendly",
+                        "big",
+                        "small",
+                        "there is",
+                        "there are",
+                        "near"
+                    ],
+                    "grammar": "Consolidação de to be + adj, there is/are, preposições.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U05_L09_Q01",
+                            "objective_id": "A1_U05_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Describe your friend Pedro (tall and friendly) and your city (big):",
+                            "options": [],
+                            "correct_answer": "My friend Pedro is tall and friendly. My city is big.",
+                            "acceptable_answers": [
+                                "My friend Pedro is tall and friendly. My city is big.",
+                                "Pedro is tall and friendly. I live in a big city."
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U06",
+            "unit_number": 6,
+            "title": "Time & Routines",
+            "communicative_goal": "Conectar rotinas a horários, dias da semana e períodos temporais específicos.",
+            "main_can_do": "I can tell the time and talk about when I do everyday activities.",
+            "lessons": [
+                {
+                    "id": "A1_U06_L01",
+                    "lesson_number": 1,
+                    "title": "Numbers & Time",
+                    "objective": "Reconhecer números de 1 a 60 e ler horas em formatos simples.",
+                    "learning_targets": [
+                        "Contar de 1 a 60",
+                        "Dizer horas cheias ('It's eight o'clock')"
+                    ],
+                    "core_vocabulary": [
+                        "one",
+                        "ten",
+                        "twenty",
+                        "thirty",
+                        "forty",
+                        "fifty",
+                        "o'clock",
+                        "time"
+                    ],
+                    "grammar": "Estrutura 'It's [time]'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L01_Q01",
+                            "objective_id": "A1_U06_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "8:00 -> How do you say this time?",
+                            "options": [
+                                "It's eight o'clock",
+                                "It's eight hours",
+                                "It's eight days"
+                            ],
+                            "correct_answer": "It's eight o'clock",
+                            "acceptable_answers": ["It's eight o'clock"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L02",
+                    "lesson_number": 2,
+                    "title": "What Time Is It?",
+                    "objective": "Perguntar e informar o horário exato em situações cotidianas.",
+                    "learning_targets": [
+                        "Produzir 'What time is it?'",
+                        "Informar horários com minutos (8:30 -> eight thirty)"
+                    ],
+                    "core_vocabulary": [
+                        "what time",
+                        "it is",
+                        "now",
+                        "minute",
+                        "hour"
+                    ],
+                    "grammar": "Perguntas de horário com 'What time is it?'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L02_Q01",
+                            "objective_id": "A1_U06_L02_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Ask someone the time politely:",
+                            "options": [],
+                            "correct_answer": "What time is it?",
+                            "acceptable_answers": [
+                                "What time is it?",
+                                "Excuse me, what time is it?"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L03",
+                    "lesson_number": 3,
+                    "title": "Days of the Week",
+                    "objective": "Nomear os dias da semana e utilizar a preposição 'on' para dias específicos.",
+                    "learning_targets": [
+                        "Identificar Monday a Sunday",
+                        "Produzir 'on Monday', 'on weekends'"
+                    ],
+                    "core_vocabulary": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday",
+                        "on"
+                    ],
+                    "grammar": "Preposição temporal 'on' + dias da semana.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L03_Q01",
+                            "objective_id": "A1_U06_L03_OBJ01",
+                            "skill": "grammar",
+                            "type": "fill_in_the_blank",
+                            "prompt": "I work ________ Monday.",
+                            "options": [],
+                            "correct_answer": "on",
+                            "acceptable_answers": ["on"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L04",
+                    "lesson_number": 4,
+                    "title": "My Week",
+                    "objective": "Contrastar atividades realizadas em dias úteis com o final de semana.",
+                    "learning_targets": [
+                        "Diferenciar weekday de weekend",
+                        "Descrever atividades por dia"
+                    ],
+                    "core_vocabulary": [
+                        "weekday",
+                        "weekend",
+                        "work",
+                        "relax",
+                        "stay home"
+                    ],
+                    "grammar": "On weekdays / At the weekend.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L04_Q01",
+                            "objective_id": "A1_U06_L04_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write a sentence saying you work on weekdays:",
+                            "options": [],
+                            "correct_answer": "I work on weekdays.",
+                            "acceptable_answers": [
+                                "I work on weekdays",
+                                "I work on weekdays."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L05",
+                    "lesson_number": 5,
+                    "title": "Periods of the Day",
+                    "objective": "Utilizar preposições corretas para os períodos do dia (in the morning/afternoon/evening, at night).",
+                    "learning_targets": [
+                        "Aplicar 'in the morning'",
+                        "Aplicar 'at night'"
+                    ],
+                    "core_vocabulary": [
+                        "morning",
+                        "afternoon",
+                        "evening",
+                        "night",
+                        "in the",
+                        "at"
+                    ],
+                    "grammar": "Preposições de tempo: in the vs. at.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L05_Q01",
+                            "objective_id": "A1_U06_L05_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct preposition: 'I sleep ________ night.'",
+                            "options": ["in the", "at", "on", "to"],
+                            "correct_answer": "at",
+                            "acceptable_answers": ["at"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L06",
+                    "lesson_number": 6,
+                    "title": "When Do You...?",
+                    "objective": "Formular perguntas sobre o momento em que ações ocorrem utilizando 'When do you...?'.",
+                    "learning_targets": [
+                        "Perguntar 'When do you study?'",
+                        "Responder com horários ou dias"
+                    ],
+                    "core_vocabulary": [
+                        "when",
+                        "study",
+                        "work",
+                        "wake up",
+                        "eat"
+                    ],
+                    "grammar": "When do you + verb?",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L06_Q01",
+                            "objective_id": "A1_U06_L06_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'When do you study English?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "I study in the morning",
+                            "acceptable_answers": [
+                                "I study in the morning",
+                                "I study at night",
+                                "In the evening"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L07",
+                    "lesson_number": 7,
+                    "title": "My Weekly Routine",
+                    "objective": "Integrar verbos de ação, dias da semana e horários exatos em um relato contínuo.",
+                    "learning_targets": [
+                        "Produzir 'I work at 8:00 on Monday'",
+                        "Descrever uma semana típica"
+                    ],
+                    "core_vocabulary": [
+                        "at",
+                        "on",
+                        "from... to...",
+                        "schedule"
+                    ],
+                    "grammar": "At + time, On + day.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L07_Q01",
+                            "objective_id": "A1_U06_L07_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write sentences about when you work and study:",
+                            "options": [],
+                            "correct_answer": "I work at 8:00 AM on weekdays. I study English in the evening.",
+                            "acceptable_answers": [
+                                "I work at 8:00 AM on weekdays. I study English in the evening.",
+                                "I work at 8:00 on Monday and study at night."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L08",
+                    "lesson_number": 8,
+                    "title": "Talking About Time",
+                    "objective": "Combinar horários de compromissos e agendamentos em conversas cotidianas.",
+                    "learning_targets": [
+                        "Marcar compromissos simples ('See you on Friday at 3:00')"
+                    ],
+                    "core_vocabulary": [
+                        "appointment",
+                        "class",
+                        "meet",
+                        "see you"
+                    ],
+                    "grammar": "Preposições de tempo integradas a interações sociais.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L08_Q01",
+                            "objective_id": "A1_U06_L08_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Agree to meet on Friday at 4:00 PM:",
+                            "options": [],
+                            "correct_answer": "See you on Friday at 4:00 PM.",
+                            "acceptable_answers": [
+                                "See you on Friday at 4:00 PM",
+                                "Great, see you on Friday at 4."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U06_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 6 Checkpoint",
+                    "objective": "Demonstrar domínio em perguntar, informar e planejar horários e dias da semana em simulação integrada.",
+                    "learning_targets": [
+                        "Dizer horários e dias sem hesitação",
+                        "Agendar um compromisso simples"
+                    ],
+                    "core_vocabulary": [
+                        "what time",
+                        "Monday",
+                        "Friday",
+                        "weekend",
+                        "at",
+                        "on",
+                        "in the morning"
+                    ],
+                    "grammar": "Consolidação de preposições temporais (at, in, on) e horas.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U06_L09_Q01",
+                            "objective_id": "A1_U06_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Tell a friend you study English on Tuesdays at 7:00 PM and ask when they study:",
+                            "options": [],
+                            "correct_answer": "I study English on Tuesdays at 7:00 PM. When do you study?",
+                            "acceptable_answers": [
+                                "I study English on Tuesdays at 7:00 PM. When do you study?",
+                                "I study on Tuesday at 7:00 PM. When do you study?"
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U07",
+            "unit_number": 7,
+            "title": "Everyday Activities",
+            "communicative_goal": "Descrever a frequência de hábitos diários e atividades de lazer utilizando advérbios de frequência.",
+            "main_can_do": "I can talk about my habits, free time, and how often I do everyday activities.",
+            "lessons": [
+                {
+                    "id": "A1_U07_L01",
+                    "lesson_number": 1,
+                    "title": "Everyday Activities",
+                    "objective": "Identificar atividades de estilo de vida e rotina ampliada.",
+                    "learning_targets": [
+                        "Identificar drink coffee, read, walk, cook, exercise"
+                    ],
+                    "core_vocabulary": [
+                        "drink",
+                        "walk",
+                        "cook",
+                        "exercise",
+                        "listen",
+                        "drive"
+                    ],
+                    "grammar": "Simple Present com verbos de ação cotidiana.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L01_Q01",
+                            "objective_id": "A1_U07_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "What do you do in the kitchen?",
+                            "options": ["Cook", "Drive", "Sleep", "Walk"],
+                            "correct_answer": "Cook",
+                            "acceptable_answers": ["Cook"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L02",
+                    "lesson_number": 2,
+                    "title": "Always / Usually",
+                    "objective": "Expressar frequência alta em hábitos diários com 'always' (100%) e 'usually' (80%).",
+                    "learning_targets": [
+                        "Posicionar advérbios antes do verbo principal",
+                        "Produzir 'I always drink coffee'"
+                    ],
+                    "core_vocabulary": [
+                        "always",
+                        "usually",
+                        "habit",
+                        "morning"
+                    ],
+                    "grammar": "Posição dos advérbios de frequência (Sujeito + Advérbio + Verbo).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L02_Q01",
+                            "objective_id": "A1_U07_L02_OBJ01",
+                            "skill": "writing",
+                            "type": "reorder_words",
+                            "prompt": "Reorder: [coffee / always / I / drink / .]",
+                            "options": [],
+                            "correct_answer": "I always drink coffee.",
+                            "acceptable_answers": [
+                                "I always drink coffee.",
+                                "I always drink coffee"
+                            ],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L03",
+                    "lesson_number": 3,
+                    "title": "Sometimes / Never",
+                    "objective": "Expressar frequência ocasional ('sometimes') e ausência de ação ('never').",
+                    "learning_targets": [
+                        "Produzir 'I sometimes play games'",
+                        "Produzir 'I never drink tea'"
+                    ],
+                    "core_vocabulary": [
+                        "sometimes",
+                        "never",
+                        "tea",
+                        "cook",
+                        "gym"
+                    ],
+                    "grammar": "Uso de never (sentido negativo sem 'don't').",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L03_Q01",
+                            "objective_id": "A1_U07_L03_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose: 'I ________ eat meat. (0% frequency)'",
+                            "options": [
+                                "never",
+                                "always",
+                                "usually",
+                                "sometimes"
+                            ],
+                            "correct_answer": "never",
+                            "acceptable_answers": ["never"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L04",
+                    "lesson_number": 4,
+                    "title": "My Habits",
+                    "objective": "Descrever hábitos pessoais utilizando a escala completa de advérbios de frequência.",
+                    "learning_targets": [
+                        "Estruturar 4 frases comparando diferentes níveis de frequência"
+                    ],
+                    "core_vocabulary": [
+                        "always",
+                        "usually",
+                        "sometimes",
+                        "never",
+                        "habits"
+                    ],
+                    "grammar": "Escala de frequência integrada.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L04_Q01",
+                            "objective_id": "A1_U07_L04_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write sentences about your habits using always, sometimes, and never:",
+                            "options": [],
+                            "correct_answer": "I always study English. I sometimes cook dinner. I never drink soda.",
+                            "acceptable_answers": [
+                                "I always study English. I sometimes cook dinner. I never drink soda.",
+                                "I always work. I sometimes play games. I never drink tea."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L05",
+                    "lesson_number": 5,
+                    "title": "Work and Study",
+                    "objective": "Falar sobre frequência aplicada a responsabilidades acadêmicas e profissionais.",
+                    "learning_targets": [
+                        "Descrever hábitos de trabalho ('I usually work from home')"
+                    ],
+                    "core_vocabulary": [
+                        "work from home",
+                        "office",
+                        "study online",
+                        "busy"
+                    ],
+                    "grammar": "Advérbios de frequência + trabalho/estudo.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L05_Q01",
+                            "objective_id": "A1_U07_L05_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'Lucas usually works from home on Fridays.' Where does Lucas work on Fridays?",
+                            "options": [
+                                "At home",
+                                "In the office",
+                                "At school"
+                            ],
+                            "correct_answer": "At home",
+                            "acceptable_answers": ["At home"],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L06",
+                    "lesson_number": 6,
+                    "title": "Free Time",
+                    "objective": "Descrever com que frequência realiza atividades de lazer e descanso.",
+                    "learning_targets": [
+                        "Falar sobre frequência de lazer nos finais de semana"
+                    ],
+                    "core_vocabulary": [
+                        "weekend",
+                        "relax",
+                        "play games",
+                        "go out"
+                    ],
+                    "grammar": "Advérbios aplicados a lazer.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L06_Q01",
+                            "objective_id": "A1_U07_L06_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Say what you usually do in your free time:",
+                            "options": [],
+                            "correct_answer": "I usually relax and watch series on weekends.",
+                            "acceptable_answers": [
+                                "I usually relax and watch series on weekends.",
+                                "I usually play games in my free time."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L07",
+                    "lesson_number": 7,
+                    "title": "Weekday vs. Weekend",
+                    "objective": "Contrastar a frequência de hábitos entre dias úteis e o fim de semana.",
+                    "learning_targets": [
+                        "Produzir contraste com 'always ... on weekdays, but ... on weekends'"
+                    ],
+                    "core_vocabulary": [
+                        "early",
+                        "late",
+                        "wake up",
+                        "sleep",
+                        "but"
+                    ],
+                    "grammar": "Conector 'but' contrastando frequências.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L07_Q01",
+                            "objective_id": "A1_U07_L07_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write a sentence contrasting waking up early on weekdays vs. late on weekends:",
+                            "options": [],
+                            "correct_answer": "I always wake up early on weekdays, but I sleep late on weekends.",
+                            "acceptable_answers": [
+                                "I always wake up early on weekdays, but I sleep late on weekends.",
+                                "I wake up early on weekdays, but I wake up late on weekends."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L08",
+                    "lesson_number": 8,
+                    "title": "Talking About Habits",
+                    "objective": "Manter uma conversa fluida perguntando e respondendo com 'How often do you...?'.",
+                    "learning_targets": [
+                        "Perguntar 'How often do you exercise?'",
+                        "Responder com advérbios"
+                    ],
+                    "core_vocabulary": [
+                        "how often",
+                        "every day",
+                        "once a week",
+                        "twice a week"
+                    ],
+                    "grammar": "How often do you + verb?",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L08_Q01",
+                            "objective_id": "A1_U07_L08_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'How often do you study English?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "I study English every day",
+                            "acceptable_answers": [
+                                "I study English every day",
+                                "I always study English",
+                                "Every day"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U07_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 7 Checkpoint",
+                    "objective": "Demonstrar domínio em relatar, contrastar e entrevistar sobre frequência de hábitos em simulação 360°.",
+                    "learning_targets": [
+                        "Usar a escala de advérbios com precisão",
+                        "Entrevistar alguém sobre 'How often'"
+                    ],
+                    "core_vocabulary": [
+                        "always",
+                        "usually",
+                        "sometimes",
+                        "never",
+                        "how often",
+                        "exercise",
+                        "cook"
+                    ],
+                    "grammar": "Consolidação de advérbios de frequência e 'How often'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U07_L09_Q01",
+                            "objective_id": "A1_U07_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Tell your partner how often you exercise and ask how often they cook:",
+                            "options": [],
+                            "correct_answer": "I usually exercise in the morning. How often do you cook?",
+                            "acceptable_answers": [
+                                "I usually exercise in the morning. How often do you cook?",
+                                "I always exercise. How often do you cook?"
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U08",
+            "unit_number": 8,
+            "title": "Around Town",
+            "communicative_goal": "Pedir e dar localizações simples e interagir no espaço urbano.",
+            "main_can_do": "I can ask for and give basic directions and find places in a town.",
+            "lessons": [
+                {
+                    "id": "A1_U08_L01",
+                    "lesson_number": 1,
+                    "title": "Places in Town",
+                    "objective": "Nomear estabelecimentos comerciais e pontos de referência urbanos essenciais.",
+                    "learning_targets": [
+                        "Identificar pharmacy, bank, supermarket, bus stop, hospital"
+                    ],
+                    "core_vocabulary": [
+                        "pharmacy",
+                        "bank",
+                        "supermarket",
+                        "bus stop",
+                        "hospital",
+                        "hotel"
+                    ],
+                    "grammar": "Substantivos de locais urbanos com artigo 'the'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L01_Q01",
+                            "objective_id": "A1_U08_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Where do you buy medicine?",
+                            "options": [
+                                "Pharmacy",
+                                "Bank",
+                                "Hotel",
+                                "Restaurant"
+                            ],
+                            "correct_answer": "Pharmacy",
+                            "acceptable_answers": ["Pharmacy"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L02",
+                    "lesson_number": 2,
+                    "title": "Where Is...?",
+                    "objective": "Perguntar a localização de estabelecimentos utilizando 'Where is the...?' educadamente.",
+                    "learning_targets": [
+                        "Produzir 'Excuse me, where is the bank?'",
+                        "Compreender perguntas de pedestres"
+                    ],
+                    "core_vocabulary": [
+                        "excuse me",
+                        "where is",
+                        "the",
+                        "please"
+                    ],
+                    "grammar": "Where is the + place?",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L02_Q01",
+                            "objective_id": "A1_U08_L02_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Ask someone politely where the nearest supermarket is:",
+                            "options": [],
+                            "correct_answer": "Excuse me, where is the supermarket?",
+                            "acceptable_answers": [
+                                "Excuse me, where is the supermarket?",
+                                "Where is the supermarket, please?"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L03",
+                    "lesson_number": 3,
+                    "title": "Near / Far",
+                    "objective": "Indicar distâncias relativas em relação ao ponto atual.",
+                    "learning_targets": [
+                        "Diferenciar near de far",
+                        "Responder 'It's near here' / 'It's far'"
+                    ],
+                    "core_vocabulary": [
+                        "near",
+                        "far",
+                        "here",
+                        "from here",
+                        "close"
+                    ],
+                    "grammar": "It's near / It's far from here.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L03_Q01",
+                            "objective_id": "A1_U08_L03_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Opposite of 'near':",
+                            "options": ["Far", "Next to", "Here", "Big"],
+                            "correct_answer": "Far",
+                            "acceptable_answers": ["Far"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L04",
+                    "lesson_number": 4,
+                    "title": "Next To / Opposite",
+                    "objective": "Utilizar preposições espaciais precisas para indicar a posição de prédios e locais.",
+                    "learning_targets": [
+                        "Aplicar 'next to'",
+                        "Aplicar 'opposite' (em frente / do outro lado)"
+                    ],
+                    "core_vocabulary": [
+                        "next to",
+                        "opposite",
+                        "between",
+                        "on the corner"
+                    ],
+                    "grammar": "Preposições de lugar urbanas.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L04_Q01",
+                            "objective_id": "A1_U08_L04_OBJ01",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "The pharmacy is ________ (ao lado) the bank.",
+                            "options": [],
+                            "correct_answer": "next to",
+                            "acceptable_answers": ["next to"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L05",
+                    "lesson_number": 5,
+                    "title": "Finding Places",
+                    "objective": "Interpretar referências espaciais em mapas simples e orientações de pedestres.",
+                    "learning_targets": [
+                        "Localizar pontos em mapas",
+                        "Identificar se um local fica perto ou longe"
+                    ],
+                    "core_vocabulary": [
+                        "street",
+                        "avenue",
+                        "map",
+                        "corner",
+                        "block"
+                    ],
+                    "grammar": "On [Street Name] / Next to [Place].",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L05_Q01",
+                            "objective_id": "A1_U08_L05_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'The hotel is on Main Street, next to the restaurant.' Where is the hotel?",
+                            "options": [
+                                "On Main Street, next to the restaurant",
+                                "On First Avenue",
+                                "Opposite the park"
+                            ],
+                            "correct_answer": "On Main Street, next to the restaurant",
+                            "acceptable_answers": [
+                                "On Main Street, next to the restaurant"
+                            ],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L06",
+                    "lesson_number": 6,
+                    "title": "Simple Directions",
+                    "objective": "Compreender e fornecer comandos simples de direção na rua.",
+                    "learning_targets": [
+                        "Compreender 'go straight', 'turn left', 'turn right'",
+                        "Dar direções simples"
+                    ],
+                    "core_vocabulary": [
+                        "go straight",
+                        "turn left",
+                        "turn right",
+                        "stop",
+                        "corner"
+                    ],
+                    "grammar": "Imperativo funcional para direções.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L06_Q01",
+                            "objective_id": "A1_U08_L06_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Direction command to continue walking forward:",
+                            "options": [
+                                "Go straight",
+                                "Turn left",
+                                "Turn right",
+                                "Stop"
+                            ],
+                            "correct_answer": "Go straight",
+                            "acceptable_answers": ["Go straight"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L07",
+                    "lesson_number": 7,
+                    "title": "Asking for Help",
+                    "objective": "Iniciar pedidos de ajuda na rua de forma educada.",
+                    "learning_targets": [
+                        "Produzir 'Can you help me?'",
+                        "Produzir 'I'm looking for the bus stop'"
+                    ],
+                    "core_vocabulary": [
+                        "can you help me",
+                        "looking for",
+                        "lost",
+                        "thank you"
+                    ],
+                    "grammar": "Can you help me? / I'm looking for...",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L07_Q01",
+                            "objective_id": "A1_U08_L07_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "You are lost. Ask a passerby for help:",
+                            "options": [],
+                            "correct_answer": "Excuse me, can you help me?",
+                            "acceptable_answers": [
+                                "Excuse me, can you help me?",
+                                "Can you help me, please?",
+                                "Excuse me, I'm lost."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L08",
+                    "lesson_number": 8,
+                    "title": "Around My Town",
+                    "objective": "Descrever pontos principais e localizações da própria cidade.",
+                    "learning_targets": [
+                        "Descrever 3 locais principais da cidade e como chegar"
+                    ],
+                    "core_vocabulary": [
+                        "downtown",
+                        "center",
+                        "square",
+                        "mall",
+                        "station"
+                    ],
+                    "grammar": "Integração de there is/are + preposições de lugar.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L08_Q01",
+                            "objective_id": "A1_U08_L08_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Describe two places in your town and where they are located:",
+                            "options": [],
+                            "correct_answer": "There is a big supermarket near my house. The bank is on Main Street, next to the pharmacy.",
+                            "acceptable_answers": [
+                                "There is a big supermarket near my house. The bank is on Main Street, next to the pharmacy.",
+                                "There is a mall downtown. The park is near my house."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U08_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 8 Checkpoint",
+                    "objective": "Demonstrar domínio em pedir e fornecer direções na rua em simulação urbana integrada.",
+                    "learning_targets": [
+                        "Entender direções ouvidas",
+                        "Explicar como chegar a um local com imperativos e preposições"
+                    ],
+                    "core_vocabulary": [
+                        "excuse me",
+                        "where is",
+                        "go straight",
+                        "turn left",
+                        "next to",
+                        "opposite"
+                    ],
+                    "grammar": "Consolidação de preposições espaciais e direções.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U08_L09_Q01",
+                            "objective_id": "A1_U08_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "A tourist asks: 'Excuse me, where is the bank?' Give directions (go straight, next to pharmacy):",
+                            "options": [],
+                            "correct_answer": "Go straight. The bank is next to the pharmacy.",
+                            "acceptable_answers": [
+                                "Go straight. The bank is next to the pharmacy.",
+                                "Go straight, it's next to the pharmacy."
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U09",
+            "unit_number": 9,
+            "title": "Food & Shopping",
+            "communicative_goal": "Realizar transações básicas de consumo, pedir comida e comprar itens.",
+            "main_can_do": "I can order food, ask for prices, and buy basic things in a store or restaurant.",
+            "lessons": [
+                {
+                    "id": "A1_U09_L01",
+                    "lesson_number": 1,
+                    "title": "Food & Drinks",
+                    "objective": "Identificar itens de cardápio e produtos de supermercado comuns.",
+                    "learning_targets": [
+                        "Identificar coffee, water, sandwich, burger, apple"
+                    ],
+                    "core_vocabulary": [
+                        "sandwich",
+                        "burger",
+                        "coffee",
+                        "water",
+                        "apple",
+                        "cake",
+                        "menu"
+                    ],
+                    "grammar": "Substantivos contáveis e incontáveis básicos (a sandwich, coffee).",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L01_Q01",
+                            "objective_id": "A1_U09_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Which item is commonly ordered for lunch?",
+                            "options": ["Sandwich", "Book", "Hotel", "Phone"],
+                            "correct_answer": "Sandwich",
+                            "acceptable_answers": ["Sandwich"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L02",
+                    "lesson_number": 2,
+                    "title": "At the Store",
+                    "objective": "Iniciar uma interação de compras com o atendente de balcão.",
+                    "learning_targets": [
+                        "Compreender 'Can I help you?'",
+                        "Responder 'Yes, please'"
+                    ],
+                    "core_vocabulary": [
+                        "store",
+                        "help",
+                        "look",
+                        "buy",
+                        "clerk",
+                        "customer"
+                    ],
+                    "grammar": "Can I help you? / Yes, please.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L02_Q01",
+                            "objective_id": "A1_U09_L02_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Store clerk: 'Hello! Can I help you?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "Yes, please",
+                            "acceptable_answers": [
+                                "Yes, please",
+                                "Yes, please.",
+                                "Yes, I'm looking for a coffee."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L03",
+                    "lesson_number": 3,
+                    "title": "I Want / I Need",
+                    "objective": "Expressar necessidades e intenções de compra de forma clara.",
+                    "learning_targets": [
+                        "Produzir 'I want a coffee'",
+                        "Produzir 'I need water'"
+                    ],
+                    "core_vocabulary": [
+                        "want",
+                        "need",
+                        "please",
+                        "bottle",
+                        "cup"
+                    ],
+                    "grammar": "I want + noun / I need + noun.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L03_Q01",
+                            "objective_id": "A1_U09_L03_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Build a sentence saying you want a cup of coffee, please:",
+                            "options": [],
+                            "correct_answer": "I want a cup of coffee, please.",
+                            "acceptable_answers": [
+                                "I want a coffee, please.",
+                                "I want a cup of coffee, please."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L04",
+                    "lesson_number": 4,
+                    "title": "Prices & Numbers",
+                    "objective": "Compreender valores monetários e preços em compras.",
+                    "learning_targets": [
+                        "Compreender preços como $5.50 (five fifty)",
+                        "Identificar 'dollars' e 'cents'"
+                    ],
+                    "core_vocabulary": [
+                        "dollar",
+                        "cent",
+                        "price",
+                        "cost",
+                        "numbers"
+                    ],
+                    "grammar": "Leitura de valores monetários.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L04_Q01",
+                            "objective_id": "A1_U09_L04_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "$10.00 -> How do you read this price?",
+                            "options": [
+                                "Ten dollars",
+                                "Ten cents",
+                                "Ten hours"
+                            ],
+                            "correct_answer": "Ten dollars",
+                            "acceptable_answers": ["Ten dollars"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L05",
+                    "lesson_number": 5,
+                    "title": "How Much Is It?",
+                    "objective": "Perguntar o preço de itens utilizando 'How much is it?' ou 'How much are they?'.",
+                    "learning_targets": [
+                        "Perguntar o preço de singular e plural",
+                        "Responder com 'It is $X'"
+                    ],
+                    "core_vocabulary": [
+                        "how much",
+                        "is it",
+                        "are they",
+                        "this",
+                        "these"
+                    ],
+                    "grammar": "How much is + singular / How much are + plural.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L05_Q01",
+                            "objective_id": "A1_U09_L05_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Ask the price of a shirt:",
+                            "options": [],
+                            "correct_answer": "How much is this shirt?",
+                            "acceptable_answers": [
+                                "How much is this shirt?",
+                                "How much is it?",
+                                "How much is this?"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L06",
+                    "lesson_number": 6,
+                    "title": "Ordering Food",
+                    "objective": "Fazer pedidos em cafés ou lanchonetes utilizando fórmulas educadas.",
+                    "learning_targets": [
+                        "Produzir 'Can I have a coffee, please?'",
+                        "Produzir 'I'd like a sandwich'"
+                    ],
+                    "core_vocabulary": [
+                        "can I have",
+                        "I'd like",
+                        "for here",
+                        "to go",
+                        "please"
+                    ],
+                    "grammar": "Can I have...? / I'd like...",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L06_Q01",
+                            "objective_id": "A1_U09_L06_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Order a bottle of water politely at a café:",
+                            "options": [],
+                            "correct_answer": "Can I have a water, please?",
+                            "acceptable_answers": [
+                                "Can I have a water, please?",
+                                "I'd like a water, please.",
+                                "Can I have a bottle of water, please?"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L07",
+                    "lesson_number": 7,
+                    "title": "Shopping Transactions",
+                    "objective": "Completar o ciclo de compra (escolher, perguntar preço, forma de pagamento e recibo).",
+                    "learning_targets": [
+                        "Compreender 'Cash or card?'",
+                        "Responder 'Card, please'"
+                    ],
+                    "core_vocabulary": [
+                        "cash",
+                        "card",
+                        "pay",
+                        "receipt",
+                        "total"
+                    ],
+                    "grammar": "Linguagem funcional de pagamento.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L07_Q01",
+                            "objective_id": "A1_U09_L07_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Cashier: 'That's $15. Cash or card?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "Card, please",
+                            "acceptable_answers": [
+                                "Card, please",
+                                "Card, please.",
+                                "By card, please.",
+                                "Cash, please."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L08",
+                    "lesson_number": 8,
+                    "title": "Real-Life Shopping",
+                    "objective": "Participar de uma conversa fluida em um comércio simulado.",
+                    "learning_targets": [
+                        "Manter 4 turnos de diálogo em compras"
+                    ],
+                    "core_vocabulary": [
+                        "size",
+                        "color",
+                        "take",
+                        "thank you",
+                        "have a nice day"
+                    ],
+                    "grammar": "Integração comunicativa de compras.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L08_Q01",
+                            "objective_id": "A1_U09_L08_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write dialogue sentences: order a burger, ask the price, and pay with card:",
+                            "options": [],
+                            "correct_answer": "Hi! Can I have a burger, please? How much is it? Card, please. Thank you!",
+                            "acceptable_answers": [
+                                "Hi! Can I have a burger, please? How much is it? Card, please. Thank you!",
+                                "Can I have a burger? How much is it? By card, please."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U09_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 9 Checkpoint",
+                    "objective": "Demonstrar domínio em realizar compras e pedidos em restaurante em simulação completa.",
+                    "learning_targets": [
+                        "Fazer pedido em café",
+                        "Perguntar preços e pagar",
+                        "Entender áudio de transação comercial"
+                    ],
+                    "core_vocabulary": [
+                        "can I have",
+                        "how much",
+                        "dollars",
+                        "card",
+                        "please",
+                        "sandwich",
+                        "coffee"
+                    ],
+                    "grammar": "Consolidação de fórmulas de pedido, how much e pagamentos.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U09_L09_Q01",
+                            "objective_id": "A1_U09_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "You are at a coffee shop. Order breakfast (sandwich + coffee), ask the total price, and pay with card:",
+                            "options": [],
+                            "correct_answer": "Can I have a sandwich and a coffee, please? How much is it? Card, please.",
+                            "acceptable_answers": [
+                                "Can I have a sandwich and a coffee, please? How much is it? Card, please.",
+                                "I'd like a sandwich and coffee, please. How much is it? By card, please."
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "A1_U10",
+            "unit_number": 10,
+            "title": "Past Experiences",
+            "communicative_goal": "Relatar acontecimentos passados simples recentes (ontem, último final de semana).",
+            "main_can_do": "I can talk about simple past actions and ask what someone did yesterday or last weekend.",
+            "lessons": [
+                {
+                    "id": "A1_U10_L01",
+                    "lesson_number": 1,
+                    "title": "Yesterday",
+                    "objective": "Introduzir o marcador temporal 'yesterday' e reconhecer verbos no passado.",
+                    "learning_targets": [
+                        "Identificar 'yesterday'",
+                        "Compreender que a ação já terminou"
+                    ],
+                    "core_vocabulary": [
+                        "yesterday",
+                        "morning",
+                        "afternoon",
+                        "night",
+                        "past"
+                    ],
+                    "grammar": "Marcadores temporais de passado.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L01_Q01",
+                            "objective_id": "A1_U10_L01_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Which word indicates the day before today?",
+                            "options": [
+                                "Yesterday",
+                                "Tomorrow",
+                                "Today",
+                                "Now"
+                            ],
+                            "correct_answer": "Yesterday",
+                            "acceptable_answers": ["Yesterday"],
+                            "evidence_target": "recognition"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L02",
+                    "lesson_number": 2,
+                    "title": "Past Actions",
+                    "objective": "Reconhecer a diferença entre ações habituais de presente e ações finalizadas no passado.",
+                    "learning_targets": ["Diferenciar 'I work' de 'I worked'"],
+                    "core_vocabulary": [
+                        "worked",
+                        "studied",
+                        "played",
+                        "stayed",
+                        "happened"
+                    ],
+                    "grammar": "Contraste Presente vs. Passado.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L02_Q01",
+                            "objective_id": "A1_U01_L02_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the past form: 'Yesterday, I ________ at home.'",
+                            "options": ["stayed", "stay", "stays", "am stay"],
+                            "correct_answer": "stayed",
+                            "acceptable_answers": ["stayed"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L03",
+                    "lesson_number": 3,
+                    "title": "Regular Past Verbs",
+                    "objective": "Aplicar a terminação '-ed' em verbos regulares familiares.",
+                    "learning_targets": [
+                        "Produzir worked, studied, played, cooked, cleaned"
+                    ],
+                    "core_vocabulary": [
+                        "worked",
+                        "studied",
+                        "played",
+                        "cooked",
+                        "cleaned",
+                        "watched"
+                    ],
+                    "grammar": "Regra ortográfica e morfológica do sufixo '-ed'.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L03_Q01",
+                            "objective_id": "A1_U10_L03_OBJ01",
+                            "skill": "writing",
+                            "type": "fill_in_the_blank",
+                            "prompt": "Past form of 'cook': Yesterday I ________ dinner.",
+                            "options": [],
+                            "correct_answer": "cooked",
+                            "acceptable_answers": ["cooked"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L04",
+                    "lesson_number": 4,
+                    "title": "Did You...?",
+                    "objective": "Formular perguntas fechadas no passado utilizando o auxiliar 'did'.",
+                    "learning_targets": [
+                        "Produzir 'Did you study yesterday?'",
+                        "Reconhecer que o verbo volta à forma base após 'did'"
+                    ],
+                    "core_vocabulary": [
+                        "did",
+                        "you",
+                        "yesterday",
+                        "study",
+                        "work",
+                        "play"
+                    ],
+                    "grammar": "Did you + verb (base form)?",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L04_Q01",
+                            "objective_id": "A1_U10_L04_OBJ01",
+                            "skill": "grammar",
+                            "type": "multiple_choice",
+                            "prompt": "Choose the correct question:",
+                            "options": [
+                                "Did you study yesterday?",
+                                "Did you studied yesterday?",
+                                "Do you studied yesterday?"
+                            ],
+                            "correct_answer": "Did you study yesterday?",
+                            "acceptable_answers": ["Did you study yesterday?"],
+                            "evidence_target": "accuracy"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L05",
+                    "lesson_number": 5,
+                    "title": "Yes, I Did / No, I Didn't",
+                    "objective": "Responder a perguntas de passado com respostas curtas precisas.",
+                    "learning_targets": [
+                        "Produzir 'Yes, I did'",
+                        "Produzir 'No, I didn't'"
+                    ],
+                    "core_vocabulary": ["yes", "no", "did", "didn't"],
+                    "grammar": "Short answers com did/didn't.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L05_Q01",
+                            "objective_id": "A1_U10_L05_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'Did you work yesterday?' (Negative response). You: '________.'",
+                            "options": [],
+                            "correct_answer": "No, I didn't",
+                            "acceptable_answers": [
+                                "No, I didn't",
+                                "No, I didn't.",
+                                "No, I did not."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L06",
+                    "lesson_number": 6,
+                    "title": "Talking About Yesterday",
+                    "objective": "Estruturar um relato contínuo de 3 ações realizadas no dia anterior.",
+                    "learning_targets": [
+                        "Relatar o que fez ontem encadeando frases afirmativas"
+                    ],
+                    "core_vocabulary": [
+                        "yesterday",
+                        "morning",
+                        "afternoon",
+                        "and then"
+                    ],
+                    "grammar": "Encadeamento de sentenças em Simple Past.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L06_Q01",
+                            "objective_id": "A1_U10_L06_OBJ01",
+                            "skill": "writing",
+                            "type": "sentence_building",
+                            "prompt": "Write sentences about what you did yesterday (morning, afternoon, night):",
+                            "options": [],
+                            "correct_answer": "Yesterday I worked in the morning. I studied English in the afternoon and I watched a movie at night.",
+                            "acceptable_answers": [
+                                "Yesterday I worked in the morning. I studied English in the afternoon and I watched a movie at night.",
+                                "Yesterday I worked, studied and watched TV."
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L07",
+                    "lesson_number": 7,
+                    "title": "Last Weekend",
+                    "objective": "Relatar atividades de lazer e descanso do último final de semana.",
+                    "learning_targets": [
+                        "Aplicar o marcador 'last weekend'",
+                        "Relatar lazer no passado"
+                    ],
+                    "core_vocabulary": [
+                        "last weekend",
+                        "stayed home",
+                        "played games",
+                        "visited"
+                    ],
+                    "grammar": "Last weekend + Simple Past.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L07_Q01",
+                            "objective_id": "A1_U10_L07_OBJ01",
+                            "skill": "reading",
+                            "type": "multiple_choice",
+                            "prompt": "Read: 'Last weekend I stayed home and cooked pizza.' What did the speaker do?",
+                            "options": [
+                                "Stayed home and cooked pizza",
+                                "Went to work",
+                                "Traveled to Canada"
+                            ],
+                            "correct_answer": "Stayed home and cooked pizza",
+                            "acceptable_answers": [
+                                "Stayed home and cooked pizza"
+                            ],
+                            "evidence_target": "comprehension"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L08",
+                    "lesson_number": 8,
+                    "title": "My Past Experience",
+                    "objective": "Manter uma conversa alternando entre perguntar e contar sobre o final de semana.",
+                    "learning_targets": [
+                        "Perguntar 'What did you do last weekend?'",
+                        "Responder detalhadamente"
+                    ],
+                    "core_vocabulary": [
+                        "what did you do",
+                        "fun",
+                        "good",
+                        "tired"
+                    ],
+                    "grammar": "What did you do + time marker?",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L08_Q01",
+                            "objective_id": "A1_U10_L08_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Interlocutor: 'What did you do yesterday?' You: '________.'",
+                            "options": [],
+                            "correct_answer": "I worked and studied English",
+                            "acceptable_answers": [
+                                "I worked and studied English",
+                                "I stayed home and played games",
+                                "I worked all day"
+                            ],
+                            "evidence_target": "production"
+                        }
+                    ]
+                },
+                {
+                    "id": "A1_U10_L09",
+                    "lesson_number": 9,
+                    "title": "Unit 10 Checkpoint",
+                    "objective": "Demonstrar domínio em relatar, perguntar e interagir sobre eventos passados em simulação completa.",
+                    "learning_targets": [
+                        "Relatar o dia anterior sem apoio",
+                        "Perguntar sobre o passado com 'did'",
+                        "Compreender narrativa no passado"
+                    ],
+                    "core_vocabulary": [
+                        "yesterday",
+                        "last weekend",
+                        "worked",
+                        "studied",
+                        "did you",
+                        "didn't"
+                    ],
+                    "grammar": "Consolidação de verbos regulares no passado, did e did not.",
+                    "activity_pool": [
+                        {
+                            "id": "A1_U10_L09_Q01",
+                            "objective_id": "A1_U10_L09_OBJ01",
+                            "skill": "interaction",
+                            "type": "dialogue_response",
+                            "prompt": "Tell a colleague what you did last weekend and ask if they studied on Sunday:",
+                            "options": [],
+                            "correct_answer": "Last weekend I stayed home and cooked. Did you study on Sunday?",
+                            "acceptable_answers": [
+                                "Last weekend I stayed home and cooked. Did you study on Sunday?",
+                                "I rested last weekend. Did you study on Sunday?"
+                            ],
+                            "evidence_target": "interaction"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "consolidation_check": {
+        "title": "A1 Integrated Check",
+        "scenarios": [
+            {
+                "id": "A1_SC_01",
+                "name": "Meeting People",
+                "focus_units": [1]
+            },
+            {
+                "id": "A1_SC_02",
+                "name": "Family & Friends",
+                "focus_units": [2]
+            },
+            {
+                "id": "A1_SC_03",
+                "name": "Daily Life & Routines",
+                "focus_units": [3, 6]
+            },
+            {
+                "id": "A1_SC_04",
+                "name": "Likes & Preferences",
+                "focus_units": [4]
+            },
+            {
+                "id": "A1_SC_05",
+                "name": "Describing Places & Town",
+                "focus_units": [5, 8]
+            },
+            {
+                "id": "A1_SC_06",
+                "name": "Food & Shopping",
+                "focus_units": [9]
+            },
+            {
+                "id": "A1_SC_07",
+                "name": "Past Experiences",
+                "focus_units": [10]
+            }
+        ]
+    },
+    "a1_plus_extension": {
+        "title": "A1+ Autonomy & Bridge Layer",
+        "modules": [
+            {
+                "id": "A1_PLUS_M01",
+                "title": "Longer Conversations",
+                "objective": "Sustentar trocas de 4 ou mais turnos sem bloqueios."
+            },
+            {
+                "id": "A1_PLUS_M02",
+                "title": "Connecting Ideas",
+                "objective": "Encadeamento fluido com 'and', 'but', 'because' e 'so'."
+            },
+            {
+                "id": "A1_PLUS_M03",
+                "title": "More Natural Speaking",
+                "objective": "Transição de frases isoladas para mini parágrafos orais."
+            },
+            {
+                "id": "A1_PLUS_M04",
+                "title": "Real-Life Scenarios",
+                "objective": "Resolução de situações combinadas (viagem, compras, apresentações)."
+            },
+            {
+                "id": "A1_PLUS_M05",
+                "title": "Integrated Challenge",
+                "objective": "Projeto prático unindo Listening, Speaking, Reading e Writing."
+            }
+        ]
+    }
+}

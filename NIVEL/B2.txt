@@ -1,0 +1,288 @@
+================================================================================
+                    ENGLISH JOURNEY — MASTER DOCUMENTATION
+                   B2 CURRICULUM MAP, UNITS & B2+ v2.0
+================================================================================
+
+ÍNDICE GERAL:
+├── 1. VISÃO GERAL DO NÍVEL B2
+│   ├── Papel Pedagógico e Salto Qualitativo (B1 → B1+ → B2)
+│   └── Evolução do Pensamento Comunicativo
+├── 2. AS 10 UNITS DO B2 (MAPEAMENTO COMPLETO DE TODAS AS LESSONS)
+│   ├── Unit 1: Identity, Goals & Change (Lessons 1 a 10)
+│   ├── Unit 2: Experiences, Stories & Perspectives (Lessons 1 a 10)
+│   ├── Unit 3: Work, Career & Professional Communication (Lessons 1 a 10)
+│   ├── Unit 4: Education & Personal Development (Lessons 1 a 10)
+│   ├── Unit 5: Society & Social Issues (Lessons 1 a 10)
+│   ├── Unit 6: Media, Technology & Information (Lessons 1 a 10)
+│   ├── Unit 7: Culture, Travel & Global Perspectives (Lessons 1 a 10)
+│   ├── Unit 8: Opinions, Arguments & Debate (Lessons 1 a 10)
+│   ├── Unit 9: Problems, Decisions & Negotiation (Lessons 1 a 10)
+│   └── Unit 10: Independent Communication (Lessons 1 a 10)
+├── 3. B2 CONSOLIDATION (INTEGRATED CHECK — AS 5 DIMENSÕES)
+├── 4. CAMADA DE EXTENSÃO: B2+ (OS 6 MÓDULOS & REAL-WORLD SIMULATION)
+└── 5. MATRIZ GLOBAL DE EVOLUÇÃO (A1 → A1+ → A2 → A2+ → B1 → B1+ → B2 → B2+)
+
+================================================================================
+1. VISÃO GERAL DO NÍVEL B2
+================================================================================
+
+No B1, o aluno desenvolve ideias, explica planos e resolve situações familiares[cite: 4].
+No B2, o objetivo é atingir comunicação com alta fluidez, precisão, variedade 
+e pensamento crítico em contextos familiares e abstratos/complexos[cite: 4]:
+- Desenvolver ideias em profundidade, fundamentando com razões e exemplos[cite: 4].
+- Comparar perspectivas divergentes e construir contra-argumentação estruturada[cite: 4].
+- Avaliar criticamente métodos, soluções, informações da mídia e pontos de vista[cite: 4].
+- Negociar acordos, ceder quando necessário e propor alternativas em equipe[cite: 4].
+- Manter comunicação espontânea com reparo fluido e precisão discursiva[cite: 4].
+
+SALTO QUALITATIVO (B1 vs. B2):
+• B1: "I can explain my idea." (Explicação de fatos e motivos pessoais)[cite: 4].
+• B2: "I can develop my idea, support it, compare perspectives, respond to 
+  other ideas and reach a conclusion." (Construção argumentativa e análise crítica)[cite: 4].
+
+================================================================================
+2. AS 10 UNITS DO B2 (MAPEAMENTO COMPLETO DE TODAS AS LESSONS)
+================================================================================
+
+--------------------------------------------------------------------------------
+🪜 UNIT 1 — IDENTITY, GOALS & CHANGE
+--------------------------------------------------------------------------------
+• Função Pedagógica: Desenvolver relatos pessoais com reflexão aprofundada sobre transformações, valores e prioridades.
+• Salto Qualitativo: De "I want to improve my career because..." (B1) para "My career goals have changed considerably over the last few years, mainly because my priorities have changed as well" (B2).
+• Can-Do Principal: "I can explain personal experiences, changes, goals, and decisions in a developed and nuanced way."
+• Core Language: Expressão de prioridades mutáveis, reflexão sobre sucessos/falhas, discurso contínuo de autoavaliação.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Who I Am Today (Identidade atual e valores essenciais)
+  - Lesson 2: How I've Changed (Reflexão sobre mudanças de personalidade e hábitos)
+  - Lesson 3: Personal Goals (Metas detalhadas de curto, médio e longo prazo)[cite: 4, 9]
+  - Lesson 4: Life Decisions (Análise de escolhas cruciais e seus impactos)
+  - Lesson 5: Success & Failure (Lições extraídas de vitórias e erros passados)
+  - Lesson 6: Challenges & Opportunities (Avaliação de cenários e momentos de virada)
+  - Lesson 7: Changing Priorities (Como o tempo redefine objetivos pessoais)
+  - Lesson 8: Explaining Personal Choices (Justificativa elaborada de decisões de vida)
+  - Lesson 9: My Future Perspective (Visão estratégica de futuro e próximos passos)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360° com a IA)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 2 — EXPERIENCES, STORIES & PERSPECTIVES
+--------------------------------------------------------------------------------
+• Função Pedagógica: Construir narrativas complexas que conectem contexto, causa, consequência, reações emocionais e múltiplos pontos de vista.
+• Pergunta Central: "What happened, why did it happen, how did you react, and what did you learn?"
+• Can-Do Principal: "I can develop a complex narrative, explain underlying causes and consequences, and reflect on experiences from different perspectives."
+• Core Language: Tempos narrativos combinados, marcadores discursivos avançados, recontagem sob a ótica de terceiros.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Complex Experiences (Estruturação de acontecimentos multifacetados)
+  - Lesson 2: Building a Story (Cenário, timing e tensão narrativa)
+  - Lesson 3: Different Perspectives (Como outras pessoas vivenciaram o mesmo fato)
+  - Lesson 4: Unexpected Events (Gerenciamento e relato de reviravoltas)
+  - Lesson 5: Cause & Consequence (Encadeamento causal detalhado)
+  - Lesson 6: Reactions & Emotions (Expressão matizada de sentimentos e atitudes)
+  - Lesson 7: Lessons From Experience (Conclusões e reflexões de aprendizado)
+  - Lesson 8: Retelling From Another Perspective (Recontar sob o olhar de outro personagem)
+  - Lesson 9: Developing a Narrative (Produção contínua e rica de narrativa longa)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 3 — WORK, CAREER & PROFESSIONAL COMMUNICATION
+--------------------------------------------------------------------------------
+• Função Pedagógica: Comunicação estratégica e profissional (propostas, reuniões, recomendações e tomadas de decisão corporativas).
+• Salto Qualitativo: "I believe this approach would be more effective because..."
+• Can-Do Principal: "I can participate actively in professional discussions, present proposals, give expert advice, and justify business decisions."
+• Core Language: Propostas formais, negociação de prazos, condução de reuniões, análise de pontos fortes da equipe.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Career Paths (Trajetórias de carreira e posicionamento profissional)
+  - Lesson 2: Professional Experience (Apresentação técnica de conquistas e projetos)[cite: 4, 9]
+  - Lesson 3: Skills & Strengths (Análise de competências centrais e diferenciais)[cite: 4]
+  - Lesson 4: Workplace Communication (Comunicação assertiva e alinhamentos de equipe)
+  - Lesson 5: Professional Problems (Identificação de gargalos operacionais e riscos)
+  - Lesson 6: Giving Professional Advice (Recomendações técnicas e consultivas)
+  - Lesson 7: Meetings & Discussions (Condução, intervenção e moderação de reuniões)
+  - Lesson 8: Presenting Ideas (Estruturação lógica e defesa de propostas)
+  - Lesson 9: Professional Decisions (Alinhamento de estratégias corporativas)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 4 — EDUCATION & PERSONAL DEVELOPMENT
+--------------------------------------------------------------------------------
+• Função Pedagógica: Avaliação crítica de sistemas de ensino, estratégias pedagógicas e métodos de aprendizagem.
+• Salto Qualitativo: De "I like this method" (B1) para "I think this method is effective for beginners, although it may not work as well for more advanced learners" (B2).
+• Can-Do Principal: "I can critically evaluate learning methods, discuss educational systems, and analyze personal development strategies."
+• Core Language: Estruturas de avaliação comparativa (effective, limited, advantageous, questionable), motivação e desafios cognitivos.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Learning Experiences (Análise crítica da formação acadêmica e cursos)[cite: 4]
+  - Lesson 2: Education Systems (Contraste entre modelos educacionais globais)
+  - Lesson 3: Learning Strategies (Eficácia de abordagens e técnicas de estudo)[cite: 4]
+  - Lesson 4: Motivation (Fatores intrínsecos e extrínsecos de persistência)
+  - Lesson 5: Challenges in Learning (Superação de bloqueios e limitações práticas)
+  - Lesson 6: Skills & Abilities (Desenvolvimento contínuo de competências)[cite: 4]
+  - Lesson 7: Personal Development (Planejamento de crescimento holístico)
+  - Lesson 8: Different Ways of Learning (Comparações de metodologias e formatos)
+  - Lesson 9: Evaluating Learning Methods (Análise estruturada de prós e contras)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 5 — SOCIETY & SOCIAL ISSUES
+--------------------------------------------------------------------------------
+• Função Pedagógica: Debater questões sociais contemporâneas construindo a cadeia lógica completa:
+  Problem → Cause → Effect → Perspective → Possible Solution → Evaluation
+• Can-Do Principal: "I can discuss complex social issues, explain causes and effects, and critically evaluate proposed solutions."
+• Core Language: Mudança social, dinâmica urbana, impacto comunitário, análise de viabilidade de soluções públicas.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Life in Modern Society (Desafios do estilo de vida contemporâneo)
+  - Lesson 2: Communities (Engajamento cívico e organização comunitária)
+  - Lesson 3: Social Change (Fatores que impulsionam transformações culturais)
+  - Lesson 4: Everyday Social Issues (Discussão de problemas urbanos e cotidianos)
+  - Lesson 5: Different Perspectives (Análise de visões conflitantes da sociedade)
+  - Lesson 6: Causes & Effects (Identificação de raízes e desdobramentos)
+  - Lesson 7: Possible Solutions (Formulação de propostas e intervenções)
+  - Lesson 8: Discussing Social Issues (Debate colaborativo sobre prioridades)
+  - Lesson 9: Evaluating Solutions (Avaliação de impacto, custos e benefícios)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 6 — MEDIA, TECHNOLOGY & INFORMATION
+--------------------------------------------------------------------------------
+• Função Pedagógica: Desenvolver letramento crítico sobre mídias, avaliando confiabilidade de fontes, viés do autor e impacto ético da tecnologia.
+• Can-Do Principal: "I can evaluate the reliability of media and information, analyze digital trends, and discuss the societal risks of technology."
+• Core Language: Confiabilidade de dados, viés de autoria (author's point of view), ética digital, algoritmos, privacidade e riscos tecnológicos.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Technology & Society (Transformações tecnológicas estruturais)[cite: 4, 9]
+  - Lesson 2: Digital Communication (Evolução da linguagem e interações online)[cite: 4]
+  - Lesson 3: Media & Information (Padrões de consumo e saturação de dados)
+  - Lesson 4: News & Perspectives (Identificação de linhas editoriais e enquadramentos)
+  - Lesson 5: Reliable Information (Critérios para validação de fatos e combate a boatos)
+  - Lesson 6: Online Behavior (Comportamento digital, polarização e pegada virtual)
+  - Lesson 7: Advantages & Risks (Balanço crítico de IA, automação e conectividade)
+  - Lesson 8: Technology & Change (O futuro do trabalho e das relações humanas)
+  - Lesson 9: Discussing Technology (Debate fundamentado sobre regulação e avanços)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 7 — CULTURE, TRAVEL & GLOBAL PERSPECTIVES
+--------------------------------------------------------------------------------
+• Função Pedagógica: Analisar choque cultural, expectativas implícitas de convivência e adaptação a costumes internacionais.
+• Salto Qualitativo: "One of the most interesting aspects of visiting Canada was noticing how certain cultural expectations differed from those I was familiar with."
+• Can-Do Principal: "I can analyze cultural differences in depth, discuss global connections, and reflect on identity and adaptation abroad."
+• Core Language: Expectativas culturais implícitas, choque de adaptação, viver no exterior, comunicação intercultural.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Cultural Experiences (Relato de vivências e contato com o diferente)[cite: 4]
+  - Lesson 2: Cultural Differences (Normas sociais, etiqueta e valores subjacentes)
+  - Lesson 3: Global Connections (Globalização e interdependência econômica/cultural)
+  - Lesson 4: Travel & Identity (Como viajar transforma a visão de si mesmo)
+  - Lesson 5: Living Abroad (Desafios práticos e psicológicos da expatriação)
+  - Lesson 6: Adapting to Different Cultures (Processo de assimilação e flexibilidade)
+  - Lesson 7: Different Perspectives (Desconstrução de estereótipos)[cite: 4]
+  - Lesson 8: Culture & Communication (Ruídos comunicativos causados por cultura)
+  - Lesson 9: Discussing Cultural Differences (Debate maduro sobre costumes globais)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 8 — OPINIONS, ARGUMENTS & DEBATE
+--------------------------------------------------------------------------------
+• Função Pedagógica: Construir argumentação formal completa com tese, evidência, contra-argumento e refutação:
+  Claim → Reason → Example → Counterpoint → Response → Conclusion
+• Salto Qualitativo: "I believe remote work can be highly effective because it gives employees more flexibility. However, some people argue that working remotely can reduce collaboration. In my view, this depends largely on how the company organizes communication."
+• Can-Do Principal: "I can construct structured arguments, respond effectively to counterpoints, evaluate opposing claims, and reach a reasoned conclusion."
+• Core Language: Operadores argumentativos (In my view, It is often claimed that, This depends largely on, While it may be true that).
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Developing an Opinion (Construção clara da tese central)
+  - Lesson 2: Supporting an Argument (Uso de dados, razões e fatos)
+  - Lesson 3: Agreeing & Disagreeing (Nuances de concordância parcial e oposição)[cite: 4]
+  - Lesson 4: Counterarguments (Mapeamento de objeções contrárias)
+  - Lesson 5: Comparing Perspectives (Pesagem de teses opostas)
+  - Lesson 6: Evaluating Arguments (Identificação de falhas lógicas e argumentos fracos)
+  - Lesson 7: Structured Discussion (Manutenção da ordem discursiva em debate)
+  - Lesson 8: Debate (Enfrentamento dialético colaborativo)
+  - Lesson 9: Reaching a Conclusion (Síntese equilibrada dos pontos discutidos)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 9 — PROBLEMS, DECISIONS & NEGOTIATION
+--------------------------------------------------------------------------------
+• Função Pedagógica: Interação estratégica sob divergência (defender posicionamento, negociar termos, ceder estrategicamente e fechar acordos).
+• Can-Do Principal: "I can negotiate complex situations, defend priorities, handle strong disagreement, and lead collaborative problem solving."
+• Core Language: Linguagem de concessão (If you agree to X, we can do Y), mediação de conflitos, priorização de recursos limitados.
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Complex Problems (Mapeamento de cenários com múltiplos entraves)
+  - Lesson 2: Evaluating Options (Comparação de alternativas inviáveis/viáveis)
+  - Lesson 3: Making Decisions (Tomada de decisão sob pressão de tempo/recursos)[cite: 4]
+  - Lesson 4: Negotiating (Técnicas de troca de benefícios e alinhamentos)
+  - Lesson 5: Finding Compromises (Ceder em pontos secundários para fechar acordos)
+  - Lesson 6: Explaining Priorities (Defesa firme de linhas vermelhas essenciais)
+  - Lesson 7: Handling Disagreement (Desarmar atritos e manter o foco no objetivo)
+  - Lesson 8: Collaborative Problem Solving (Construção coletiva de soluções)
+  - Lesson 9: Reaching Agreement (Formalização de consensos e termos finais)
+  - Lesson 10: Unit Checkpoint (Demonstração prática 360°)
+
+--------------------------------------------------------------------------------
+🪜 UNIT 10 — INDEPENDENT COMMUNICATION
+--------------------------------------------------------------------------------
+• Função Pedagógica: Autonomia total. A IA atua como interlocutora natural (sem instruções de apoio) avaliando conversação estendida, transição de temas e reações imediatas.
+• Can-Do Principal: "I can independently lead, maintain, and conclude extended discussions on unfamiliar and complex topics with high fluency and precision."
+• Mapeamento das 10 Lessons:
+  - Lesson 1: Extended Conversations (Sustentação de diálogos longos sem perda de ritmo)
+  - Lesson 2: Developing Topics (Aprofundamento orgânico de temas sem desvios)
+  - Lesson 3: Changing Perspectives (Transição voluntária de pontos de vista)
+  - Lesson 4: Clarifying Complex Ideas (Explicação de conceitos difíceis com simplicidade)
+  - Lesson 5: Handling Misunderstandings (Reparo instantâneo de ruídos de comunicação)
+  - Lesson 6: Responding to Unexpected Questions (Improvisação rápida e estruturada)[cite: 4]
+  - Lesson 7: Presenting & Explaining (Monólogo expositivo claro com sessão de perguntas)
+  - Lesson 8: Discussion Challenge (Debate dinâmico com a IA apresentando resistência)
+  - Lesson 9: Real-World Communication Challenge (Simulação complexa sem roteiro prévio)
+  - Lesson 10: B2 Unit Checkpoint (Demonstração prática final do nível B2)
+
+================================================================================
+3. B2 CONSOLIDATION (INTEGRATED CHECK)
+================================================================================
+
+Após a Unit 10, o aluno realiza a verificação de proficiência integrada do B2:
+• 🗣️ Speaking: Apresentação estruturada de uma posição sobre tema complexo seguida de sabatina de perguntas.
+• 👂 Listening: Compreensão de áudios/palestras longas, identificando tese, argumentos, viés e consequências implícitas.
+• 📖 Reading: Análise de artigos, relatórios e textos de opinião densos, identificando intenção e linhas argumentativas.
+• ✍️ Writing: Redação de ensaios, relatórios profissionais, e-mails estratégicos e textos de opinião estruturados.
+• 🤝 Interaction: Simulação com a IA introduzindo atritos intencionais (desacordo, pergunta inesperada, mal-entendido e contra-argumentos).
+
+================================================================================
+4. CAMADA DE EXTENSÃO: B2+ (TRANSIÇÃO PARA NÍVEIS SUPERIORES)
+================================================================================
+
+O B2+ não é C1; é a consolidação do B2 em nível máximo de autonomia, 
+pensamento crítico, precisão discursiva e flexibilidade de negociação[cite: 4].
+
+OS 6 MÓDULOS DE AUTONOMIA DO B2+:
+• MÓDULO B2+.1 — Advanced Discussion: Sustentação de debates longos, refutação elegante de teses e síntese conclusiva.
+• MÓDULO B2+.2 — Complex Problem Solving:
+  Analyze → Compare → Prioritize → Discuss → Negotiate → Decide → Justify
+• MÓDULO B2+.3 — Presentation & Explanation:
+  Introduction → Main Point → Supporting Ideas → Examples → Conclusion → Q&A
+• MÓDULO B2+.4 — Critical Communication: Avaliação de solidez de argumentos, pressupostos ocultos e falácias lógicas.
+• MÓDULO B2+.5 — Flexibility & Repair:
+  * "Sorry, what I meant was..."
+  * "Let me explain that another way."
+  * "I see your point, but..."
+• MÓDULO B2+.6 — B2 → Next Level Bridge: Domínio de abstrações, sofisticação de vocabulário e naturalidade idiomática.
+
+B2+ FINAL CHALLENGE (REAL-WORLD SIMULATION):
+Simulação imersiva completa: "Leading a major project planning team"
+1. Understand the situation → 2. Ask questions → 3. Identify the problem → 
+4. Present your position → 5. Listen to another perspective → 6. Respond → 
+7. Negotiate → 8. Compare alternatives → 9. Make a decision → 
+10. Explain the decision → 11. Answer unexpected questions.
+
+================================================================================
+5. MATRIZ GLOBAL DE EVOLUÇÃO (A1 → A1+ → A2 → A2+ → B1 → B1+ → B2 → B2+)
+================================================================================
+
+PROGRESSÃO PEDAGÓGICA CENTRAL DO SISTEMA:
+• A1: Can I communicate basic information? (Básico / Familiar imediato)[cite: 4]
+• A2: Can I communicate in familiar situations? (Familiar / Descritivo / Rotina)[cite: 4]
+• B1: Can I develop and explain ideas independently? (Independente / Narrativo / Argumentativo)[cite: 4]
+• B2: Can I discuss, evaluate, negotiate and communicate effectively across a wider range of situations? (Fluido / Crítico / Analítico)[cite: 4]
+
+ARQUITETURA MACRO UNIFICADA DO LEARNING ENGINE:
+O motor operacional (Learning Engine) permanece o mesmo para toda a plataforma[cite: 5, 6, 10]:
+Level Objectives → Practice Pool → Evidence Gathering → AI Adaptation → Reassessment → Mastery → Extension (+) → Next Level.
+
+================================================================================
+                 FIM DO DOCUMENTO — B2 / B2+ CURRICULUM MAP v2.0
+================================================================================

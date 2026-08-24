@@ -1,0 +1,1538 @@
+# English Journey
+
+## Visão, Objetivo e Sistema de Aprendizagem
+
+## 1. O que é o English Journey?
+
+O **English Journey** será uma plataforma de aprendizagem de inglês construída para transformar o estudo em uma jornada contínua, personalizada e mensurável.
+
+A ideia não é simplesmente apresentar exercícios.
+
+O objetivo é responder à pergunta:
+
+> **“O que eu devo estudar hoje para melhorar meu inglês?”**
+
+O usuário entra no sistema, informa seu nível, seus objetivos e suas dificuldades. A partir dessas informações, o English Journey monta uma jornada de estudos adequada para ele.
+
+O sistema acompanha sua evolução, identifica dificuldades, recomenda conteúdos e adapta os próximos estudos.
+
+A inspiração pode vir de plataformas como o Duolingo na questão da **consistência diária e progressão**, mas o English Journey terá uma proposta diferente:
+
+**menos foco em simplesmente completar exercícios e mais foco em desenvolver a capacidade real de usar o inglês.**
+
+---
+
+# 2. O princípio central
+
+O English Journey não deve ser organizado simplesmente como:
+
+> Vocabulary → Grammar → Listening → Speaking
+
+Essas páginas são apenas as **áreas do conhecimento**.
+
+A verdadeira estrutura será:
+
+> **Nível → Objetivo → Plano → Estudo → Prática → Avaliação → Feedback → Adaptação → Progresso**
+
+Isso é extremamente importante.
+
+O usuário não deveria entrar no Vocabulary pensando:
+
+> “Qual exercício eu faço?”
+
+Ele deveria entrar pensando:
+
+> **“O que o English Journey preparou para eu aprender hoje?”**
+
+---
+
+# 3. O conceito de jornada
+
+Cada usuário terá uma jornada própria.
+
+Exemplo:
+
+### Usuário iniciante
+
+O sistema identifica:
+
+* nível aproximado A1;
+* pouco vocabulário;
+* dificuldade com verbos básicos;
+* dificuldade para montar frases;
+* pouca compreensão auditiva;
+* objetivo: conversação.
+
+O sistema poderia montar:
+
+**Today's Journey**
+
+1. Vocabulary — 10 palavras sobre rotina
+2. Grammar — verbo to be
+3. Listening — diálogo simples sobre apresentação
+4. Speaking — apresentar-se em inglês
+5. Review — revisar palavras aprendidas anteriormente
+
+Ao terminar, o sistema registra os resultados.
+
+No dia seguinte, a jornada muda de acordo com o desempenho.
+
+---
+
+# 4. O sistema de níveis
+
+A base de progressão será inspirada no **CEFR**, que organiza proficiência em A1, A2, B1, B2, C1 e C2, além de níveis complementares. O CEFR também trabalha com descritores do que o estudante consegue efetivamente fazer com a língua.
+
+Por isso, o English Journey não deve dizer apenas:
+
+> “Você está no nível B1.”
+
+Deve dizer:
+
+> “Você está desenvolvendo habilidades de nível B1 e consegue realizar determinadas tarefas em inglês.”
+
+A plataforma poderá trabalhar inicialmente com:
+
+### Beginner
+
+* Pre-A1
+* A1
+
+### Elementary / Pre-Intermediate
+
+* A2
+
+### Intermediate
+
+* B1
+
+### Upper-Intermediate
+
+* B2
+
+### Advanced
+
+* C1
+
+### Proficiency
+
+* C2
+
+No começo do projeto podemos trabalhar principalmente com **A1 → B2**, e posteriormente expandir.
+
+---
+
+# 5. O primeiro passo: diagnóstico
+
+Antes de liberar uma jornada completa, o English Journey deverá conhecer o estudante.
+
+Teremos um:
+
+## Initial Assessment
+
+Um diagnóstico inicial simples e progressivo.
+
+Não será apenas uma prova de múltipla escolha.
+
+Poderemos avaliar:
+
+### Vocabulary
+
+O usuário reconhece palavras?
+
+Consegue associá-las ao significado?
+
+Consegue utilizá-las em frases?
+
+### Grammar
+
+Consegue formar frases?
+
+Reconhece estruturas?
+
+Sabe utilizar presente, passado, futuro etc.?
+
+### Reading
+
+Consegue compreender textos pequenos?
+
+### Listening
+
+Consegue compreender frases faladas?
+
+### Speaking
+
+Consegue responder perguntas simples?
+
+### Writing
+
+Consegue escrever pequenas respostas?
+
+---
+
+# 6. Perfil de aprendizagem
+
+Depois do diagnóstico, teremos algo como:
+
+## Your English Profile
+
+**Estimated Level:** A2
+
+**Vocabulary:** A2
+**Grammar:** A1+
+**Listening:** A1
+**Reading:** A2
+**Speaking:** A1+
+**Writing:** A2
+
+Isso é muito mais interessante do que simplesmente mostrar:
+
+> “Seu nível é A2.”
+
+Porque agora sabemos **onde o estudante precisa melhorar**.
+
+---
+
+# 7. Objetivo pessoal
+
+O nível não será a única coisa utilizada pelo sistema.
+
+O usuário também deverá informar:
+
+### Why are you learning English?
+
+Por exemplo:
+
+* Conversação
+* Trabalho
+* Viagem
+* Estudos
+* Programação/Tecnologia
+* Morar no exterior
+* Provas
+* Filmes e séries
+* Jogos
+* Cultura
+* Desenvolvimento pessoal
+* Inglês acadêmico
+* Inglês profissional
+
+Isso permitirá que duas pessoas do mesmo nível tenham jornadas diferentes.
+
+---
+
+# 8. A jornada diária
+
+O coração do English Journey será:
+
+# Today's Journey
+
+O usuário abrirá o Dashboard e encontrará algo parecido com:
+
+**Good morning, João.**
+
+### Today's Goal
+
+**Improve your ability to talk about your daily routine.**
+
+---
+
+### 01 — Vocabulary
+
+Learn 10 useful words.
+
+**15 min**
+
+---
+
+### 02 — Grammar
+
+Simple Present.
+
+**15 min**
+
+---
+
+### 03 — Listening
+
+Listen to a short conversation about daily routines.
+
+**10 min**
+
+---
+
+### 04 — Speaking
+
+Talk about your own daily routine.
+
+**10 min**
+
+---
+
+### 05 — Review
+
+Review today's vocabulary.
+
+**5 min**
+
+---
+
+### Daily Progress
+
+**42 / 55 XP**
+
+---
+
+A pessoa não precisa decidir sozinha o que estudar.
+
+**O sistema guia.**
+
+---
+
+# 9. Vocabulary
+
+O Vocabulary não será simplesmente:
+
+> Palavra → tradução.
+
+Ele será construído para ensinar **uso da palavra**.
+
+Uma palavra poderá possuir:
+
+* palavra;
+* significado;
+* pronúncia;
+* áudio;
+* classe gramatical;
+* exemplos;
+* frases;
+* sinônimos;
+* antônimos;
+* nível CEFR;
+* tema;
+* frequência;
+* palavras relacionadas;
+* expressões;
+* contexto.
+
+Por exemplo:
+
+## RUN
+
+**Verb**
+
+> correr
+
+Mas depois:
+
+> I run every morning.
+
+E posteriormente:
+
+> I have to run to work.
+
+O usuário aprende não apenas **o significado**, mas **como a palavra funciona na língua**.
+
+O próprio British Council organiza materiais de vocabulary por nível e trabalha significado, pronúncia, ortografia, tópicos e exercícios interativos.
+
+---
+
+# 10. Vocabulary também terá revisão
+
+Não queremos ensinar uma palavra hoje e esquecê-la amanhã.
+
+Portanto, teremos um sistema de revisão.
+
+Exemplo:
+
+**Today**
+
+Learn:
+
+> travel
+
+Depois:
+
+**Tomorrow**
+
+Review:
+
+> travel
+
+Depois:
+
+**3 days later**
+
+Review:
+
+> travel
+
+Depois:
+
+**1 week later**
+
+Review:
+
+> travel
+
+Com o tempo, palavras dominadas aparecem menos frequentemente e palavras difíceis aparecem mais.
+
+Isso transforma Vocabulary em um sistema contínuo de memória, e não em uma lista.
+
+---
+
+# 11. Grammar
+
+Grammar será diferente de um livro de regras.
+
+A estrutura será:
+
+### Understand
+
+Explicação simples.
+
+### Observe
+
+Exemplos reais.
+
+### Practice
+
+Exercícios.
+
+### Apply
+
+O usuário precisa utilizar a estrutura.
+
+### Produce
+
+Ele cria suas próprias frases.
+
+Exemplo:
+
+## Simple Past
+
+Primeiro:
+
+> I played soccer yesterday.
+
+Depois:
+
+> Did you play soccer yesterday?
+
+Depois:
+
+> I didn't play soccer yesterday.
+
+Depois:
+
+> Tell me what you did yesterday.
+
+Assim, a gramática sai da teoria e vai para o uso.
+
+O British Council também estrutura seus materiais de Grammar por nível e combina explicações com exercícios de prática.
+
+---
+
+# 12. Listening
+
+Listening não será apenas:
+
+> ▶️ ouvir áudio
+> responder pergunta.
+
+Teremos níveis de dificuldade.
+
+### Stage 1
+
+Ouvir palavras.
+
+### Stage 2
+
+Ouvir frases.
+
+### Stage 3
+
+Ouvir pequenos diálogos.
+
+### Stage 4
+
+Ouvir conversas naturais.
+
+### Stage 5
+
+Ouvir diferentes sotaques e velocidades.
+
+Depois podemos adicionar:
+
+* transcrição;
+* palavras desconhecidas;
+* repetição;
+* compreensão;
+* ditado;
+* shadowing;
+* identificação de palavras;
+* perguntas sobre o áudio.
+
+Materiais do British Council, por exemplo, organizam listening por níveis CEFR e utilizam gravações de situações diferentes acompanhadas de atividades interativas.
+
+---
+
+# 13. Speaking
+
+Essa será uma das partes mais importantes do English Journey.
+
+Porque nosso objetivo final não é apenas:
+
+> “Eu entendo inglês.”
+
+É:
+
+> **“Eu consigo usar inglês.”**
+
+O Speaking poderá possuir:
+
+### Read
+
+Leia a frase.
+
+### Repeat
+
+Repita o áudio.
+
+### Describe
+
+Descreva uma imagem.
+
+### Answer
+
+Responda uma pergunta.
+
+### Conversation
+
+Converse com a IA.
+
+### Free Speaking
+
+Fale livremente sobre determinado assunto.
+
+A IA poderá analisar posteriormente:
+
+* clareza;
+* vocabulário;
+* gramática;
+* pronúncia;
+* construção das frases;
+* palavras repetidas;
+* evolução.
+
+O British Council também trabalha speaking por nível e situações comunicativas, utilizando vídeos, frases úteis e exercícios interativos.
+
+---
+
+# 14. Writing
+
+Embora inicialmente não esteja entre as páginas principais que criamos, devemos considerar Writing como uma competência transversal.
+
+O usuário poderá escrever:
+
+> “What did you do yesterday?”
+
+A IA poderá analisar:
+
+* gramática;
+* vocabulário;
+* construção;
+* erros recorrentes;
+* naturalidade;
+* sugestões de melhoria.
+
+E o sistema poderá registrar:
+
+**Recurring mistake**
+
+> He go → He goes
+
+Depois esse erro poderá voltar para a jornada futura.
+
+---
+
+# 15. Grammar + Vocabulary + Listening + Speaking não serão separados
+
+Esse é um dos pontos mais importantes do projeto.
+
+As áreas devem conversar entre si.
+
+Imagine que a lição do dia seja:
+
+# Daily Routine
+
+Vocabulary:
+
+* wake up
+* work
+* study
+* eat
+* sleep
+
+Grammar:
+
+* Simple Present
+
+Listening:
+
+Uma pessoa falando sobre sua rotina.
+
+Speaking:
+
+> “Tell me about your daily routine.”
+
+Writing:
+
+> “Write five sentences about your day.”
+
+Agora temos uma **unidade de aprendizagem completa**.
+
+Não são cinco páginas independentes.
+
+É **um assunto estudado por diferentes perspectivas**.
+
+---
+
+# 16. Learning Units
+
+A partir disso, teremos uma estrutura fundamental:
+
+## Learning Unit
+
+Exemplo:
+
+**Unit 01 — Introductions**
+
+Objetivo:
+
+> Introduce yourself in English.
+
+### Vocabulary
+
+* name
+* age
+* country
+* city
+* job
+* student
+
+### Grammar
+
+* Verb to be
+* Personal pronouns
+
+### Listening
+
+Conversation between two people meeting for the first time.
+
+### Speaking
+
+Introduce yourself.
+
+### Writing
+
+Write a short introduction.
+
+### Review
+
+Review the vocabulary and grammar.
+
+---
+
+# 17. O sistema será baseado em objetivos
+
+Não queremos:
+
+> “Complete 10 exercícios.”
+
+Queremos:
+
+> **“Ao terminar esta unidade, você deverá conseguir fazer X.”**
+
+Isso combina muito bem com a filosofia do CEFR, que trabalha com objetivos claros e descritores de capacidades do aprendiz.
+
+Exemplo:
+
+### Goal
+
+> I can introduce myself and ask basic questions about another person.
+
+Esse será o verdadeiro progresso.
+
+---
+
+# 18. Progress
+
+A página Progress será muito mais do que uma porcentagem.
+
+Ela deverá mostrar:
+
+### Overall
+
+**English Level**
+
+B1
+
+### Skills
+
+Vocabulary — 72%
+Grammar — 64%
+Listening — 48%
+Speaking — 41%
+Reading — 70%
+Writing — 55%
+
+### Consistency
+
+7-day streak
+
+### Study Time
+
+12h 43m
+
+### Words Learned
+
+843
+
+### Lessons Completed
+
+67
+
+### Speaking Sessions
+
+24
+
+---
+
+# 19. Progress também mostrará fraquezas
+
+Por exemplo:
+
+> **Your weakest skill is Listening.**
+
+E:
+
+> You frequently struggle with past tense questions.
+
+Isso alimentará o sistema de recomendação.
+
+---
+
+# 20. O Dashboard será o cérebro visual
+
+O Dashboard não deve ser apenas estatísticas.
+
+Ele deverá responder:
+
+### Where am I?
+
+Meu nível atual.
+
+### Where am I going?
+
+Meu objetivo.
+
+### What should I do today?
+
+Minha jornada diária.
+
+### What am I struggling with?
+
+Minhas dificuldades.
+
+### What did I improve?
+
+Minha evolução.
+
+### What comes next?
+
+Minha próxima etapa.
+
+---
+
+# 21. A IA
+
+Aqui começa uma das partes mais ambiciosas do projeto.
+
+A IA não deverá simplesmente ser um chatbot.
+
+Ela será uma espécie de:
+
+# AI Learning Assistant
+
+Ela poderá:
+
+* explicar gramática;
+* conversar;
+* corrigir textos;
+* gerar exercícios;
+* adaptar dificuldade;
+* explicar palavras;
+* criar exemplos;
+* analisar respostas;
+* analisar speaking;
+* sugerir revisões;
+* identificar erros recorrentes;
+* recomendar conteúdos;
+* criar situações de conversação;
+* responder dúvidas;
+* adaptar explicações ao nível do aluno.
+
+Mas existe uma regra:
+
+> **A IA não será responsável por inventar todo o currículo.**
+
+O currículo deverá ter uma estrutura definida.
+
+A IA será usada para **personalizar a experiência dentro dessa estrutura**.
+
+Isso evita que cada usuário receba uma jornada completamente aleatória.
+
+---
+
+# 22. Dicionários e fontes externas
+
+O sistema poderá integrar diferentes fontes para enriquecer os dados:
+
+* dicionários;
+* APIs de tradução;
+* pronúncia;
+* áudio;
+* exemplos;
+* informações linguísticas;
+* conteúdos educacionais.
+
+Mas devemos separar:
+
+### Curriculum
+
+Controlado pelo English Journey.
+
+### External Knowledge
+
+Obtido de APIs/fontes externas.
+
+### AI
+
+Utilizada para interação, adaptação e geração controlada.
+
+Isso deixará nossa arquitetura muito mais organizada.
+
+---
+
+# 23. Conteúdo educacional
+
+E aqui entra exatamente a ideia que você teve.
+
+Antes de criarmos milhares de exercícios, vamos **estudar como ensinar inglês**.
+
+Vamos pesquisar:
+
+* CEFR;
+* Cambridge;
+* British Council;
+* cursos gratuitos;
+* materiais de ensino;
+* estruturas de níveis;
+* métodos de aquisição de vocabulário;
+* práticas de listening;
+* práticas de speaking;
+* exercícios de grammar;
+* avaliação;
+* revisão;
+* aprendizagem baseada em tarefas.
+
+O British Council, por exemplo, possui uma biblioteca gratuita organizada por skill, nível e tipo de conteúdo.
+
+Cambridge também utiliza o CEFR como referência internacional para descrever níveis de proficiência.
+
+Ou seja:
+
+**não vamos simplesmente inventar uma metodologia.**
+
+Vamos pesquisar metodologias existentes, entender o que funciona e construir nossa própria abordagem em cima de fundamentos sólidos.
+
+---
+
+# 24. A arquitetura de conteúdo
+
+No futuro, podemos chegar a algo assim:
+
+```text
+Level
+ └── A1
+      ├── Unit 01
+      │    ├── Vocabulary
+      │    ├── Grammar
+      │    ├── Listening
+      │    ├── Speaking
+      │    └── Writing
+      │
+      ├── Unit 02
+      ├── Unit 03
+      └── Unit 04
+```
+
+Depois:
+
+```text
+A1
+A2
+B1
+B2
+C1
+C2
+```
+
+E cada nível terá suas próprias unidades.
+
+---
+
+# 25. Personalização
+
+Agora entra a parte realmente poderosa.
+
+Dois usuários podem estar no B1.
+
+### João
+
+Weakness:
+
+Listening
+
+Goal:
+
+Work
+
+### Maria
+
+Weakness:
+
+Speaking
+
+Goal:
+
+Travel
+
+Ambos estão no B1.
+
+Mas suas jornadas serão diferentes.
+
+João receberá mais:
+
+> Listening + Business English
+
+Maria receberá mais:
+
+> Speaking + Travel English
+
+O conteúdo-base pode ser o mesmo.
+
+A experiência será diferente.
+
+---
+
+# 26. O sistema de recomendação
+
+Com o tempo, o sistema poderá pensar:
+
+```text
+User completed lesson
+        ↓
+Evaluate performance
+        ↓
+Identify strengths / weaknesses
+        ↓
+Update learner profile
+        ↓
+Calculate next recommendation
+        ↓
+Generate next journey
+```
+
+Exemplo:
+
+O usuário errou muito:
+
+> Simple Past
+
+O sistema registra:
+
+**Grammar weakness → Simple Past**
+
+Na próxima semana:
+
+> Review Simple Past
+
+Depois aparece em:
+
+* Grammar;
+* Listening;
+* Speaking;
+* Writing.
+
+Assim o conhecimento volta para contextos diferentes.
+
+---
+
+# 27. O conceito de “Today”
+
+Essa será uma das principais ideias do English Journey.
+
+O usuário não precisa pensar:
+
+> “O que eu faço agora?”
+
+Ele simplesmente entra:
+
+# Today's Journey
+
+E começa.
+
+Quando termina:
+
+> **Journey Complete 🎉**
+
+O sistema registra tudo.
+
+No dia seguinte:
+
+> **Your next journey is ready.**
+
+Isso cria consistência sem transformar o sistema em uma simples coleção de exercícios.
+
+---
+
+# 28. Gamificação
+
+Podemos utilizar alguns elementos do Duolingo sem transformar o projeto em um clone.
+
+Por exemplo:
+
+* XP;
+* streak;
+* níveis;
+* conquistas;
+* metas;
+* desafios;
+* progresso;
+* unidades desbloqueadas;
+* estatísticas.
+
+Mas o foco principal continuará sendo:
+
+**aprendizagem real.**
+
+A recompensa serve para incentivar a consistência.
+
+Não para substituir o aprendizado.
+
+---
+
+# 29. A experiência completa
+
+No futuro, a experiência ideal será:
+
+```text
+ENTRAR
+   ↓
+DASHBOARD
+   ↓
+VER OBJETIVO DO DIA
+   ↓
+COMEÇAR JOURNEY
+   ↓
+VOCABULARY
+   ↓
+GRAMMAR
+   ↓
+LISTENING
+   ↓
+SPEAKING
+   ↓
+WRITING
+   ↓
+REVIEW
+   ↓
+FEEDBACK
+   ↓
+PROGRESS
+   ↓
+SISTEMA ATUALIZA PERFIL
+   ↓
+PRÓXIMA JOURNEY É ADAPTADA
+```
+
+Esse é o ciclo.
+
+---
+
+# 30. As páginas do projeto
+
+Nossa estrutura inicial poderá evoluir para:
+
+## Dashboard
+
+Centro da jornada.
+
+Mostra:
+
+* nível;
+* objetivo;
+* jornada do dia;
+* streak;
+* progresso;
+* recomendações;
+* dificuldades.
+
+---
+
+## Vocabulary
+
+Construção e retenção de vocabulário.
+
+* palavras;
+* frases;
+* pronúncia;
+* áudio;
+* tópicos;
+* revisão;
+* exercícios;
+* palavras difíceis;
+* histórico.
+
+---
+
+## Grammar
+
+Construção estrutural da língua.
+
+* conceitos;
+* explicações;
+* exemplos;
+* exercícios;
+* aplicação;
+* erros recorrentes;
+* revisão.
+
+---
+
+## Listening
+
+Desenvolvimento da compreensão auditiva.
+
+* áudios;
+* diálogos;
+* vídeos futuramente;
+* transcrições;
+* exercícios;
+* ditado;
+* shadowing;
+* níveis de dificuldade.
+
+---
+
+## Speaking
+
+Desenvolvimento da comunicação oral.
+
+* repetição;
+* pronúncia;
+* perguntas;
+* situações;
+* conversação;
+* IA;
+* gravações;
+* feedback.
+
+---
+
+## Writing
+
+Poderá entrar como página própria futuramente.
+
+* frases;
+* textos;
+* correção;
+* escrita guiada;
+* escrita livre;
+* feedback da IA.
+
+---
+
+## Progress
+
+Acompanhamento da evolução.
+
+* nível;
+* skills;
+* histórico;
+* tempo;
+* vocabulário;
+* erros;
+* metas;
+* evolução semanal/mensal.
+
+---
+
+# 31. Futuramente: Review Center
+
+Eu adicionaria uma área que ainda não está na nossa estrutura visual:
+
+## Review
+
+Um lugar dedicado exclusivamente ao que o usuário precisa revisar.
+
+Por exemplo:
+
+> 14 words need review.
+
+> 3 grammar concepts need review.
+
+> 2 listening exercises recommended.
+
+> You haven't practiced speaking in 4 days.
+
+Isso faria o sistema ficar muito mais inteligente.
+
+---
+
+# 32. Futuramente: AI Tutor
+
+Outra página/área:
+
+## AI Tutor
+
+O usuário poderá conversar livremente com a IA.
+
+Exemplo:
+
+> “Doca, I don't understand when I should use did.”
+
+A IA responde de acordo com o nível dele.
+
+Ou:
+
+> “Let's practice English.”
+
+A IA começa uma conversa.
+
+Se o usuário cometer erros recorrentes, isso poderá alimentar o perfil dele.
+
+---
+
+# 33. Futuramente: Learning Library
+
+Também podemos ter:
+
+## Library
+
+Uma biblioteca de conteúdos:
+
+* cursos;
+* artigos;
+* vídeos;
+* podcasts;
+* histórias;
+* exercícios;
+* materiais externos.
+
+O sistema poderá recomendar conteúdos de acordo com o nível.
+
+---
+
+# 34. O grande diferencial
+
+O grande diferencial do English Journey não será:
+
+> “Tem IA.”
+
+Isso qualquer aplicativo poderá ter.
+
+Nem:
+
+> “Tem exercícios.”
+
+Também não.
+
+O diferencial será:
+
+# A jornada personalizada.
+
+O sistema sabe:
+
+> quem é você
+> qual seu nível
+> o que você quer
+> onde você tem dificuldade
+> o que você já estudou
+> o que você esqueceu
+> o que você precisa revisar
+> e qual deveria ser seu próximo passo.
+
+---
+
+# 35. Nosso MVP
+
+Mas aqui precisamos ter MUITO cuidado.
+
+Essa visão é enorme.
+
+Se tentarmos construir tudo agora, vamos travar.
+
+Então nosso primeiro objetivo será:
+
+## English Journey v1
+
+### Ter:
+
+* Dashboard;
+* Vocabulary;
+* Grammar;
+* Listening;
+* Speaking;
+* Progress;
+* níveis;
+* unidades;
+* conteúdo estruturado;
+* jornada diária;
+* exercícios;
+* registro básico de progresso.
+
+### Ainda não precisamos:
+
+* IA avançada;
+* análise complexa de pronúncia;
+* milhões de palavras;
+* dezenas de APIs;
+* sistema social;
+* aplicativo mobile;
+* gamificação complexa.
+
+Primeiro:
+
+**construir o coração.**
+
+Depois colocamos inteligência.
+
+---
+
+# 36. A evolução do projeto
+
+Podemos pensar em fases:
+
+### FASE 1 — Foundation
+
+Estrutura atual.
+
+React + TypeScript + Tailwind.
+
+Páginas e componentes.
+
+---
+
+### FASE 2 — Curriculum
+
+Criar:
+
+* níveis;
+* unidades;
+* lessons;
+* vocabulary;
+* grammar;
+* listening;
+* speaking;
+* exercícios.
+
+Aqui começa o verdadeiro conteúdo.
+
+---
+
+### FASE 3 — Daily Journey
+
+Criar:
+
+> Today's Journey
+
+O sistema passa a guiar o usuário.
+
+---
+
+### FASE 4 — Persistence
+
+Login e banco de dados.
+
+Guardar:
+
+* usuário;
+* progresso;
+* respostas;
+* palavras;
+* revisões;
+* histórico;
+* sessões.
+
+---
+
+### FASE 5 — Adaptation
+
+O sistema começa a adaptar a jornada.
+
+---
+
+### FASE 6 — AI
+
+Integração da IA.
+
+---
+
+### FASE 7 — Advanced Learning
+
+* speaking avançado;
+* pronúncia;
+* conversação;
+* conteúdo externo;
+* recomendações;
+* análise detalhada.
+
+---
+
+# 37. A nossa regra de ouro
+
+Existe uma frase que eu colocaria literalmente na documentação do projeto:
+
+> **English Journey does not tell you how much English you studied. It helps you become better at using English.**
+
+Porque essa é a diferença entre:
+
+**estudar inglês**
+
+e
+
+**aprender a usar inglês.**
+
+---
+
+# 38. E agora, o que vamos fazer?
+
+Não vamos começar codando a IA.
+
+Não vamos começar criando 5.000 exercícios.
+
+Não vamos começar integrando 20 APIs.
+
+Nosso próximo trabalho será:
+
+## 1. Definir a metodologia
+
+Pesquisar e estudar:
+
+* CEFR;
+* Cambridge;
+* British Council;
+* cursos gratuitos;
+* materiais didáticos;
+* métodos de aprendizagem.
+
+## 2. Definir os níveis
+
+Exatamente o que um usuário deve saber/conseguir fazer em:
+
+**A1 → A2 → B1 → B2 → C1 → C2**
+
+## 3. Criar o currículo
+
+Por exemplo:
+
+```text
+A1
+ ├── Unit 01 — Introductions
+ ├── Unit 02 — Family
+ ├── Unit 03 — Daily Routine
+ ├── Unit 04 — Food
+ ├── Unit 05 — Places
+ └── ...
+```
+
+## 4. Definir cada unidade
+
+Cada unidade terá:
+
+```text
+Objective
+Vocabulary
+Grammar
+Listening
+Speaking
+Writing
+Review
+Assessment
+```
+
+## 5. Criar o sistema de jornada
+
+Depois disso:
+
+```text
+User
+ ↓
+Assessment
+ ↓
+Profile
+ ↓
+Level
+ ↓
+Goal
+ ↓
+Curriculum
+ ↓
+Daily Journey
+ ↓
+Activities
+ ↓
+Results
+ ↓
+Feedback
+ ↓
+Adaptation
+```
+
+---
+
+# 39. O objetivo final
+
+No final, quando alguém entrar no English Journey, não queremos que pense:
+
+> “Que página eu devo abrir?”
+
+Queremos que pense:
+
+> **“Hoje eu vou melhorar meu inglês.”**
+
+E o sistema responde:
+
+> **“Perfeito. Eu sei onde você está. Sei onde você quer chegar. Aqui está o caminho de hoje.”**
+
+Esse, João, **é o English Journey que eu acho que vale a pena construir.**
+
+E agora temos uma direção.
+
+A estrutura React que fizemos deixa de ser simplesmente um conjunto de páginas e passa a ser a **interface de um sistema educacional completo**.
+
+**Primeiro construímos a metodologia.
+Depois o currículo.
+Depois o conteúdo.
+Depois a jornada.
+Depois a persistência.
+E só então colocamos a IA para tornar tudo adaptativo.**
+
+A partir daqui, nosso próximo passo deve ser **sentar e desenhar o currículo do English Journey**, começando pelo **A1**, aula por aula, unidade por unidade. É aí que o projeto realmente começa a nascer. 🚀
+
+[British Council — recursos gratuitos de inglês](https://learnenglish.britishcouncil.org/free-resources?utm_source=chatgpt.com)
+[Cambridge English — níveis CEFR](https://www.cambridgeenglish.org/exams-and-tests/cefr/?utm_source=chatgpt.com)
+[Council of Europe — CEFR e conceitos de aprendizagem](https://www.coe.int/en/web/common-european-framework-reference-languages/key-concepts?utm_source=chatgpt.com)

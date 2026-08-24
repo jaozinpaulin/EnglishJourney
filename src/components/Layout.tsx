@@ -12,13 +12,13 @@ function Layout({ children }: LayoutProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
-    const [asideMode, setAsideMode] = useState<"hover" | "open">("hover");
+    const [asideMode, setAsideMode] = useState<"hover" | "open">("open");
 
     return (
         <div className="min-h-screen bg-[#151515] text-[#E7E5E1]">
             <Header isMenuOpen={isMenuOpen} onMenuToggle={() => setIsMenuOpen((prev) => !prev)} />
 
-            <div className="flex pt-16">
+            <div className="flex pt-16 md:pt-0">
                 <Sidebar isMenuOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}
                     mode={asideMode}
                     setAsideMode={setAsideMode} />
