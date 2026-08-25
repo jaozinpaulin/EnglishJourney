@@ -1,5 +1,6 @@
 import { ArrowRight, BookOpen, Check, Clock3, Flame, Headphones, Mic, MessageCircle, MoreVertical, SpellCheck, Target, TrendingUp } from "lucide-react"
 
+
 interface Stat {
     label: string
     value: string
@@ -49,6 +50,7 @@ export default function Dashboard() {
                     <h1 className="mt-1 text-2xl font-bold tracking-tight text-white md:text-3xl">Good morning, João!</h1>
                     <p className="mt-1 text-sm text-[#999994]">Ready to continue your English journey?</p>
                 </div>
+
 
                 {/* stats topo */}
                 <div className="flex items-center gap-4 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] p-2.5 sm:gap-6 sm:px-4">
@@ -132,6 +134,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </div>
+
 
                     {/* cards metricas */}
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">

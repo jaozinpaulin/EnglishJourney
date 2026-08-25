@@ -14,6 +14,10 @@ import Review from "../pages/Review";
 import Units from "../pages/Units";
 import Levels from "../pages/Levels";
 import Settings from "../pages/settings";
+import Onboarding from "../components/Onboarding";
+
+// import { LandingPage } from "../components/LandingPage";
+// import { AuthPage } from "../components/AuthPage";
 
 export default function Router() {
     return (
@@ -33,10 +37,15 @@ export default function Router() {
             <Route path="/levels" element={< Levels />} />
             <Route path="/settings" element={< Settings />} />
 
+
+            <Route path="/onboarding" element={< Onboarding />} />
+            {/* 
+            <Route path="/landingPage" element={< LandingPage />} />
+            <Route path="/authPage" element={< AuthPage />} /> */}
+
             <Route path="*" element={<Navigate to={"/"} replace />} />
         </Routes>
 
     )
-
 
 }
