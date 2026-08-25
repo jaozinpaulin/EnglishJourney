@@ -745,3 +745,4 @@ export default function Onboarding() {
 }
 
 /* fazer tratamento de empy */
+/* tipar esse tsx e remover o anule la em cima */

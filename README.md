@@ -29,11 +29,50 @@ A proposta é centralizar diferentes áreas do aprendizado em uma única platafo
 - Progress
 - Daily Study
 
-Atualmente, o projeto está em sua fase inicial, com foco na construção da interface, arquitetura e fundamentos da aplicação.
+Além das áreas de estudo, o projeto possui um sistema de **onboarding**, desenvolvido para conhecer o perfil e as necessidades de cada aluno antes de iniciar sua jornada.
+
+Durante o onboarding, o usuário informa:
+
+- Seu nível atual de inglês
+- Motivações para aprender inglês
+- Habilidades que deseja desenvolver
+- Tempo disponível para estudar
+- Frequência semanal de estudos
+- Nível de confiança em cada habilidade
+- Habilidades que deseja priorizar
+- Experiência anterior com inglês
+
+Essas informações são reunidas em um perfil estruturado que futuramente será utilizado para criar uma jornada de aprendizagem personalizada.
+
+Atualmente, o projeto está em sua fase inicial, com foco na construção da interface, arquitetura, experiência do usuário e fundamentos da aplicação.
 
 ---
 
 ## Features
+
+### Onboarding
+
+The onboarding is responsible for understanding the user's learning profile before starting the journey.
+
+It currently includes:
+
+- English level assessment
+- Learning motivations
+- Desired real-life abilities
+- Daily study time
+- Weekly study frequency
+- Speaking confidence
+- Listening confidence
+- Reading confidence
+- Writing confidence
+- Skill priorities
+- Previous English experience
+- Study experience duration
+- Final profile summary
+
+The onboarding collects these answers and generates a structured `journeyProfile` object containing the user's learning information.
+
+Future plans include using this profile to generate a personalized learning journey.
 
 ### Dashboard
 
@@ -135,6 +174,8 @@ Total recommended study time:
 
 The main goal is consistency rather than long study sessions.
 
+The learning experience will progressively evolve according to the user's level, goals, available study time and individual needs.
+
 ---
 
 ## Roadmap
@@ -154,29 +195,49 @@ The main goal is consistency rather than long study sessions.
 - [x] Listening page
 - [x] Speaking page
 - [x] Progress page
+- [x] Initial onboarding
+- [x] Multi-step onboarding flow
+- [x] User profile data collection
+- [x] Onboarding validation
+- [x] Learning profile summary
+- [x] `journeyProfile` object
 
-### Phase 2 — Application Logic
+### Phase 2 — Personalized Journey
 
-- [ ] Connect daily activities
+- [ ] Define learning journey structure
+- [ ] Define levels and progression
+- [ ] Connect onboarding profile to learning path
+- [ ] Generate initial learning plan
+- [ ] Create units and lessons
+- [ ] Connect daily activities to the learning path
 - [ ] Activity completion system
 - [ ] Real progress calculation
 - [ ] Study time tracking
+
+### Phase 3 — Learning Systems
+
 - [ ] Vocabulary system
+- [ ] Grammar lessons
 - [ ] Grammar exercises
 - [ ] Listening activities
 - [ ] Speaking recordings
+- [ ] Writing practice
+- [ ] Review system
+- [ ] Learning history
 
-### Phase 3 — Authentication and Data
+### Phase 4 — Authentication and Data
 
 - [ ] User registration
 - [ ] User login
 - [ ] Firebase Authentication
 - [ ] Firestore integration
 - [ ] User-specific progress
-- [ ] Study history
+- [ ] Persistent study history
 - [ ] Streak system
+- [ ] Persistent vocabulary
+- [ ] Persistent learning journey
 
-### Phase 4 — Intelligence
+### Phase 5 — Intelligence
 
 - [ ] Dictionary API
 - [ ] AI-assisted grammar explanations
@@ -184,6 +245,7 @@ The main goal is consistency rather than long study sessions.
 - [ ] AI speaking feedback
 - [ ] Personalized recommendations
 - [ ] Adaptive study plans
+- [ ] AI-assisted learning activities
 
 ---
 
@@ -211,21 +273,25 @@ Future technologies may include:
 
 ```text
 src/
+
 ├── components/
+
 │   ├── Header/
 │   └── Sidebar/
-│
+
 ├── layouts/
+
 │   └── Layout.tsx
-│
+
 ├── pages/
+
 │   ├── Dashboard/
 │   ├── Vocabulary/
 │   ├── Grammar/
 │   ├── Listening/
 │   ├── Speaking/
 │   └── Progress/
-│
+
 ├── App.tsx
 └── main.tsx
 ```
