@@ -1,7 +1,5 @@
 import { ArrowRight, BookMarked, CheckCircle2, ChevronRight, Filter, Flame, Layers, Play, Plus, RotateCcw, Search, Sparkles, Volume2, Zap } from "lucide-react"
-import A1 from "../../JSONS/A1.json"
 
-console.log(A1)
 interface VocabularyDeck {
     id: string
     title: string
