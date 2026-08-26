@@ -1,17 +1,10 @@
-import { useState } from "react"
-import type { ReactNode } from "react";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
-import Header from "../components/Header"
-import Sidebar from "../components/Sidebar"
-
-interface LayoutProps {
-    children: ReactNode
-}
-
-function Layout({ children }: LayoutProps) {
+export default function Layout() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
     const [asideMode, setAsideMode] = useState<"hover" | "open">("open");
 
     return (
@@ -19,17 +12,13 @@ function Layout({ children }: LayoutProps) {
             <Header isMenuOpen={isMenuOpen} onMenuToggle={() => setIsMenuOpen((prev) => !prev)} />
 
             <div className="flex pt-16 md:pt-0">
-                <Sidebar isMenuOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}
-                    mode={asideMode}
-                    setAsideMode={setAsideMode} />
+                <Sidebar isMenuOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} mode={asideMode} setAsideMode={setAsideMode} />
 
-                <main className={`min-w-0 flex-1 p-4 md:p-6 ${asideMode === "hover" ? "md:ml-16" : "md:ml-56"}`}>
-
-                    {children}
+                <main
+                    className={`min-w-0 flex-1 p-4 md:p-6 ${asideMode === "hover" ? "md:ml-16" : "md:ml-56"}`}>
+                    <Outlet />
                 </main>
             </div>
         </div>
-    )
+    );
 }
-
-export default Layout

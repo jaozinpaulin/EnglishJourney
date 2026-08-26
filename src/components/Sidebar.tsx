@@ -23,7 +23,7 @@ interface SidebarProps {
 const navSections: NavigationSection[] = [
     {
         items: [
-            { label: "Dashboard", path: "/", icon: LayoutDashboard },
+            { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
             { label: "Vocabulary", path: "/vocabulary", icon: BookOpen },
             { label: "Grammar", path: "/grammar", icon: Type },
             { label: "Listening", path: "/listening", icon: Headphones },
