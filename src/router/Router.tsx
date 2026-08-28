@@ -1,6 +1,6 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 
-// Componentes Públicos (Tela Cheia, sem Aside)
+// Componentes Públicos
 import { LandingPage } from "../components/LandingPage";
 import Onboarding from "../components/Onboarding";
 import { AuthPage } from "../components/AuthPage";
@@ -25,12 +25,11 @@ import Settings from "../pages/settings";
 export default function Router() {
     return (
         <Routes>
-            {/* 1. Rotas Públicas / Fluxo de Entrada (Sem Menu Lateral) */}
+
             <Route path="/" element={<LandingPage />} />
             <Route path="/authPage" element={<AuthPage />} />
             <Route path="/onboarding" element={<Onboarding />} />
 
-            {/* 2. Rotas Internas da Aplicação (Com Header + Sidebar) */}
             <Route element={<Layout />}>
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/vocabulary" element={<Vocabulary />} />
@@ -46,24 +45,7 @@ export default function Router() {
                 <Route path="/settings" element={<Settings />} />
             </Route>
 
-            {/* Redirecionamento padrão para rotas inválidas */}
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     );
 }
-
-/* ==========================================================================
-   TODO: IMPLEMENTAR AUTENTICAÇÃO REAL & REFACTOR DE ROUTE GUARD
-   --------------------------------------------------------------------------
-   ESTADO ATUAL (PROVISÓRIO):
-   - O controle de acesso usa apenas o estado local/localStorage `isLogin`.
-   - Utilizado apenas para desenvolvimento e testes de fluxo.
-
-   PASSOS PARA O REFACTOR DEFINITIVO:
-   1. Substituir `isLogin` por um AuthContext real (Firebase, Supabase, NextAuth ou JWT/Node).
-   2. Validar o token de sessão (Bearer Token) no backend em cada troca de rota protegida.
-   3. Adicionar verificação de status do onboarding (`hasCompletedOnboarding`):
-      - Se logado SEM onboarding -> redirecionar para '/onboarding'.
-      - Se logado COM onboarding -> liberar acesso ao '/dashboard'.
-   4. Tratar limpeza de sessão (logout) e expiração de token com interceptor HTTP.
-   ========================================================================== */

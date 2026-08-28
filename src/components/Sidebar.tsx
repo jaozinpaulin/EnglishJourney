@@ -156,38 +156,38 @@ function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: SidebarProps) {
 
                 {/* Perfil & Configurações */}
                 <div className="border-t border-[#1F1F1F] p-1.5 space-y-1.5 shrink-0">
-                    <div className="flex items-center justify-between p-1.5 rounded-xl bg-[#141416] border border-[#222226]">
+
+                    <div className="flex items-center justify-between rounded-xl border border-[#222226] bg-[#141416] p-1.5">
                         <div className="flex items-center gap-2.5 overflow-hidden">
                             <img
                                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces"
                                 alt="Avatar"
-                                className="h-7 w-7 rounded-full object-cover shrink-0 ml-1.5"
+                                className="ml-1.5 h-7 w-7 shrink-0 rounded-full object-cover"
                             />
+
                             <div
-                                className={`overflow-hidden whitespace-nowrap transition-all duration-300 ${isHover ? "max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100" : "max-w-xs opacity-100"
+                                className={`overflow-hidden whitespace-nowrap transition-all duration-300 ${isHover
+                                    ? "max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100"
+                                    : "max-w-xs opacity-100"
                                     }`}
                             >
-                                <p className="text-xs font-medium text-zinc-200 leading-tight">João Silva</p>
-                                <p className="text-[10px] text-zinc-500">A1 Learner</p>
+                                <p className="text-xs font-medium leading-tight text-zinc-200">
+                                    João Silva
+                                </p>
+
+                                <p className="text-[10px] text-zinc-500">
+                                    A1 Learner
+                                </p>
                             </div>
                         </div>
-                        <ChevronDown size={14} className={`text-zinc-500 shrink-0 mr-1.5 ${isHover ? "hidden group-hover:block" : "block"}`} />
+
+                        <NavLink to="/settings" title="Settings"
+                            className="mr-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-[#18181B] hover:text-zinc-200">
+                            <Settings size={15} />
+                        </NavLink>
                     </div>
 
                     <div className="flex items-center justify-between px-1">
-                        <NavLink
-                            to="/settings"
-                            className="flex h-8 items-center gap-2 rounded-lg px-2 text-xs font-medium text-zinc-400 hover:bg-[#18181B] hover:text-zinc-200 transition-colors flex-1"
-                        >
-                            <Settings size={15} className="shrink-0 ml-1" />
-                            <span
-                                className={`overflow-hidden whitespace-nowrap text-xs transition-all duration-300 ${isHover ? "max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100" : "max-w-xs opacity-100"
-                                    }`}
-                            >
-                                Settings
-                            </span>
-                        </NavLink>
-
                         <div ref={asideOptionsRef} className="relative">
                             <button
                                 onClick={() => setShowAsideOptions((curr) => !curr)}
