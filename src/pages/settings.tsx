@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Check, Save, Volume2, Bell, Clock, Trash2, Flame, BookOpen, Sparkles, UserCheck } from "lucide-react"
 
+
 export default function Settings() {
     const [accent, setAccent] = useState("US")
     const [dailyGoal, setDailyGoal] = useState("30")
@@ -214,3 +215,101 @@ export default function Settings() {
         </section>
     )
 }
+
+
+/*
+================================================================================
+ENGLISH JOURNEY — PRÓXIMOS PASSOS
+================================================================================
+
+ESTADO ATUAL
+- Supabase conectado e funcionando.
+- Keys configuradas no .env.
+- Sign Up funcionando.
+- Login funcionando.
+- Confirmação de email funcionando pelo Supabase.
+- Validações de email e senha implementadas.
+- Tratamento de loading, sucesso e erros implementado.
+- Form usando onSubmit + noValidate.
+- Settings criada/reorganizada.
+- Perfil dentro da Settings está mockado por enquanto.
+- Sidebar possui perfil + engrenagem → /settings.
+- Ainda NÃO estamos usando os dados reais do perfil.
+- Ainda NÃO temos Route Guard / proteção das rotas.
+- Ainda NÃO temos persistência do perfil/learning profile.
+
+PRÓXIMA ETAPA — AUTH
+1. Finalizar completamente o fluxo de Login.
+2. Melhorar todos os tratamentos de erro do Supabase.
+3. Adicionar Login com Google.
+4. Trabalhar com a sessão real do Supabase.
+5. Fazer o usuário permanecer logado ao recarregar a página.
+6. Fazer Login → entrar automaticamente no App.
+7. Implementar proteção das rotas internas.
+8. Implementar Logout.
+9. Verificar email confirmado.
+10. Mostrar aviso dentro do App caso o email ainda não esteja confirmado.
+11. Adicionar opção de reenviar confirmação de email.
+12. Revisar o fluxo completo:
+    Landing → Auth → Sign Up/Login → Session → App.
+
+DEPOIS DO AUTH — PERFIL DO USUÁRIO
+1. Criar estrutura real de Profile no Supabase.
+2. Associar Profile ao usuário do Supabase Auth.
+3. Buscar os dados reais na Settings.
+4. Permitir editar informações do perfil.
+5. Definir quais informações pertencem ao Auth
+   e quais pertencem ao Profile/Learning Profile.
+
+DEPOIS — LEARNING PROFILE / ONBOARDING
+1. Definir as informações que precisamos coletar do aluno.
+2. Objetivo de aprender inglês.
+3. Experiência anterior.
+4. Contexto de uso do inglês.
+5. Preferências e necessidades.
+6. Tempo disponível para estudar.
+7. Outras informações relevantes para personalização.
+8. Criar o fluxo de onboarding.
+9. Salvar essas informações no Supabase.
+
+DEPOIS — CURRÍCULO PERSONALIZADO
+Aluno
+  ↓
+Profile
+  ↓
+Learning Profile
+  ↓
+Diagnóstico
+  ↓
+Nível / Capacidades
+  ↓
+Currículo
+  ↓
+Jornada
+  ↓
+Atividades
+  ↓
+Evidências de aprendizagem
+  ↓
+Personalização da jornada
+
+IMPORTANTE
+- Não pular etapas.
+- Primeiro finalizar a fundação do Auth.
+- Depois estruturar Profile/Learning Profile.
+- Depois construir o currículo personalizado.
+- Não colocar IA antes de definirmos corretamente os dados,
+  currículo, progressão e regras pedagógicas.
+- O currículo deve seguir nossa arquitetura já definida:
+  Can-Do + comunicação + tarefas + spiral learning + recycling.
+- O aluno não deve simplesmente "receber um nível".
+  Precisamos construir o perfil e usar evidências para orientar
+  a jornada.
+
+COMMIT DE HOJE
+feat: improve auth flow and settings page
+
+================================================================================
+RETOMAR DAQUI
+================================================================================
+*/
