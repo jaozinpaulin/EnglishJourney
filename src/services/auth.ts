@@ -1,22 +1,56 @@
 import { supabase } from "../lib/supabase";
+import type { User } from "@supabase/supabase-js";
 
-export async function singUp(email: string, password: string) {
-    const { data, error } = await supabase.auth
-        .signUp({ email, password });
+
+export async function signUp(email: string, password: string, name: string) {
+    const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+            data: {
+                name,
+            },
+        },
+    });
 
     if (error) {
-        throw error
+        throw error;
+    }
+
+    if (!data.session) {
+        throw new Error("Conta criada, mas não foi possível iniciar a sessão.");
     }
 
     return data;
 }
 
-export async function singIn(email: string, password: string) {
-    const { data, error } = await supabase.auth
-        .signInWithPassword({ email, password });
+export async function signIn(email: string, password: string) {
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+    });
 
     if (error) {
-        throw error
+        throw error;
     }
-    return data
+
+    return data;
+}
+
+export async function signOut() {
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+        throw error;
+    }
+}
+
+export async function getCurrentUser(): Promise<User | null> {
+    const { data, error } = await supabase.auth.getUser();
+
+    if (error) {
+        return null;
+    }
+
+    return data.user;
 }
