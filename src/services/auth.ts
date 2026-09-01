@@ -1,6 +1,4 @@
 import { supabase } from "../lib/supabase";
-import type { User } from "@supabase/supabase-js";
-
 
 export async function signUp(email: string, password: string, name: string) {
     const { data, error } = await supabase.auth.signUp({
@@ -45,12 +43,15 @@ export async function signOut() {
     }
 }
 
-export async function getCurrentUser(): Promise<User | null> {
-    const { data, error } = await supabase.auth.getUser();
+export async function loginWithGoogle() {
+    const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+            redirectTo: `${window.location.origin}/dashboard`
+        }
+    });
 
     if (error) {
-        return null;
+        throw new Error(error.message);
     }
-
-    return data.user;
 }

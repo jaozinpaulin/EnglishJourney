@@ -24,9 +24,8 @@ import PublicRoute from "./PublicRoute";
 export default function Router() {
     return (
         <Routes>
-            <Route path="/" element={<LandingPage />} />
-
             <Route element={<PublicRoute />}>
+                <Route path="/" element={<LandingPage />} />
                 <Route path="/authPage" element={<AuthPage />} />
             </Route>
 

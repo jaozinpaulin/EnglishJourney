@@ -71,16 +71,12 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
 
     const isHover = mode === "hover";
 
-    console.log(user)
-
     return (
         <>
-            {/* Desktop Sidebar */}
             <aside
                 className={`fixed left-0 top-0 z-40 hidden h-screen border-r border-[#1F1F1F] bg-[#0E0E10] md:flex flex-col justify-between transition-[width] duration-300 ease-in-out group ${isHover ? "w-16 hover:w-56" : "w-56"
                     }`}
             >
-                {/* Header / Logo */}
                 <div className="flex items-center h-16 shrink-0 border-b border-[#1F1F1F]/50 overflow-hidden">
                     <div className="flex h-16 w-16 shrink-0 items-center justify-center">
                         <svg
