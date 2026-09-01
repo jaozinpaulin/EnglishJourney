@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Lock, Eye, EyeOff, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
+import { Lock, Eye, EyeOff, CheckCircle2, AlertCircle, XCircle } from "lucide-react";
 import { CompassRose } from "./CompassRose";
 import { updatePassword, signOut } from "../services/auth";
 
@@ -14,47 +13,39 @@ export default function ResetPassword() {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState(false);
 
-    const validateResetForm = () => {
-        if (!password) {
+    const validateResetForm = (p: string, cp: string) => {
+        if (!p) {
             setError("Please enter your new password.");
             return false;
         }
-
-        if (password.length < 8) {
+        if (p.length < 8) {
             setError("Password must be at least 8 characters.");
             return false;
         }
-
-        if (!/[a-z]/.test(password)) {
+        if (!/[a-z]/.test(p)) {
             setError("Password must contain a lowercase letter.");
             return false;
         }
-
-        if (!/[A-Z]/.test(password)) {
+        if (!/[A-Z]/.test(p)) {
             setError("Password must contain an uppercase letter.");
             return false;
         }
-
-        if (!/\d/.test(password)) {
+        if (!/\d/.test(p)) {
             setError("Password must contain a number.");
             return false;
         }
-
-        if (!/[^A-Za-z0-9]/.test(password)) {
+        if (!/[^A-Za-z0-9]/.test(p)) {
             setError("Password must contain a symbol.");
             return false;
         }
-
-        if (!confirmPassword) {
+        if (!cp) {
             setError("Please confirm your password.");
             return false;
         }
-
-        if (password !== confirmPassword) {
+        if (p !== cp) {
             setError("Passwords do not match.");
             return false;
         }
-
         return true;
     };
 
@@ -62,14 +53,15 @@ export default function ResetPassword() {
         e.preventDefault();
         setError("");
 
-        if (!validateResetForm()) {
-            return;
-        }
+        const cleanPassword = password.trim();
+        const cleanConfirmPassword = confirmPassword.trim();
+
+        if (!validateResetForm(cleanPassword, cleanConfirmPassword)) return;
 
         try {
             setLoading(true);
-
-            await updatePassword(password);
+            // Atualiza senha e encerra sessão
+            await updatePassword(cleanPassword);
             await signOut();
 
             setPassword("");
@@ -86,6 +78,7 @@ export default function ResetPassword() {
         <div className="flex min-h-screen w-full items-center justify-center bg-[#0D0D0D] p-3 text-[#E7E5E1] sm:p-5 lg:p-6">
             <div className="grid w-full max-w-[440px] overflow-hidden rounded-2xl border border-[#242424] bg-[#141414] shadow-2xl lg:min-h-[500px] lg:max-w-[960px] lg:grid-cols-2">
 
+                {/* Hero */}
                 <div className="relative hidden flex-col justify-between overflow-hidden border-r border-[#242424] bg-[#111111] p-6 lg:flex lg:p-8">
                     <div className="z-10 flex w-fit items-center gap-2.5">
                         <div className="flex h-7 w-7 shrink-0 items-center justify-center">
@@ -116,8 +109,9 @@ export default function ResetPassword() {
                     </div>
                 </div>
 
+                {/* Form area */}
                 <div className="flex flex-col justify-between bg-[#141414] p-5 sm:p-6 lg:p-8">
-
+                    {/* Header mobile */}
                     <div className="flex items-center gap-2 pb-1 lg:hidden">
                         <div className="flex h-6 w-6 shrink-0 items-center justify-center">
                             <CompassRose />
@@ -129,36 +123,39 @@ export default function ResetPassword() {
 
                     <div className="mx-auto my-auto w-full py-2">
                         {success ? (
+                            /* Card sucesso */
                             <div className="flex flex-col items-center gap-4 rounded-xl border border-emerald-500/20 bg-emerald-950/20 p-5 text-center">
-                                <CheckCircle2 className="h-9 w-9 text-emerald-400" />
+                                <CheckCircle2 className="h-10 w-10 text-emerald-400" />
 
                                 <div>
                                     <h2 className="text-base font-bold tracking-tight text-white sm:text-lg">
-                                        Password updated successfully!
+                                        Password Updated Successfully!
                                     </h2>
                                     <p className="mt-1 text-xs text-[#8E8E88]">
-                                        Your credentials have been securely updated.
+                                        Your new credentials are now active across your account.
                                     </p>
                                 </div>
 
-                                <div className="w-full rounded-xl border border-[#262626] bg-[#0E0E0E] p-3 text-left">
+                                <div className="w-full rounded-xl border border-[#262626] bg-[#0E0E0E] p-3.5 text-left">
                                     <div className="flex items-start gap-2.5">
-                                        <AlertCircle size={15} className="mt-0.5 shrink-0 text-[#C96B62]" />
-                                        <p className="text-[11px] leading-relaxed text-[#A0A09A]">
-                                            <strong className="text-white">Security Tip:</strong> You may safely close this recovery tab and return to your main window, or continue to login here.
+                                        <AlertCircle size={16} className="mt-0.5 shrink-0 text-[#C96B62]" />
+                                        <p className="text-xs leading-relaxed text-[#A0A09A]">
+                                            <strong className="text-white">Security Action Required:</strong> Please <span className="text-[#C96B62] font-semibold">close this recovery window</span> and log in using your main application tab.
                                         </p>
                                     </div>
                                 </div>
 
-                                <Link
-                                    to="/authPage"
-                                    className="mt-1 flex w-full items-center justify-center gap-2 rounded-xl bg-[#C96B62] py-2.5 text-xs font-semibold text-white shadow-md shadow-[#C96B62]/10 transition-colors hover:bg-[#B85C55] sm:text-sm"
+                                <button
+                                    type="button"
+                                    onClick={() => window.close()}
+                                    className="mt-1 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#262626] py-2.5 text-xs font-semibold text-white shadow-md transition-colors hover:bg-[#333333] sm:text-sm"
                                 >
-                                    Proceed to Login
-                                    <ArrowRight size={14} />
-                                </Link>
+                                    <XCircle size={15} />
+                                    Close This Tab
+                                </button>
                             </div>
                         ) : (
+                            /* Form */
                             <>
                                 <div className="mb-4">
                                     <h2 className="text-lg font-bold tracking-tight text-white sm:text-xl">
@@ -170,7 +167,7 @@ export default function ResetPassword() {
                                 </div>
 
                                 <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
-
+                                    {/* Password */}
                                     <div>
                                         <label className="text-[11px] font-semibold text-[#A0A09A]">
                                             New Password
@@ -198,6 +195,7 @@ export default function ResetPassword() {
                                         </div>
                                     </div>
 
+                                    {/* Confirm password */}
                                     <div>
                                         <label className="text-[11px] font-semibold text-[#A0A09A]">
                                             Confirm New Password
@@ -238,7 +236,6 @@ export default function ResetPassword() {
                                         className="mt-2 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#C96B62] py-2.5 text-xs font-semibold text-white shadow-md shadow-[#C96B62]/10 transition-colors hover:bg-[#B85C55] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:text-sm"
                                     >
                                         {loading ? "Updating Password..." : "Update Password"}
-                                        {!loading && <ArrowRight size={14} />}
                                     </button>
                                 </form>
                             </>
@@ -248,7 +245,6 @@ export default function ResetPassword() {
                     <div className="pt-2 text-center font-mono text-[9px] text-[#555550]">
                         English Journey • Secure Credentials System
                     </div>
-
                 </div>
             </div>
         </div>

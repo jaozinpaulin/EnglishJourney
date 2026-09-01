@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowRight, Eye, EyeOff, Mail, Lock, User } from "lucide-react";
+import { ArrowRight, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle2 } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
 import { CompassRose } from "../components/CompassRose";
 import { signUp, signIn, loginWithGoogle, resetPassword } from "../services/auth";
+
+type LoadingAction = "form" | "google" | "reset" | null;
 
 export function AuthPage() {
     const location = useLocation();
@@ -18,7 +20,9 @@ export function AuthPage() {
 
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [loadingAction, setLoadingAction] = useState<LoadingAction>(null);
+
+    const isEmailValid = (val: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
 
     const validateForm = () => {
         if (!email.trim()) {
@@ -26,10 +30,13 @@ export function AuthPage() {
             return false;
         }
 
-        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!isEmailValid(email)) {
+            setError("Please enter a valid email address.");
+            return false;
+        }
 
-        if (!isValidEmail) {
-            setError("Please enter a valid email.");
+        if (mode === "signup" && !name.trim()) {
+            setError("Please enter your name.");
             return false;
         }
 
@@ -68,50 +75,46 @@ export function AuthPage() {
         return true;
     };
 
-    const getAuthErrorMessage = (error: unknown) => {
-        if (error instanceof Error) {
-            if (error.message === "Invalid login credentials") {
+    const getAuthErrorMessage = (err: unknown) => {
+        if (err instanceof Error) {
+            if (err.message.includes("Invalid login credentials")) {
                 return "Invalid email or password.";
             }
+            if (err.message.includes("User already registered")) {
+                return "An account with this email already exists.";
+            }
+            return err.message;
         }
-
         return "Something went wrong. Please try again.";
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         setError("");
         setSuccess("");
 
         if (!validateForm()) return;
 
         try {
-            setLoading(true);
+            setLoadingAction("form");
 
             if (mode === "signup") {
-                await signUp(email, password, name);
-
-                setSuccess("Account created! Check your email to confirm your account.");
-
+                await signUp(email.trim(), password, name.trim());
+                setSuccess("Account created! Please check your email to confirm your account.");
                 setEmail("");
                 setPassword("");
-            }
-
-            if (mode === "login") {
-                await signIn(email, password);
-
+                setName("");
+            } else {
+                await signIn(email.trim(), password);
                 setSuccess("Login successful!");
-
                 setEmail("");
                 setPassword("");
             }
-        } catch (error) {
-            console.error("Authentication error:", error);
-
-            setError(getAuthErrorMessage(error));
+        } catch (err) {
+            console.error("Authentication error:", err);
+            setError(getAuthErrorMessage(err));
         } finally {
-            setLoading(false);
+            setLoadingAction(null);
         }
     };
 
@@ -119,46 +122,53 @@ export function AuthPage() {
         try {
             setError("");
             setSuccess("");
-            setLoading(true);
+            setLoadingAction("google");
 
             await loginWithGoogle();
-        } catch (error) {
-            console.error("Google authentication error:", error);
-            setError(getAuthErrorMessage(error));
-
+        } catch (err) {
+            console.error("Google authentication error:", err);
+            setError(getAuthErrorMessage(err));
         } finally {
-            setLoading(false);
+            setLoadingAction(null);
         }
     };
 
-    const handleResetPassword = async (email: string) => {
-        try {
-            setError("")
-            setSuccess("")
-            setLoading(true)
+    const handleResetPassword = async () => {
+        setError("");
+        setSuccess("");
 
-            await resetPassword(email);
-            setSuccess("Se existir uma conta com este e-mail, enviaremos as instruções de redefinição.");
-
-        } catch (error) {
-            console.error("Erro ao solicitar alteração de senha:", error);
-            setError("Não foi possível enviar o e-mail. Tente novamente.");
-        } finally {
-            setLoading(false)
+        if (!email.trim()) {
+            setError("Please enter your email above to receive the password reset link.");
+            return;
         }
-    }
+
+        if (!isEmailValid(email)) {
+            setError("Please enter a valid email address to receive the password reset link.");
+            return;
+        }
+
+        try {
+            setLoadingAction("reset");
+            await resetPassword(email.trim());
+            setSuccess("If an account exists with this email, recovery instructions have been sent.");
+        } catch (err) {
+            console.error("Password reset request error:", err);
+            setError("Unable to send recovery email. Please try again in a moment.");
+        } finally {
+            setLoadingAction(null);
+        }
+    };
+
+    const isAnyLoading = loadingAction !== null;
 
     return (
         <div className="flex min-h-screen w-full items-center justify-center bg-[#0D0D0D] p-3 text-[#E7E5E1] sm:p-6 lg:p-8">
             <div className="grid w-full max-w-md overflow-hidden rounded-2xl border border-[#242424] bg-[#141414] shadow-2xl lg:min-h-[580px] lg:max-w-[1280px] lg:grid-cols-2">
 
+                {/* Hero / Branding (Desktop) */}
                 <div className="relative hidden flex-col justify-between overflow-hidden border-r border-[#242424] bg-[#111111] p-8 lg:flex lg:p-12">
-                    {/* <div className="pointer-events-none absolute -bottom-20 -left-20 opacity-15">
-                    <CompassRose className="h-80 w-80" />
-                </div> */}
-
                     <Link to="/" className="z-10 flex w-fit items-center gap-3 transition-opacity hover:opacity-80">
-                        <div className="flex h-8 w-8 items-center justify-center ">
+                        <div className="flex h-8 w-8 items-center justify-center">
                             <CompassRose />
                         </div>
                         <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#C96B62]">
@@ -175,7 +185,7 @@ export function AuthPage() {
                             <span className="text-[#C96B62]">Improve with focus.</span>
                         </h1>
                         <p className="mt-3 max-w-sm text-xs leading-relaxed text-[#8E8E88] sm:text-sm">
-                            A structured English learning journey designed around your real level, career focus, and daily 20-minute momentum.
+                            A structured English learning journey designed around your real level, career focus, and daily momentum.
                         </p>
                     </div>
 
@@ -186,8 +196,10 @@ export function AuthPage() {
                     </div>
                 </div>
 
+                {/* Área do Formulário */}
                 <div className="flex flex-col justify-between bg-[#141414] p-5 sm:p-8 lg:p-12">
 
+                    {/* Top Bar Mobile */}
                     <div className="flex items-center justify-between gap-2 pb-2">
                         <Link to="/" className="flex min-w-0 shrink items-center gap-2 lg:hidden">
                             <div className="flex h-7 w-7 shrink-0 items-center justify-center">
@@ -198,29 +210,33 @@ export function AuthPage() {
                             </span>
                         </Link>
 
+                        {/* Switch de Modo */}
                         <div className="ml-auto flex shrink-0 items-center rounded-xl border border-[#262626] bg-[#0E0E0E] p-1 font-mono text-xs">
                             <button
                                 type="button"
+                                disabled={isAnyLoading}
                                 onClick={() => {
                                     setMode("signup");
                                     setError("");
                                     setSuccess("");
                                 }}
-                                className={`cursor-pointer whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${mode === "signup"
+                                className={`cursor-pointer whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 ${mode === "signup"
                                     ? "bg-[#C96B62] text-white shadow"
                                     : "text-[#777770] hover:text-white"
-                                    }`}>
+                                    }`}
+                            >
                                 Sign Up
                             </button>
 
                             <button
                                 type="button"
+                                disabled={isAnyLoading}
                                 onClick={() => {
                                     setMode("login");
                                     setError("");
                                     setSuccess("");
                                 }}
-                                className={`cursor-pointer whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${mode === "login"
+                                className={`cursor-pointer whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 ${mode === "login"
                                     ? "bg-[#C96B62] text-white shadow"
                                     : "text-[#777770] hover:text-white"
                                     }`}
@@ -244,21 +260,28 @@ export function AuthPage() {
 
                         <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
 
-                            <div className={`grid transition-all duration-300 ease-in-out ${mode === "signup"
-                                ? "grid-rows-[1fr] opacity-100"
-                                : "grid-rows-[0fr] opacity-0 pointer-events-none"
-                                }`}>
+                            {/* Campo Nome (Apenas Signup) */}
+                            <div
+                                className={`grid transition-all duration-300 ease-in-out ${mode === "signup"
+                                    ? "grid-rows-[1fr] opacity-100"
+                                    : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                                    }`}
+                            >
                                 <div className="overflow-hidden">
                                     <label className="text-[11px] font-semibold text-[#A0A09A]">Name</label>
                                     <div className="mt-1 flex items-center gap-3 rounded-xl border border-[#262626] bg-[#0E0E0E] px-3.5 py-2.5 transition-colors focus-within:border-[#C96B62]">
                                         <User size={16} className="shrink-0 text-[#666660]" />
                                         <input
                                             type="text"
-                                            placeholder="Seu nome"
+                                            placeholder="Your full name"
                                             value={name}
-                                            onChange={(e) => setName(e.target.value)}
+                                            onChange={(e) => {
+                                                setName(e.target.value);
+                                                if (error) setError("");
+                                            }}
                                             tabIndex={mode === "signup" ? 0 : -1}
-                                            className="w-full bg-transparent text-sm text-white outline-none placeholder:text-[#555550]"
+                                            disabled={isAnyLoading}
+                                            className="w-full bg-transparent text-sm text-white outline-none placeholder:text-[#555550] disabled:opacity-50"
                                         />
                                     </div>
                                 </div>
@@ -272,9 +295,13 @@ export function AuthPage() {
                                     <input
                                         type="email"
                                         value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="teste@gmail.com"
-                                        className="w-full border-none bg-transparent p-0 text-sm text-white outline-none placeholder-[#4A4A48]"
+                                        onChange={(e) => {
+                                            setEmail(e.target.value);
+                                            if (error) setError("");
+                                        }}
+                                        placeholder="your.email@example.com"
+                                        disabled={isAnyLoading}
+                                        className="w-full border-none bg-transparent p-0 text-sm text-white outline-none placeholder-[#4A4A48] disabled:opacity-50"
                                     />
                                 </div>
                             </div>
@@ -283,13 +310,24 @@ export function AuthPage() {
                             <div>
                                 <div className="flex items-center justify-between">
                                     <label className="text-[11px] font-semibold text-[#A0A09A]">Password</label>
-                                    <div className={`transition-opacity duration-300 ${mode === "login" ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+                                    <div
+                                        className={`transition-opacity duration-300 ${mode === "login" ? "opacity-100" : "opacity-0 pointer-events-none"
+                                            }`}
+                                    >
                                         <button
                                             type="button"
-                                            onClick={() => handleResetPassword(email)}
-                                            className="cursor-pointer text-[11px] text-[#777770] transition-colors hover:text-[#C96B62]"
+                                            disabled={isAnyLoading}
+                                            onClick={handleResetPassword}
+                                            className="cursor-pointer text-[11px] text-[#777770] transition-colors hover:text-[#C96B62] disabled:cursor-not-allowed disabled:opacity-50"
                                         >
-                                            Forgot password?
+                                            {loadingAction === "reset" ? (
+                                                <span className="flex items-center gap-1.5 text-[#C96B62]">
+                                                    <span className="h-2.5 w-2.5 animate-spin rounded-full border border-[#C96B62]/30 border-t-[#C96B62]" />
+                                                    Sending link...
+                                                </span>
+                                            ) : (
+                                                "Forgot password?"
+                                            )}
                                         </button>
                                     </div>
                                 </div>
@@ -298,24 +336,40 @@ export function AuthPage() {
                                     <input
                                         type={showPassword ? "text" : "password"}
                                         value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        onChange={(e) => {
+                                            setPassword(e.target.value);
+                                            if (error) setError("");
+                                        }}
                                         placeholder="••••••••"
-                                        className="w-full border-none bg-transparent p-0 text-sm text-white outline-none placeholder-[#4A4A48]"
+                                        disabled={isAnyLoading}
+                                        className="w-full border-none bg-transparent p-0 text-sm text-white outline-none placeholder-[#4A4A48] disabled:opacity-50"
                                     />
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
                                         className="cursor-pointer text-[#666660] transition-colors hover:text-white"
+                                        tabIndex={-1}
                                     >
                                         {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                                     </button>
                                 </div>
                             </div>
 
-                            {error && <p className="text-xs text-red-400">{error}</p>}
-                            {success && <p className="text-xs text-green-400">{success}</p>}
+                            {/*Erro e Sucesso */}
+                            {error && (
+                                <div className="flex items-start gap-2 rounded-lg border border-red-500/20 bg-red-950/20 p-2.5 text-xs text-red-400">
+                                    <AlertCircle size={15} className="mt-0.5 shrink-0" />
+                                    <span>{error}</span>
+                                </div>
+                            )}
 
-                            {/* Divisor */}
+                            {success && (
+                                <div className="flex items-start gap-2 rounded-lg border border-emerald-500/20 bg-emerald-950/20 p-2.5 text-xs text-emerald-300">
+                                    <CheckCircle2 size={15} className="mt-0.5 shrink-0" />
+                                    <span>{success}</span>
+                                </div>
+                            )}
+
                             <div className="my-1 flex items-center gap-3">
                                 <div className="h-px flex-1 bg-[#242424]" />
                                 <span className="text-[10px] uppercase tracking-wider text-[#666660]">or</span>
@@ -326,10 +380,10 @@ export function AuthPage() {
                             <button
                                 onClick={handleGoogleLogin}
                                 type="button"
-                                disabled={loading}
-                                className="flex w-full items-center justify-center gap-3 rounded-xl border border-[#242424] bg-[#141414] px-4 py-2.5 text-xs font-medium text-[#E7E5E1] transition-all hover:border-[#383838] hover:bg-[#1a1a1a] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:text-sm"
+                                disabled={isAnyLoading}
+                                className="flex w-full items-center justify-center gap-3 rounded-xl border border-[#242424] bg-[#141414] px-4 py-2.5 text-xs font-medium text-[#E7E5E1] transition-all hover:border-[#383838] hover:bg-[#1a1a1a] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60 sm:text-sm"
                             >
-                                {loading ? (
+                                {loadingAction === "google" ? (
                                     <>
                                         <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-[#E7E5E1]/30 border-t-[#E7E5E1]" />
                                         <span>Connecting with Google...</span>
@@ -337,24 +391,27 @@ export function AuthPage() {
                                 ) : (
                                     <>
                                         <FcGoogle className="h-4 w-4 shrink-0" />
-                                        <span>Continuar com Google</span>
+                                        <span>Continue with Google</span>
                                     </>
                                 )}
                             </button>
 
                             <button
                                 type="submit"
-                                disabled={loading}
-                                className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#C96B62] py-3 text-xs font-semibold text-white shadow-md shadow-[#C96B62]/10 transition-colors hover:bg-[#B85C55] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:text-sm">
-                                {loading
-                                    ? mode === "signup"
-                                        ? "Creating Account..."
-                                        : "Logging In..."
-                                    : mode === "signup"
-                                        ? "Create Account & Continue"
-                                        : "Log In"}
-
-                                {!loading && <ArrowRight size={15} />}
+                                disabled={isAnyLoading}
+                                className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#C96B62] py-3 text-xs font-semibold text-white shadow-md shadow-[#C96B62]/10 transition-colors hover:bg-[#B85C55] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:text-sm"
+                            >
+                                {loadingAction === "form" ? (
+                                    <>
+                                        <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                                        <span>{mode === "signup" ? "Creating Account..." : "Logging In..."}</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <span>{mode === "signup" ? "Create Account & Continue" : "Log In"}</span>
+                                        <ArrowRight size={15} />
+                                    </>
+                                )}
                             </button>
                         </form>
                     </div>
