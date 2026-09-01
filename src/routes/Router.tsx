@@ -21,6 +21,8 @@ import Settings from "../pages/settings";
 import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
 import ResetPassword from "../components/ResetPassword";
+import NotificationsPage from "../components/NotificationsPage";
+
 
 export default function Router() {
     return (
@@ -48,6 +50,8 @@ export default function Router() {
                     <Route path="/units" element={<Units />} />
                     <Route path="/levels" element={<Levels />} />
                     <Route path="/settings" element={<Settings />} />
+                    <Route path="/notifications" element={<NotificationsPage />} />
+
                 </Route>
             </Route>
 

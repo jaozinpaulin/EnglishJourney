@@ -1,13 +1,12 @@
 import {
     LayoutDashboard, BookOpen, Type, Headphones, Mic, BookMarked,
-    PenLine, RotateCcw, Layers, Trophy, TrendingUp, Settings, PanelLeft
+    PenLine, RotateCcw, Layers, Trophy, TrendingUp, Settings, PanelLeft, Bell
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import { useAuth } from "../hooks/useAuth";
-import { CompassRose } from "../components/CompassRose";
-import { SidebarOnboardingPrompt } from "../components/SidebarOnboardingPrompt";
+import { CompassLogo } from "./CompassLogo";
 
 interface NavigationItem {
     label: string;
@@ -77,16 +76,13 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
 
     return (
         <>
-            {/* Desktop Aside */}
             <aside
                 className={`fixed left-0 top-0 z-40 hidden h-screen border-r border-[#1F1F1F] bg-[#0E0E10] md:flex flex-col justify-between transition-[width] duration-300 ease-in-out group ${isHover ? "w-16 hover:w-56" : "w-56"
-                    }`}
-            >
-                {/* Header com Logo CompassRose */}
+                    }`}            >
                 <div className="flex items-center h-16 shrink-0 border-b border-[#1F1F1F]/50 overflow-hidden">
                     <div className="flex h-16 w-16 shrink-0 items-center justify-center">
                         <div className="flex h-7 w-7 items-center justify-center text-[#C96B62]">
-                            <CompassRose />
+                            <CompassLogo />
                         </div>
                     </div>
 
@@ -105,7 +101,7 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                     </div>
                 </div>
 
-                {/* Navegação */}
+                {/* Nav */}
                 <nav className="flex-1 overflow-y-auto overflow-x-hidden px-1.5 py-2.5 space-y-2.5 scrollbar-none">
                     {navSections.map((section, idx) => (
                         <div
@@ -158,40 +154,78 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                     ))}
                 </nav>
 
-                {/* Container Inferior: Alerta Onboarding + Toggle Mode + Card User */}
-                <div className="flex w-full shrink-0 flex-col space-y-2 px-1.5 py-2 border-t border-[#1F1F1F]">
-
-                    {/* Prompt de Onboarding integrado (com transição de largura no modo hover) */}
-                    <div
-                        className={`overflow-hidden transition-all duration-300 ${isHover
-                            ? "max-h-0 opacity-0 group-hover:max-h-36 group-hover:opacity-100"
-                            : "max-h-36 opacity-100"
-                            }`}
+                <div className="flex w-full shrink-0 flex-col space-y-1.5 px-1.5 py-2 border-t border-[#1F1F1F]">
+                    <NavLink
+                        to="/notifications"
+                        className={({ isActive }) =>
+                            `group/notif relative flex h-9 w-full items-center justify-between rounded-lg transition-colors ${isActive
+                                ? "bg-[#251A18] text-[#C96B62]"
+                                : "text-zinc-400 hover:bg-[#18181B] hover:text-zinc-200"
+                            }`
+                        }
                     >
-                        <SidebarOnboardingPrompt />
-                    </div>
+                        <div className="flex items-center min-w-0">
+                            <div className="relative flex h-full w-[52px] shrink-0 items-center justify-center">
+                                <Bell size={17} strokeWidth={1.8} className="shrink-0" />
+                                <span
+                                    className={`absolute top-2 right-4 h-2 w-2 rounded-full bg-amber-500 transition-opacity duration-200 ${isHover ? "group-hover:opacity-0" : "hidden"}`}
+                                />
+                            </div>
 
-                    {/* Botão PanelLeft + Badge com o [mode] atual */}
-                    <div ref={asideOptionsRef} className="relative flex h-9 w-full items-center justify-between">
+                            <span
+                                className={`overflow-hidden whitespace-nowrap text-xs font-medium transition-all duration-300 ease-in-out ${isHover
+                                    ? "max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100"
+                                    : "max-w-xs opacity-100"
+                                    }`}>
+                                Notificações
+                            </span>
+                        </div>
+
+                        <div
+                            className={`pr-2 transition-all duration-300 ease-in-out ${isHover
+                                ? "max-w-0 overflow-hidden opacity-0 group-hover:max-w-xs group-hover:opacity-100"
+                                : "max-w-xs opacity-100"
+                                }`}
+                        >
+                            <span className="flex h-4 min-w-4 items-center justify-center rounded-full border border-amber-500/30 bg-amber-500/15 px-1 font-mono text-[9px] font-bold text-amber-400">
+                                2
+                            </span>
+                        </div>
+                    </NavLink>
+                    {/* Toggle de Modo Aside */}
+                    <div ref={asideOptionsRef} className="relative flex w-full">
                         <button
                             type="button"
                             onClick={() => setShowAsideOptions((curr) => !curr)}
                             title="Configurações da barra lateral"
-                            className="flex h-9 w-[52px] shrink-0 cursor-pointer items-center justify-center rounded-lg text-zinc-400 transition-colors hover:bg-[#18181B] hover:text-zinc-200"
+                            className="group/aside-toggle relative flex h-9 w-full items-center justify-between rounded-lg text-zinc-400 transition-colors hover:bg-[#18181B] hover:text-zinc-200"
                         >
-                            <PanelLeft size={17} />
-                        </button>
+                            <div className="flex items-center min-w-0">
+                                <div className="flex h-full w-[52px] shrink-0 items-center justify-center">
+                                    <PanelLeft size={17} strokeWidth={1.8} className="shrink-0" />
+                                </div>
 
-                        <div
-                            className={`overflow-hidden pr-2 transition-all duration-300 ease-in-out ${isHover
-                                ? "max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100"
-                                : "max-w-xs opacity-100"
-                                }`}
-                        >
-                            <span className="rounded-md border border-zinc-800/80 bg-zinc-900/60 px-2 py-0.5 text-[10px] font-medium tracking-wider text-zinc-400 uppercase">
-                                {mode}
-                            </span>
-                        </div>
+                                <span
+                                    className={`overflow-hidden whitespace-nowrap text-xs font-medium transition-all duration-300 ease-in-out ${isHover
+                                        ? "max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100"
+                                        : "max-w-xs opacity-100"
+                                        }`}
+                                >
+                                    Barra lateral
+                                </span>
+                            </div>
+
+                            <div
+                                className={`pr-2 transition-all duration-300 ease-in-out ${isHover
+                                    ? "max-w-0 overflow-hidden opacity-0 group-hover:max-w-xs group-hover:opacity-100"
+                                    : "max-w-xs opacity-100"
+                                    }`}
+                            >
+                                <span className="flex h-4 items-center justify-center rounded border border-zinc-800 bg-zinc-900/60 px-1.5 font-mono text-[9px] font-bold uppercase text-zinc-400">
+                                    {mode}
+                                </span>
+                            </div>
+                        </button>
 
                         {showAsideOptions && (
                             <div className="absolute bottom-full left-0 mb-2 w-32 rounded-lg border border-[#2B2B2B] bg-[#141416] p-1 text-xs shadow-xl z-50">
@@ -226,21 +260,25 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                     </div>
 
                     {/* Card User */}
-                    <div className="flex h-11 items-center justify-between overflow-hidden rounded-xl border border-[#222226] bg-[#141416] p-1">
+                    <div className="flex h-11 items-center justify-between overflow-hidden p-1">
                         <div className="flex min-w-0 items-center">
-                            <div className="flex h-9 w-[44px] shrink-0 items-center justify-center">
+                            <NavLink
+                                to="/settings"
+                                title="Configurações de perfil"
+                                className="group/avatar flex h-9 w-[44px] shrink-0 items-center justify-center"
+                            >
                                 {user?.user_metadata?.avatar_url ? (
                                     <img
                                         src={user.user_metadata.avatar_url}
                                         alt="Avatar"
-                                        className="h-7 w-7 rounded-full object-cover"
+                                        className="h-7 w-7 rounded-full object-cover transition-opacity group-hover/avatar:opacity-80"
                                     />
                                 ) : (
-                                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#3D201E] text-xs font-semibold text-[#C96B62]">
+                                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#3D201E] text-xs font-semibold text-[#C96B62] transition-colors group-hover/avatar:bg-[#4A2624]">
                                         {user?.user_metadata?.name ? user.user_metadata.name.charAt(0).toUpperCase() : "U"}
                                     </div>
                                 )}
-                            </div>
+                            </NavLink>
 
                             <div
                                 className={`overflow-hidden whitespace-nowrap transition-all duration-300 ${isHover
@@ -263,8 +301,7 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                             className={`flex h-7 shrink-0 items-center justify-center rounded-lg text-zinc-500 transition-all duration-300 hover:bg-[#18181B] hover:text-zinc-200 ${isHover
                                 ? "w-0 overflow-hidden opacity-0 group-hover:w-7 group-hover:opacity-100"
                                 : "w-7 opacity-100"
-                                }`}
-                        >
+                                }`}>
                             <Settings size={15} />
                         </NavLink>
                     </div>
@@ -277,7 +314,7 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                     <div className="overflow-y-auto space-y-3">
                         <div className="flex items-center gap-2.5 pb-2 border-b border-[#1F1F1F]">
                             <div className="flex h-6 w-6 items-center justify-center text-[#C96B62]">
-                                <CompassRose />
+                                <CompassLogo />
                             </div>
                             <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#C96B62]">
                                 English Journey
@@ -321,13 +358,30 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                         ))}
                     </div>
 
-                    <div className="space-y-2 border-t border-[#1F1F1F] pt-3">
-                        <SidebarOnboardingPrompt />
+                    <div className="space-y-1 border-t border-[#1F1F1F] pt-3">
+                        <NavLink
+                            to="/notifications"
+                            onClick={onClose}
+                            className={({ isActive }) =>
+                                `flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive
+                                    ? "bg-[#251A18] text-[#C96B62]"
+                                    : "text-zinc-400 hover:bg-[#18181B] hover:text-zinc-200"
+                                }`
+                            }
+                        >
+                            <div className="flex items-center gap-3">
+                                <Bell size={18} strokeWidth={1.8} />
+                                <span>Notificações</span>
+                            </div>
+                            <span className="flex h-5 min-w-5 items-center justify-center rounded-full border border-amber-500/30 bg-amber-500/15 px-1.5 font-mono text-[10px] font-bold text-amber-400">
+                                2
+                            </span>
+                        </NavLink>
 
                         <NavLink
                             to="/settings"
                             onClick={onClose}
-                            className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 hover:bg-[#18181B]"
+                            className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 hover:bg-[#18181B] hover:text-zinc-200"
                         >
                             <Settings size={18} />
                             <span>Settings</span>
