@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle2 } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
-import { CompassRose } from "../components/CompassRose";
+import { CompassLogo } from "../components/CompassLogo";
 import { signUp, signIn, loginWithGoogle, resetPassword } from "../services/auth";
 
 type LoadingAction = "form" | "google" | "reset" | null;
@@ -165,11 +165,10 @@ export function AuthPage() {
         <div className="flex min-h-screen w-full items-center justify-center bg-[#0D0D0D] p-3 text-[#E7E5E1] sm:p-6 lg:p-8">
             <div className="grid w-full max-w-md overflow-hidden rounded-2xl border border-[#242424] bg-[#141414] shadow-2xl lg:min-h-[580px] lg:max-w-[1280px] lg:grid-cols-2">
 
-                {/* Hero / Branding (Desktop) */}
                 <div className="relative hidden flex-col justify-between overflow-hidden border-r border-[#242424] bg-[#111111] p-8 lg:flex lg:p-12">
                     <Link to="/" className="z-10 flex w-fit items-center gap-3 transition-opacity hover:opacity-80">
                         <div className="flex h-8 w-8 items-center justify-center">
-                            <CompassRose />
+                            <CompassLogo />
                         </div>
                         <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#C96B62]">
                             English Journey
@@ -196,21 +195,10 @@ export function AuthPage() {
                     </div>
                 </div>
 
-                {/* Área do Formulário */}
                 <div className="flex flex-col justify-between bg-[#141414] p-5 sm:p-8 lg:p-12">
 
-                    {/* Top Bar Mobile */}
                     <div className="flex items-center justify-between gap-2 pb-2">
-                        <Link to="/" className="flex min-w-0 shrink items-center gap-2 lg:hidden">
-                            <div className="flex h-7 w-7 shrink-0 items-center justify-center">
-                                <CompassRose />
-                            </div>
-                            <span className="truncate font-mono text-xs font-bold uppercase tracking-wider text-[#C96B62]">
-                                English Journey
-                            </span>
-                        </Link>
 
-                        {/* Switch de Modo */}
                         <div className="ml-auto flex shrink-0 items-center rounded-xl border border-[#262626] bg-[#0E0E0E] p-1 font-mono text-xs">
                             <button
                                 type="button"
@@ -260,7 +248,7 @@ export function AuthPage() {
 
                         <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
 
-                            {/* Campo Nome (Apenas Signup) */}
+                            {/* Nome */}
                             <div
                                 className={`grid transition-all duration-300 ease-in-out ${mode === "signup"
                                     ? "grid-rows-[1fr] opacity-100"

@@ -1,58 +1,74 @@
-import { ArrowRight, BookOpen, Check, Clock3, Flame, Headphones, Mic, MessageCircle, MoreVertical, SpellCheck, Target, TrendingUp } from "lucide-react"
+import { ArrowRight, BookOpen, Check, Clock3, Flame, Headphones, Mic, MessageCircle, MoreVertical, SpellCheck, Target, TrendingUp } from "lucide-react";
+import { OnboardingHeroBanner } from "../components/OnboardingHeroBanner";
+import { useAuth } from "../hooks/useAuth";
+import { useState } from "react";
+import { OnboardingModalPrompt } from "../components/OnboardingModalPrompt";
+
 
 
 interface Stat {
-    label: string
-    value: string
-    description: string
+    label: string;
+    value: string;
+    description: string;
 }
 
 interface StudyActivity {
-    id: string
-    title: string
-    subtitle: string
-    duration: string
-    icon: typeof BookOpen
-    progress: number
-    completed: boolean
+    id: string;
+    title: string;
+    subtitle: string;
+    duration: string;
+    icon: typeof BookOpen;
+    progress: number;
+    completed: boolean;
 }
 
 const stats: Stat[] = [
     { label: "Current Level", value: "A1", description: "Elementary" },
     { label: "Day Streak", value: "7", description: "Keep it going!" },
     { label: "Study Time", value: "42 min", description: "Today" },
-]
+];
 
 const activities: StudyActivity[] = [
     { id: "vocabulary", title: "Vocabulary", subtitle: "Greetings & introductions", duration: "10 min", icon: BookOpen, progress: 60, completed: false },
     { id: "grammar", title: "Grammar", subtitle: "Verb to be", duration: "12 min", icon: SpellCheck, progress: 30, completed: false },
     { id: "listening", title: "Listening", subtitle: "Simple conversations", duration: "15 min", icon: Headphones, progress: 0, completed: false },
     { id: "speaking", title: "Speaking", subtitle: "Introduce yourself", duration: "10 min", icon: Mic, progress: 0, completed: false },
-]
+];
 
 const skills = [
     { label: "Vocabulary", value: 72 },
     { label: "Grammar", value: 64 },
     { label: "Listening", value: 58 },
     { label: "Speaking", value: 42 },
-]
+];
 
 export default function Dashboard() {
-    const completedActivities = 1
-    const totalActivities = activities.length
-    const dailyProgress = (completedActivities / totalActivities) * 100
+    const [isPromptOpen, setIsPromptOpen] = useState(true);
+    const { user } = useAuth();
+    const userName = user?.user_metadata?.name?.split(" ")[0] || "João";
+
+    const completedActivities = 1;
+    const totalActivities = activities.length;
+    const dailyProgress = (completedActivities / totalActivities) * 100;
 
     return (
         <section className="mx-auto w-full max-w-[1500px] space-y-6">
+
+            <OnboardingModalPrompt
+                isOpen={isPromptOpen}
+                onClose={() => setIsPromptOpen(false)}
+                userName={user?.user_metadata?.name?.split(" ")[0]}
+            />
+
             <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
                 <div>
                     <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C96B62]">English Journey</p>
-                    <h1 className="mt-1 text-2xl font-bold tracking-tight text-white md:text-3xl">Good morning, João!</h1>
+                    <h1 className="mt-1 text-2xl font-bold tracking-tight text-white md:text-3xl">
+                        Good morning, {userName}!
+                    </h1>
                     <p className="mt-1 text-sm text-[#999994]">Ready to continue your English journey?</p>
                 </div>
 
-
-                {/* stats topo */}
                 <div className="flex items-center gap-4 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] p-2.5 sm:gap-6 sm:px-4">
                     <div className="flex items-center gap-3">
                         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#2A2020] text-[#C96B62]">
@@ -90,14 +106,20 @@ export default function Dashboard() {
                 </div>
             </div>
 
-            {/* grid */}
+            <OnboardingHeroBanner />
+
             <div className="grid grid-cols-1 gap-5 xl:grid-cols-[minmax(0,1fr)_330px]">
+
+                {/* Coluna Central */}
                 <div className="space-y-5">
+
                     <div className="overflow-hidden rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D]">
                         <div className="border-b border-[#2B2B2B] px-6 py-3.5">
                             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#C96B62]">Current Journey</p>
                         </div>
                         <div className="grid gap-6 p-6 md:grid-cols-[160px_minmax(0,1fr)_200px] md:items-center">
+
+                            {/* Círculo do Nível */}
                             <div className="relative mx-auto flex h-36 w-36 items-center justify-center rounded-full border border-[#49302E] bg-gradient-to-br from-[#6D3833] via-[#2A2020] to-[#181818] md:mx-0">
                                 <div className="absolute inset-3.5 rounded-full border border-[#C96B62]/20" />
                                 <div className="text-center">
@@ -115,7 +137,9 @@ export default function Dashboard() {
                                 <div className="mt-4 border-t border-[#2B2B2B] pt-4">
                                     <p className="text-xs font-semibold text-[#C96B62]">Lesson 1</p>
                                     <h3 className="mt-0.5 text-base font-semibold text-white">Greetings</h3>
-                                    <p className="mt-1 max-w-lg text-xs leading-relaxed text-[#999994]">Learn simple greetings and ways to start a basic conversation in English.</p>
+                                    <p className="mt-1 max-w-lg text-xs leading-relaxed text-[#999994]">
+                                        Learn simple greetings and ways to start a basic conversation in English.
+                                    </p>
                                 </div>
                             </div>
 
@@ -128,15 +152,13 @@ export default function Dashboard() {
                                     <div className="h-full rounded-full bg-[#C96B62]" style={{ width: "60%" }} />
                                 </div>
                                 <p className="mt-2 text-[11px] text-[#777770]">2 of 4 activities completed</p>
-                                <button type="button" className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#C96B62] px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#B85C55]">
+                                <button type="button" className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#C96B62] px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#B85C55]">
                                     Continue lesson <ArrowRight size={14} />
                                 </button>
                             </div>
                         </div>
                     </div>
 
-
-                    {/* cards metricas */}
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         {stats.map((stat) => (
                             <div key={stat.label} className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D] p-4">
@@ -154,7 +176,7 @@ export default function Dashboard() {
                         ))}
                     </div>
 
-                    {/* atividades */}
+                    {/* Atividades diarias */}
                     <div className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D]">
                         <div className="flex flex-col gap-2 border-b border-[#2B2B2B] px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
                             <div>
@@ -174,9 +196,9 @@ export default function Dashboard() {
 
                         <div className="grid grid-cols-1 gap-3.5 p-6 md:grid-cols-2">
                             {activities.map((activity) => {
-                                const Icon = activity.icon
+                                const Icon = activity.icon;
                                 return (
-                                    <article key={activity.id} className={`rounded-xl border p-4 transition-colors ${activity.progress > 0 ? "border-[#59403D] bg-[#211C1C]" : "border-[#2B2B2B] bg-[#191919] hover:border-[#3A3A3A]"}`}>
+                                    <article key={activity.id} className={`rounded-xl border p-4 transition-colors ${activity.progress > 0 ? "border-[#59403D] bg-[#191919]" : "border-[#2B2B2B] i hover:border-[#3A3A3A]"}`}>
                                         <div className="flex items-start justify-between">
                                             <div className="flex items-center gap-3">
                                                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#2A2020] text-[#C96B62]">
@@ -206,19 +228,20 @@ export default function Dashboard() {
                                             <div className="flex items-center gap-1.5 text-[11px] text-[#777770]">
                                                 <Clock3 size={13} /> {activity.duration}
                                             </div>
-                                            <button type="button" className="flex items-center gap-1 text-xs font-semibold text-[#C96B62] transition-colors hover:text-white">
+                                            <button type="button" className="flex cursor-pointer items-center gap-1 text-xs font-semibold text-[#C96B62] transition-colors hover:text-white">
                                                 {activity.progress > 0 ? "Continue" : "Start"} <ArrowRight size={13} />
                                             </button>
                                         </div>
                                     </article>
-                                )
+                                );
                             })}
                         </div>
                     </div>
                 </div>
 
-                {/* lateral */}
                 <aside className="space-y-5">
+
+                    {/* Today's Focus */}
                     <div className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D] p-5">
                         <div className="flex items-center justify-between">
                             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#C96B62]">Today's Focus</p>
@@ -243,12 +266,12 @@ export default function Dashboard() {
                             </div>
                         </div>
 
-                        <button type="button" className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#6B3935] px-4 py-2.5 text-xs font-semibold text-[#C96B62] transition-colors hover:bg-[#2A2020]">
+                        <button type="button" className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl border border-[#6B3935] px-4 py-2.5 text-xs font-semibold text-[#C96B62] transition-colors hover:bg-[#2A2020]">
                             Start practicing <ArrowRight size={14} />
                         </button>
                     </div>
 
-                    {/* progresso geral */}
+                    {/* Progresso Geral */}
                     <div className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D] p-5">
                         <div className="flex items-center justify-between">
                             <h2 className="text-sm font-semibold text-white">Journey Progress</h2>
@@ -291,12 +314,11 @@ export default function Dashboard() {
                             ))}
                         </div>
 
-                        <button type="button" className="mt-5 flex w-full items-center justify-center gap-2 text-xs font-semibold text-[#C96B62] transition-colors hover:text-white">
+                        <button type="button" className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 text-xs font-semibold text-[#C96B62] transition-colors hover:text-white">
                             View detailed progress <ArrowRight size={14} />
                         </button>
                     </div>
 
-                    {/* revisao */}
                     <div className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D] p-4">
                         <div className="flex items-center gap-3">
                             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#242126] text-[#A78BC7]">
@@ -307,14 +329,15 @@ export default function Dashboard() {
                                 <p className="text-[11px] text-[#777770]">6 items ready to review</p>
                             </div>
                         </div>
-                        <button type="button" className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[#242424] px-4 py-2 text-xs font-semibold text-[#E7E5E1] transition-colors hover:bg-[#2B2B2B]">
+                        <button type="button" className="mt-3 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#242424] px-4 py-2 text-xs font-semibold text-[#E7E5E1] transition-colors hover:bg-[#2B2B2B]">
                             Review now <ArrowRight size={13} />
                         </button>
                     </div>
                 </aside>
+
             </div>
         </section>
-    )
+    );
 }
 /*
     FUTURE DASHBOARD IDEAS

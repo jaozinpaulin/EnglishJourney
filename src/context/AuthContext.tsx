@@ -14,12 +14,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const isResetRoute =
-            window.location.pathname === "/resetPassword" ||
-            window.location.hash.includes("type=recovery") ||
+        const isRecoveryHash = window.location.hash.includes("type=recovery") ||
             window.location.search.includes("type=recovery");
+        const isResetPath = window.location.pathname === "/resetPassword";
 
-        if (isResetRoute) {
+        if (isRecoveryHash || isResetPath) {
             localStorage.setItem("is_resetting_password", "true");
         }
 
@@ -27,9 +26,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             const isResetting = localStorage.getItem("is_resetting_password") === "true";
             const { data: { session } } = await supabase.auth.getSession();
 
-            if (isResetting || window.location.pathname === "/resetPassword") {
+            if (isResetting && isResetPath) {
                 setUser(null);
             } else {
+                if (!isResetPath && !isRecoveryHash) {
+                    localStorage.removeItem("is_resetting_password");
+                }
                 setUser(session?.user ?? null);
             }
 
@@ -39,6 +41,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         loadSession();
 
         const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+            console.group(`🔥 Supabase Auth Event: [${event}]`);
+            console.log("Session:", session);
+            console.log("Path:", window.location.pathname);
+            console.log("Hash:", window.location.hash);
+            console.groupEnd();
+
             if (event === "PASSWORD_RECOVERY") {
                 localStorage.setItem("is_resetting_password", "true");
                 setUser(null);
@@ -53,21 +61,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 return;
             }
 
-            if (event === "USER_UPDATED") {
+            if (event === "SIGNED_IN") {
+                const hasRecoveryToken = window.location.hash.includes("type=recovery");
+
+                if (!hasRecoveryToken && window.location.pathname !== "/resetPassword") {
+                    localStorage.removeItem("is_resetting_password");
+                    setUser(session?.user ?? null);
+                } else {
+                    setUser(null);
+                }
                 setLoading(false);
                 return;
             }
 
-            const isResetting = localStorage.getItem("is_resetting_password") === "true";
-            const isResetPath = window.location.pathname === "/resetPassword";
+            if (event === "INITIAL_SESSION" || event === "TOKEN_REFRESHED" || event === "USER_UPDATED") {
+                const isCurrentlyResetting = localStorage.getItem("is_resetting_password") === "true" &&
+                    window.location.pathname === "/resetPassword";
 
-            if (isResetting || isResetPath) {
-                setUser(null);
-            } else if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED") {
-                setUser(session?.user ?? null);
+                if (isCurrentlyResetting) {
+                    setUser(null);
+                } else {
+                    setUser(session?.user ?? null);
+                }
+                setLoading(false);
             }
-
-            setLoading(false);
         });
 
         return () => subscription.unsubscribe();

@@ -1,21 +1,23 @@
-import { ArrowRight, BookOpen, Compass, Trophy, Zap, Sparkles, LogIn, UserPlus } from "lucide-react";
+import { ArrowRight, BookOpen, Trophy, Zap, Sparkles, LogIn, UserPlus } from "lucide-react";
 import { CompassRose } from "../components/CompassRose";
 import { Link } from "react-router-dom";
+import { CompassLogo } from "../components/CompassLogo";
+
 
 export function LandingPage() {
     return (
         <div className="min-h-screen w-full bg-[#0C0C0E] text-[#E7E5E1] antialiased selection:bg-[#C96B62]/30 selection:text-white">
             <section className="mx-auto flex min-h-screen w-full max-w-[1400px] flex-col justify-between p-6 sm:p-10 lg:p-12">
 
-                {/* Header */}
                 <header className="flex items-center justify-between border-b border-[#202024] pb-6">
+
                     <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#49302E] bg-gradient-to-br from-[#2D1B1A] to-[#171313] text-[#C96B62]">
-                            <Compass size={22} strokeWidth={2} />
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl">
+                            <CompassLogo className="h-12 w-12" />
                         </div>
 
                         <div>
-                            <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#C96B62]">
+                            <span className="block font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#C96B62]">
                                 English Journey
                             </span>
                             <p className="hidden text-[10px] text-zinc-500 sm:block">
@@ -83,8 +85,8 @@ export function LandingPage() {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-center">
-                        <CompassRose className="h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96" />
+                    <div className="flex items-center justify-center w-full">
+                        <CompassRose className="w-full max-w-[440px] aspect-square" />
                     </div>
                 </div>
 

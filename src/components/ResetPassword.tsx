@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Lock, Eye, EyeOff, CheckCircle2, AlertCircle, XCircle } from "lucide-react";
-import { CompassRose } from "./CompassRose";
+import { CompassLogo } from "../components/CompassLogo";
+
 import { updatePassword, signOut } from "../services/auth";
 
 export default function ResetPassword() {
@@ -82,7 +83,7 @@ export default function ResetPassword() {
                 <div className="relative hidden flex-col justify-between overflow-hidden border-r border-[#242424] bg-[#111111] p-6 lg:flex lg:p-8">
                     <div className="z-10 flex w-fit items-center gap-2.5">
                         <div className="flex h-7 w-7 shrink-0 items-center justify-center">
-                            <CompassRose />
+                            <CompassLogo />
                         </div>
                         <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#C96B62]">
                             English Journey
@@ -109,12 +110,10 @@ export default function ResetPassword() {
                     </div>
                 </div>
 
-                {/* Form area */}
                 <div className="flex flex-col justify-between bg-[#141414] p-5 sm:p-6 lg:p-8">
-                    {/* Header mobile */}
                     <div className="flex items-center gap-2 pb-1 lg:hidden">
                         <div className="flex h-6 w-6 shrink-0 items-center justify-center">
-                            <CompassRose />
+                            <CompassLogo />
                         </div>
                         <span className="truncate font-mono text-xs font-bold uppercase tracking-wider text-[#C96B62]">
                             English Journey
