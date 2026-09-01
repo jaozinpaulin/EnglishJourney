@@ -20,10 +20,13 @@ import Settings from "../pages/settings";
 
 import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
+import ResetPassword from "../components/ResetPassword";
 
 export default function Router() {
     return (
         <Routes>
+            <Route path="/resetPassword" element={<ResetPassword />} />
+
             <Route element={<PublicRoute />}>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/authPage" element={<AuthPage />} />

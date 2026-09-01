@@ -1,3 +1,4 @@
+import { data, redirect } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 
 export async function signUp(email: string, password: string, name: string) {
@@ -41,6 +42,8 @@ export async function signOut() {
     if (error) {
         throw error;
     }
+
+    // window.location.replace("/authPage")
 }
 
 export async function loginWithGoogle() {
@@ -54,4 +57,30 @@ export async function loginWithGoogle() {
     if (error) {
         throw new Error(error.message);
     }
+}
+
+export async function resetPassword(email: string) {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/resetPassword`,
+    });
+
+    if (error) {
+        throw new Error(error.message);
+    }
+}
+
+export async function updatePassword(password: string) {
+    const { data, error } = await supabase.auth.updateUser({
+        password: password
+    });
+
+    if (error) {
+        throw new Error(error.message);
+    }
+    // Remove a trava 
+    localStorage.removeItem("is_resetting_password");
+
+    await supabase.auth.signOut({ scope: "global" });
+
+    return data;
 }

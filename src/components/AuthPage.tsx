@@ -4,7 +4,7 @@ import { ArrowRight, Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
 import { CompassRose } from "../components/CompassRose";
-import { signUp, signIn, loginWithGoogle } from "../services/auth";
+import { signUp, signIn, loginWithGoogle, resetPassword } from "../services/auth";
 
 export function AuthPage() {
     const location = useLocation();
@@ -125,9 +125,28 @@ export function AuthPage() {
         } catch (error) {
             console.error("Google authentication error:", error);
             setError(getAuthErrorMessage(error));
+
+        } finally {
             setLoading(false);
         }
     };
+
+    const handleResetPassword = async (email: string) => {
+        try {
+            setError("")
+            setSuccess("")
+            setLoading(true)
+
+            await resetPassword(email);
+            setSuccess("Se existir uma conta com este e-mail, enviaremos as instruções de redefinição.");
+
+        } catch (error) {
+            console.error("Erro ao solicitar alteração de senha:", error);
+            setError("Não foi possível enviar o e-mail. Tente novamente.");
+        } finally {
+            setLoading(false)
+        }
+    }
 
     return (
         <div className="flex min-h-screen w-full items-center justify-center bg-[#0D0D0D] p-3 text-[#E7E5E1] sm:p-6 lg:p-8">
@@ -267,6 +286,7 @@ export function AuthPage() {
                                     <div className={`transition-opacity duration-300 ${mode === "login" ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
                                         <button
                                             type="button"
+                                            onClick={() => handleResetPassword(email)}
                                             className="cursor-pointer text-[11px] text-[#777770] transition-colors hover:text-[#C96B62]"
                                         >
                                             Forgot password?
