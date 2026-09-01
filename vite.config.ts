@@ -7,4 +7,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  esbuild: {
+    // Remove apenas console.log na build de produção (preserva console.error/warn)
+    pure: ['console.log'],
+    drop: ['debugger'],
+  },
 })

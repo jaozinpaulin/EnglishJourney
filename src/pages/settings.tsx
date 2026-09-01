@@ -64,10 +64,6 @@ export default function Settings() {
         }
     };
 
-
-
-    console.log(user)
-
     return (
         <section className="mx-auto w-full max-w-3xl space-y-6 pb-10">
             <div className="flex flex-col justify-between gap-4 border-b border-[#222226] pb-4 sm:flex-row sm:items-center">
