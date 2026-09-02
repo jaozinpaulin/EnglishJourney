@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Target, Clock, Compass, X } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Clock, X } from "lucide-react";
 import { CompassRose } from "./CompassRose";
 
 interface OnboardingModalPromptProps {
@@ -82,7 +82,6 @@ export function OnboardingModalPrompt({ isOpen, onClose, userName = "viajante" }
                         to="/onboarding"
                         className="flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#C96B62] px-7 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#B85C55] active:scale-[0.99] sm:text-sm"
                     >
-                        <Compass size={16} />
                         <span>Iniciar Minha Jornada</span>
                         <ArrowRight size={15} />
                     </Link>
