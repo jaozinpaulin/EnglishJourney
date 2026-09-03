@@ -3,7 +3,7 @@ import { OnboardingHeroBanner } from "../components/OnboardingHeroBanner";
 import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
 import { OnboardingModalPrompt } from "../components/OnboardingModalPrompt";
-
+import ChatBase from "../components/ChatBase";
 
 
 interface Stat {
@@ -54,6 +54,8 @@ export default function Dashboard() {
     return (
         <section className="mx-auto w-full max-w-[1500px] space-y-6">
 
+            <ChatBase />
+            {/* <GeminiSimpleTest /> */}
             <OnboardingModalPrompt
                 isOpen={isPromptOpen}
                 onClose={() => setIsPromptOpen(false)}

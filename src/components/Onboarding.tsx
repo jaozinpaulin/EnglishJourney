@@ -287,6 +287,7 @@ export default function Onboarding() {
                 duration: studyDuration,
             },
         }
+        console.log(journeyProfile)
 
         try {
             setIsLoading(true)

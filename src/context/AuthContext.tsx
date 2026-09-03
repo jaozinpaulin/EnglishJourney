@@ -41,12 +41,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         loadSession();
 
         const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-            console.group(`🔥 Supabase Auth Event: [${event}]`);
-            console.log("Session:", session);
-            console.log("Path:", window.location.pathname);
-            console.log("Hash:", window.location.hash);
-            console.groupEnd();
-
             if (event === "PASSWORD_RECOVERY") {
                 localStorage.setItem("is_resetting_password", "true");
                 setUser(null);
