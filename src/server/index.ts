@@ -29,14 +29,29 @@ app.post("/api/journey", async (req, res) => {
             });
         }
 
+        console.log("\n=============================================");
+        console.log("[NOVO ONBOARDING] Perfil recebido:");
+        console.log(`- Nível: ${profile.level}`);
+        console.log(`- Tempo diário: ${profile.studyPlan.dailyMinutes} min`);
+        console.log(`- Motivações: ${profile.motivations.join(", ")}`);
+        console.log(" Chamando o Gemini para montar o plano por módulos...");
+
+        const startTime = Date.now();
         const journey = await generateJourney(profile);
+        const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+
+        console.log(` [SUCESSO] Jornada gerada em ${duration}s!`);
+        console.log(` Módulos Ativos Hoje: ${journey.overview.activeModules.join(", ")}`);
+        console.log("\n JSON Estruturado Retornado:");
+        console.dir(journey, { depth: null, colors: true });
+        console.log("=============================================\n");
 
         res.json(journey);
-    } catch (error) {
+    } catch (error: any) {
         console.error("Erro ao gerar jornada:", error);
 
         res.status(500).json({
-            error: "Não foi possível gerar a jornada.",
+            error: error?.message || "Não foi possível gerar a jornada.",
         });
     }
 });

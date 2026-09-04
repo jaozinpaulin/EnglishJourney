@@ -1,0 +1,84 @@
+{
+    "lesson": {
+        "id": "A1_U01_L01",
+        "lesson_number": 1,
+        "title": "Greetings",
+        "objective": "Reconhecer, compreender e produzir cumprimentos e despedidas simples adequados ao período do dia e ao contexto social.",
+        "learning_targets": [
+            "Reconhecer 'Hello' e 'Hi'",
+            "Diferenciar cumprimentos por horário (Good morning, Good afternoon, Good evening)",
+            "Identificar e produzir despedidas (Goodbye, Bye, See you)",
+            "Iniciar e encerrar uma troca comunicativa simples"
+        ],
+        "core_vocabulary": [
+            "hello",
+            "hi",
+            "good",
+            "morning",
+            "afternoon",
+            "evening",
+            "goodbye",
+            "bye",
+            "see you"
+        ],
+        "grammar": "Chunks funcionais sem análise sintática formal.",
+        "activity_pool": [
+            {
+                "id": "A1_U01_L01_Q01",
+                "objective_id": "A1_U01_L01_OBJ01",
+                "skill": "reading",
+                "type": "multiple_choice",
+                "prompt": "It is 8:00 AM. You meet your teacher at school. What is the most appropriate greeting?",
+                "options": [
+                    "Good morning",
+                    "Good afternoon",
+                    "Good evening",
+                    "Goodbye"
+                ],
+                "correct_answer": "Good morning",
+                "acceptable_answers": ["Good morning"],
+                "evidence_target": "comprehension"
+            },
+            {
+                "id": "A1_U01_L01_Q02",
+                "objective_id": "A1_U01_L01_OBJ01",
+                "skill": "reading",
+                "type": "multiple_choice",
+                "prompt": "You are leaving a friend's house at the end of the day. What do you say?",
+                "options": ["Hello", "Good morning", "Bye! See you!", "Hi"],
+                "correct_answer": "Bye! See you!",
+                "acceptable_answers": ["Bye! See you!"],
+                "evidence_target": "recognition"
+            },
+            {
+                "id": "A1_U01_L01_Q03",
+                "objective_id": "A1_U01_L01_OBJ02",
+                "skill": "writing",
+                "type": "fill_in_the_blank",
+                "prompt": "Complete the greeting used at 3:00 PM: Good ________.",
+                "options": [],
+                "correct_answer": "afternoon",
+                "acceptable_answers": ["afternoon", "Afternoon"],
+                "evidence_target": "accuracy"
+            },
+            {
+                "id": "A1_U01_L01_Q04",
+                "objective_id": "A1_U01_L01_OBJ03",
+                "skill": "interaction",
+                "type": "dialogue_response",
+                "prompt": "Interlocutor says: 'Hi! Good morning!' How do you respond?",
+                "options": [],
+                "correct_answer": "Good morning!",
+                "acceptable_answers": [
+                    "Good morning",
+                    "Good morning!",
+                    "Hi! Good morning!",
+                    "Hello! Good morning!"
+                ],
+                "evidence_target": "production"
+            }
+        ]
+    },
+    "welcomeMessage": "Bem-vindo à sua jornada de inglês! Com 50 minutos por dia, você vai se preparar para viajar sem ansiedade e se comunicar com confiança no dia a dia. Vamos começar do início!",
+    "personalizedGoal": "Aprender cumprimentos essenciais para iniciar conversas e se interagir com facilidade durante suas viagens e no cotidiano."
+}
