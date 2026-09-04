@@ -1,9 +1,8 @@
-import 'dotenv/config';
+import "dotenv/config";
 
-import express from 'express';
-import cors from 'cors';
-import ai from './ai/gemini';
-import { error } from 'console';
+import cors from "cors";
+import express from "express";
+import { generateJourney } from "./ai/generateJourney";
 
 const app = express();
 const PORT = 3000;
@@ -11,33 +10,33 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/health', (_req, res) => {
-    res.json({ status: 'ok' });
+app.get("/api/health", (_req, res) => {
+    res.json({ status: "ok" });
 });
 
-app.post('/api/ai', async (reg, res) => {
+app.post("/api/journey", async (req, res) => {
     try {
-        const { message } = reg.body;
+        const profile = req.body;
 
-        if (typeof message !== 'string' || !message.trim()) {
+        if (
+            !profile.level ||
+            !Array.isArray(profile.motivations) ||
+            !Array.isArray(profile.abilities) ||
+            !profile.studyPlan?.dailyMinutes
+        ) {
             return res.status(400).json({
-                error: 'Message must be a non-empty string',
+                error: "Perfil do aluno incompleto.",
             });
         }
 
-        const response = await ai.models.generateContent({
-            model: 'gemini-3.6-flash',
-            contents: message,
-        });
+        const journey = await generateJourney(profile);
 
-        res.json({
-            response: response.text,
-        });
+        res.json(journey);
     } catch (error) {
-        console.error('Gemini error');
+        console.error("Erro ao gerar jornada:", error);
 
         res.status(500).json({
-            error: 'Failid to generete response.',
+            error: "Não foi possível gerar a jornada.",
         });
     }
 });
