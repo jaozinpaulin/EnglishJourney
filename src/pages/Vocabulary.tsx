@@ -1,307 +1,332 @@
-import { useState } from "react"
-import { ArrowRight, Check, ChevronRight, Flame, Plus, Search, Sparkles, Volume2, } from "lucide-react"
+import { useState, useEffect, useCallback, useRef } from "react"
+import { ArrowLeftRight, Copy, Check, ChevronDown, Flame, Loader2, Volume2, X, Sparkles, } from "lucide-react"
+import WordInsightsCard from "../components/WordInsightsCard"
+import { quickTranslate } from "../services/dictionaryAi"
+import type { QuickTranslationResult } from "../services/dictionaryAi"
 
-interface WordData {
-    word: string
-    phonetic: string
-    level?: string
-    partOfSpeech: string
-    translation: string
-    definition: string
-    example: string
-    synonyms?: string[]
-    collocations?: string[]
-    conceptTip?: string
+type SupportedLanguage = "en" | "pt" | "es"
+
+interface LanguageOption {
+    code: SupportedLanguage
+    label: string
+    voiceLang: string
 }
 
-interface SuggestedWord {
-    word: string
-    translation: string
-    level: string
-    category: string
-}
-
-const dictionaryData: Record<string, WordData> = {
-    resilient: {
-        word: "Resilient",
-        phonetic: "/rɪˈzɪl.jənt/",
-        level: "B2",
-        partOfSpeech: "adjective",
-        translation: "Resiliente, que se recupera rápido",
-        definition: "Able to withstand or recover quickly from difficult conditions or sudden shock.",
-        example: "The engineering team remained resilient despite the tight delivery schedule.",
-        synonyms: ["Adaptable", "Tough", "Flexible", "Persistent"],
-        collocations: ["Highly resilient", "Stay resilient", "Resilient system"],
-        conceptTip: "Muito usado para descrever equilíbrio mental ou código e sistemas à prova de falhas.",
-    },
-    enhance: {
-        word: "Enhance",
-        phonetic: "/ɪnˈhæns/",
-        level: "B2",
-        partOfSpeech: "verb",
-        translation: "Melhorar, elevar qualidade",
-        definition: "Intensify, increase, or further improve the quality, value, or extent of something.",
-        example: "Clean layout architecture will drastically enhance the user experience.",
-        synonyms: ["Improve", "Boost", "Upgrade", "Elevate"],
-        collocations: ["Enhance performance", "Enhance skills", "Greatly enhance"],
-        conceptTip: "Usado quando algo já é bom e você quer deixá-lo com padrão ainda superior.",
-    },
-    overwhelmed: {
-        word: "Overwhelmed",
-        phonetic: "/ˌoʊ.vɚˈwelmd/",
-        level: "B1",
-        partOfSpeech: "adjective",
-        translation: "Sobrecarregado de tarefas",
-        definition: "Having too much of something to deal with, feeling weighed down by excessive work.",
-        example: "He felt overwhelmed by the amount of unread notifications.",
-        synonyms: ["Swamped", "Overloaded", "Stressed"],
-        collocations: ["Feel overwhelmed", "Easily overwhelmed"],
-        conceptTip: "Termo essencial para conversas de trabalho ao negociar prazos ou pedir ajuda.",
-    },
-    leverage: {
-        word: "Leverage",
-        phonetic: "/ˈlev.ɚ.ɪdʒ/",
-        level: "B2",
-        partOfSpeech: "verb / noun",
-        translation: "Alavancar, tirar vantagem de",
-        definition: "Use something to maximum advantage or obtain leverage in a process.",
-        example: "We can leverage modern CSS features to build responsive interfaces faster.",
-        synonyms: ["Utilize", "Exploit", "Capitalize"],
-        collocations: ["Leverage resources", "Leverage technology"],
-        conceptTip: "Palavra onipresente em reuniões técnicas e corporativas.",
-    },
-}
-
-const sidebarSuggestions: SuggestedWord[] = [
-    { word: "Leverage", translation: "Alavancar, utilizar como vantagem", level: "B2", category: "Tech & Work" },
-    { word: "Enhance", translation: "Melhorar, elevar qualidade", level: "B2", category: "General" },
-    { word: "Overwhelmed", translation: "Sobrecarregado de tarefas", level: "B1", category: "Daily" },
-    { word: "Resilient", translation: "Resiliente, adaptável a choques", level: "B2", category: "Mindset" },
+const languages: LanguageOption[] = [
+    { code: "en", label: "Inglês", voiceLang: "en-US" },
+    { code: "pt", label: "Português", voiceLang: "pt-BR" },
+    { code: "es", label: "Espanhol", voiceLang: "es-ES" },
 ]
 
 export default function Vocabulary() {
-    const [query, setQuery] = useState("")
-    const [result, setResult] = useState<WordData | null>(dictionaryData.resilient)
-    const [saved, setSaved] = useState(false)
+    const [sourceLang, setSourceLang] = useState<SupportedLanguage>("en")
+    const [targetLang, setTargetLang] = useState<SupportedLanguage>("pt")
+    const [inputText, setInputText] = useState("")
+    const [translatedText, setTranslatedText] = useState("")
+    const [quickResult, setQuickResult] = useState<QuickTranslationResult | null>(null)
+    const [loading, setLoading] = useState(false)
+    const [copied, setCopied] = useState(false)
+    const [speakingLang, setSpeakingLang] = useState<"source" | "target" | null>(null)
 
-    const searchWord = (term: string) => {
-        const key = term.trim().toLowerCase()
-        if (!key) return
+    const [openSourceMenu, setOpenSourceMenu] = useState(false)
+    const [openTargetMenu, setOpenTargetMenu] = useState(false)
 
-        if (dictionaryData[key]) {
-            setResult(dictionaryData[key])
-        } else {
-            setResult({
-                word: term.trim(),
-                phonetic: "/.../",
-                level: "B1",
-                partOfSpeech: "termo",
-                translation: "Tradução simulada (integre com sua API)",
-                definition: "Definição automática que virá do backend de dicionário.",
-                example: `Context sentence showcasing the application of "${term.trim()}".`,
-                synonyms: [],
-                collocations: [],
-                conceptTip: "Nuance conceitual fornecida após conexão externa.",
-            })
+    const sourceRef = useRef<HTMLDivElement>(null)
+    const targetRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (sourceRef.current && !sourceRef.current.contains(event.target as Node)) {
+                setOpenSourceMenu(false)
+            }
+            if (targetRef.current && !targetRef.current.contains(event.target as Node)) {
+                setOpenTargetMenu(false)
+            }
         }
-        setSaved(false)
+        document.addEventListener("mousedown", handleClickOutside)
+        return () => document.removeEventListener("mousedown", handleClickOutside)
+    }, [])
+
+    const handleTranslate = useCallback(async (text: string, src: string, tgt: string) => {
+        if (!text.trim()) {
+            setQuickResult(null)
+            setTranslatedText("")
+            setLoading(false)
+            return
+        }
+
+        setLoading(true)
+        try {
+            const result = await quickTranslate(text, src, tgt)
+            setQuickResult(result)
+            setTranslatedText(result.translation)
+        } catch (error) {
+            console.error("Falha ao traduzir:", error)
+        } finally {
+            setLoading(false)
+        }
+    }, [])
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            handleTranslate(inputText, sourceLang, targetLang)
+        }, 400)
+
+        return () => clearTimeout(timer)
+    }, [inputText, sourceLang, targetLang, handleTranslate])
+
+    const handleSwapLanguages = () => {
+        const prevSource = sourceLang
+        const prevTarget = targetLang
+        const prevInput = inputText
+        const prevTranslated = translatedText
+
+        setSourceLang(prevTarget)
+        setTargetLang(prevSource)
+        setInputText(prevTranslated)
+        setTranslatedText(prevInput)
     }
 
-    const onSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        searchWord(query)
+    const selectSourceLang = (code: SupportedLanguage) => {
+        if (code === targetLang) setTargetLang(sourceLang)
+        setSourceLang(code)
+        setOpenSourceMenu(false)
     }
+
+    const selectTargetLang = (code: SupportedLanguage) => {
+        if (code === sourceLang) setSourceLang(targetLang)
+        setTargetLang(code)
+        setOpenTargetMenu(false)
+    }
+
+    const speak = (text: string, langCode: string, side: "source" | "target") => {
+        if (!("speechSynthesis" in window) || !text.trim()) return
+        window.speechSynthesis.cancel()
+
+        const utterance = new SpeechSynthesisUtterance(text)
+        utterance.lang = langCode
+        utterance.rate = 0.9
+
+        utterance.onstart = () => setSpeakingLang(side)
+        utterance.onend = () => setSpeakingLang(null)
+        utterance.onerror = () => setSpeakingLang(null)
+
+        window.speechSynthesis.speak(utterance)
+    }
+
+    const handleCopy = () => {
+        if (!translatedText) return
+        navigator.clipboard.writeText(translatedText)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 1500)
+    }
+
+    const currentSource = languages.find((l) => l.code === sourceLang) || languages[0]
+    const currentTarget = languages.find((l) => l.code === targetLang) || languages[1]
 
     return (
         <section className="mx-auto w-full max-w-[1500px] space-y-6">
             <div className="flex flex-col justify-between gap-4 border-b border-[#262626] pb-5 sm:flex-row sm:items-center">
                 <div>
                     <h1 className="text-2xl font-bold tracking-tight text-white md:text-3xl">Vocabulário & Tradutor</h1>
-                    <p className="mt-0.5 text-xs text-[#8A8A85]">Consulte vocabulário, entenda a nuance de uso e salve para memorizar.</p>
+                    <p className="mt-0.5 text-xs text-[#8A8A85]">
+                        Tradução instantânea de palavras e frases com suporte a pronúncia fluida.
+                    </p>
                 </div>
 
                 <div className="flex items-center gap-2 rounded-xl border border-[#242424] bg-[#161616] px-3.5 py-2 text-xs text-[#C96B62]">
-                    <Flame size={15} />
+                    <Flame size={16} />
                     <span className="font-mono font-semibold">6 dias de prática</span>
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
-                <div className="space-y-5">
-                    <form onSubmit={onSubmit} className="w-full">
-                        <div className="group flex items-center rounded-2xl border border-[#2B2B2B] bg-[#161616] p-2 transition-all focus-within:border-[#C96B62]">
-                            <Search size={20} className="ml-3 text-[#666] group-focus-within:text-[#C96B62]" />
-                            <input
-                                type="text"
-                                value={query}
-                                onChange={(e) => setQuery(e.target.value)}
-                                placeholder="Pesquise um termo (ex: leverage, enhance, resilient)..."
-                                className="w-full bg-transparent px-4 py-3 text-sm text-white placeholder-[#555] outline-none"
+            <div className="w-full rounded-2xl border border-[#242424] bg-[#161616] shadow-2xl">
+                <div className="flex items-center justify-between border-b border-[#222222] bg-[#131313] rounded-t-2xl px-5 py-3 sm:px-7">
+                    <div className="relative min-w-[140px]" ref={sourceRef}>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setOpenSourceMenu(!openSourceMenu)
+                                setOpenTargetMenu(false)
+                            }}
+                            className="group flex w-full items-center justify-between gap-3 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] px-4 py-2.5 text-xs font-semibold text-white transition-all hover:border-[#C96B62] focus:border-[#C96B62]"
+                        >
+                            <span className="truncate">{currentSource.label}</span>
+                            <ChevronDown
+                                size={15}
+                                className={`shrink-0 text-[#7A7A75] transition-transform duration-200 group-hover:text-white ${openSourceMenu ? "rotate-180 text-[#C96B62]" : ""
+                                    }`}
                             />
-                            <button
-                                type="submit"
-                                className="flex items-center gap-2 rounded-xl bg-[#C96B62] px-5 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#B85C55]"
-                            >
-                                Buscar <ArrowRight size={14} />
-                            </button>
-                        </div>
-                    </form>
+                        </button>
 
-                    {result && (
-                        <div className="rounded-2xl border border-[#242424] bg-[#161616] p-6 sm:p-7">
-                            <div className="flex flex-col justify-between gap-4 border-b border-[#222222] pb-5 sm:flex-row sm:items-start">
-                                <div>
-                                    <div className="flex items-center gap-3">
-                                        <h2 className="text-3xl font-bold tracking-tight text-white">{result.word}</h2>
-                                        <button
-                                            type="button"
-                                            aria-label="Pronúncia"
-                                            className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#222222] text-[#8A8A85] transition-colors hover:bg-[#C96B62] hover:text-white"
-                                        >
-                                            <Volume2 size={16} />
-                                        </button>
-                                    </div>
-                                    <div className="mt-2 flex items-center gap-2">
-                                        <span className="font-mono text-xs text-[#7A7A75]">{result.phonetic}</span>
-                                        {result.level && (
-                                            <span className="rounded bg-[#251A19] px-2 py-0.5 font-mono text-[11px] text-[#C96B62]">
-                                                {result.level}
-                                            </span>
-                                        )}
-                                        <span className="rounded bg-[#202020] px-2 py-0.5 text-xs text-[#8A8A85]">
-                                            {result.partOfSpeech}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <button
-                                    type="button"
-                                    onClick={() => setSaved(!saved)}
-                                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition-all ${saved
-                                        ? "border border-[#1F3D2C] bg-[#14261B] text-[#55BA82]"
-                                        : "border border-[#2B2B2B] bg-[#202020] text-white hover:border-[#3D3D3D]"
-                                        }`}
-                                >
-                                    {saved ? <><Check size={14} /> Salvo no Deck</> : <><Plus size={14} /> Salvar Palavra</>}
-                                </button>
+                        {openSourceMenu && (
+                            <div className="absolute left-0 top-full z-50 mt-2 w-48 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] p-1.5 shadow-2xl backdrop-blur-md">
+                                {languages.map((l) => (
+                                    <button
+                                        key={`src-${l.code}`}
+                                        type="button"
+                                        onClick={() => selectSourceLang(l.code)}
+                                        className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs transition-colors ${l.code === sourceLang
+                                            ? "bg-[#251A19] font-semibold text-[#C96B62]"
+                                            : "text-[#B0B0AA] hover:bg-[#222222] hover:text-white"
+                                            }`}
+                                    >
+                                        <span>{l.label}</span>
+                                        <span className="font-mono text-[10px] text-[#666]">{l.code.toUpperCase()}</span>
+                                    </button>
+                                ))}
                             </div>
+                        )}
+                    </div>
 
-                            <div className="mt-5 space-y-5">
-                                <div>
-                                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">Significado / Tradução</span>
-                                    <p className="mt-1 text-base font-semibold text-white">{result.translation}</p>
-                                </div>
+                    <button
+                        type="button"
+                        onClick={handleSwapLanguages}
+                        title="Inverter idiomas"
+                        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#242424] bg-[#1A1A1A] text-[#8A8A85] transition-all hover:border-[#C96B62] hover:bg-[#251A19] hover:text-[#C96B62] active:scale-90"
+                    >
+                        <ArrowLeftRight size={16} />
+                    </button>
 
-                                <div>
-                                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">Definição</span>
-                                    <p className="mt-1 text-xs leading-relaxed text-[#B0B0AA]">{result.definition}</p>
-                                </div>
+                    <div className="relative min-w-[140px]" ref={targetRef}>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setOpenTargetMenu(!openTargetMenu)
+                                setOpenSourceMenu(false)
+                            }}
+                            className="group flex w-full items-center justify-between gap-3 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] px-4 py-2.5 text-xs font-semibold text-white transition-all hover:border-[#C96B62] focus:border-[#C96B62]"
+                        >
+                            <span className="truncate">{currentTarget.label}</span>
+                            <ChevronDown
+                                size={15}
+                                className={`shrink-0 text-[#7A7A75] transition-transform duration-200 group-hover:text-white ${openTargetMenu ? "rotate-180 text-[#C96B62]" : ""
+                                    }`}
+                            />
+                        </button>
 
-                                <div className="rounded-xl border border-[#222222] bg-[#111111] p-3.5">
-                                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">Exemplo Prático</span>
-                                    <p className="mt-1 text-xs italic text-[#E5E5E0]">"{result.example}"</p>
-                                </div>
-
-                                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                                    <div className="rounded-xl border border-[#222222] bg-[#121212] p-3.5">
-                                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">Termos Semelhantes</span>
-                                        <div className="mt-2 flex flex-wrap gap-1.5">
-                                            {(result.synonyms ?? []).length > 0 ? (
-                                                result.synonyms?.map((item, idx) => (
-                                                    <button
-                                                        key={`${item}-${idx}`}
-                                                        type="button"
-                                                        onClick={() => {
-                                                            setQuery(item)
-                                                            searchWord(item)
-                                                        }}
-                                                        className="rounded-md border border-[#242424] bg-[#1A1A1A] px-2 py-0.5 text-xs text-[#A0A09B] transition-colors hover:border-[#C96B62] hover:text-white"
-                                                    >
-                                                        {item}
-                                                    </button>
-                                                ))
-                                            ) : (
-                                                <span className="text-xs text-[#555]">Nenhum termo similar registrado.</span>
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    <div className="rounded-xl border border-[#222222] bg-[#121212] p-3.5">
-                                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">Combinações Comuns</span>
-                                        <div className="mt-2 flex flex-wrap gap-1.5">
-                                            {(result.collocations ?? []).length > 0 ? (
-                                                result.collocations?.map((item, idx) => (
-                                                    <span
-                                                        key={`${item}-${idx}`}
-                                                        className="rounded-md border border-[#242424] bg-[#1A1A1A] px-2 py-0.5 font-mono text-[11px] text-[#7A7A75]"
-                                                    >
-                                                        {item}
-                                                    </span>
-                                                ))
-                                            ) : (
-                                                <span className="text-xs text-[#555]">Sem combinações registradas.</span>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {result.conceptTip && (
-                                    <div className="rounded-xl border border-[#331C1A] bg-[#1A1414] p-3.5">
-                                        <div className="flex items-center gap-1.5 text-xs font-semibold text-[#C96B62]">
-                                            <Sparkles size={14} />
-                                            <span>Conceito & Aplicação Prática</span>
-                                        </div>
-                                        <p className="mt-1 text-xs text-[#B8AAA8] leading-relaxed">{result.conceptTip}</p>
-                                    </div>
-                                )}
+                        {openTargetMenu && (
+                            <div className="absolute right-0 top-full z-50 mt-2 w-48 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] p-1.5 shadow-2xl backdrop-blur-md">
+                                {languages.map((l) => (
+                                    <button
+                                        key={`tgt-${l.code}`}
+                                        type="button"
+                                        onClick={() => selectTargetLang(l.code)}
+                                        className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs transition-colors ${l.code === targetLang
+                                            ? "bg-[#251A19] font-semibold text-[#C96B62]"
+                                            : "text-[#B0B0AA] hover:bg-[#222222] hover:text-white"
+                                            }`}
+                                    >
+                                        <span>{l.label}</span>
+                                        <span className="font-mono text-[10px] text-[#666]">{l.code.toUpperCase()}</span>
+                                    </button>
+                                ))}
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
 
-                <aside className="space-y-4">
-                    <div className="rounded-2xl border border-[#242424] bg-[#161616] p-4">
-                        <div className="flex items-center justify-between border-b border-[#222222] pb-3">
-                            <div>
-                                <h3 className="text-sm font-semibold text-white">Explorar Vocabulário</h3>
-                                <p className="text-[11px] text-[#7A7A75]">Termos essenciais para praticar</p>
-                            </div>
-                            <span className="rounded bg-[#202020] px-2 py-0.5 text-[10px] text-[#8A8A85]">
-                                {sidebarSuggestions.length} palavras
+                <div className="grid grid-cols-1 divide-y divide-[#222222] lg:grid-cols-2 lg:divide-x lg:divide-y-0">
+                    <div className="flex min-h-[300px] w-full min-w-0 flex-col justify-between p-6 sm:p-7">
+                        <div className="relative w-full">
+                            <textarea
+                                value={inputText}
+                                onChange={(e) => setInputText(e.target.value)}
+                                placeholder="Digite palavras, expressões ou termos técnicos para traduzir..."
+                                rows={6}
+                                className="w-full resize-none bg-transparent text-lg font-medium leading-relaxed text-white placeholder-[#4F4F4F] outline-none transition-colors duration-150 sm:text-xl"
+                            />
+                            {inputText && (
+                                <button
+                                    type="button"
+                                    onClick={() => setInputText("")}
+                                    title="Limpar texto"
+                                    className="absolute right-0 top-0 flex h-8 w-8 items-center justify-center rounded-lg text-[#666] transition-colors hover:bg-[#222222] hover:text-white active:scale-95"
+                                >
+                                    <X size={18} />
+                                </button>
+                            )}
+                        </div>
+
+                        <div className="mt-4 flex items-center justify-between border-t border-[#1F1F1F] pt-3">
+                            <button
+                                type="button"
+                                onClick={() => speak(inputText, currentSource.voiceLang, "source")}
+                                disabled={!inputText.trim()}
+                                title="Ouvir pronúncia original"
+                                className={`flex h-9 w-9 items-center justify-center rounded-xl transition-all duration-150 active:scale-95 disabled:cursor-not-allowed disabled:opacity-30 ${speakingLang === "source"
+                                    ? "bg-[#C96B62] text-white shadow-lg shadow-[#C96B62]/20"
+                                    : "bg-[#202020] text-[#8A8A85] hover:bg-[#C96B62] hover:text-white"
+                                    }`}
+                            >
+                                <Volume2 size={18} />
+                            </button>
+
+                            <span className="font-mono text-[11px] text-[#555]">
+                                {inputText.length} caracteres
                             </span>
                         </div>
+                    </div>
 
-                        <div className="mt-3 divide-y divide-[#202020]">
-                            {sidebarSuggestions.map((item, idx) => (
+                    <div className="flex min-h-[300px] w-full min-w-0 flex-col justify-between bg-[#131313]/60 p-6 sm:p-7">
+                        <div className="w-full">
+                            {loading ? (
+                                <div className="flex items-center gap-2.5 text-xs font-semibold text-[#C96B62]">
+                                    <Loader2 size={16} className="animate-spin" />
+                                    <span>Traduzindo...</span>
+                                </div>
+                            ) : translatedText ? (
+                                <p className="whitespace-pre-wrap text-lg font-medium leading-relaxed text-white sm:text-xl">
+                                    {translatedText}
+                                </p>
+                            ) : (
+                                <p className="select-none text-lg text-[#444] sm:text-xl">
+                                    A tradução aparecerá aqui...
+                                </p>
+                            )}
+                        </div>
+
+                        <div className="mt-4 flex items-center justify-between border-t border-[#1F1F1F] pt-3">
+                            <div className="flex items-center gap-2">
                                 <button
-                                    key={`${item.word}-${idx}`}
                                     type="button"
-                                    onClick={() => {
-                                        setQuery(item.word)
-                                        searchWord(item.word)
-                                    }}
-                                    className="group flex w-full items-center justify-between py-3 text-left transition-colors hover:bg-[#1A1A1A] px-2 rounded-lg"
+                                    onClick={() => speak(translatedText, currentTarget.voiceLang, "target")}
+                                    disabled={!translatedText.trim()}
+                                    title="Ouvir pronúncia traduzida"
+                                    className={`flex h-9 w-9 items-center justify-center rounded-xl transition-all duration-150 active:scale-95 disabled:cursor-not-allowed disabled:opacity-30 ${speakingLang === "target"
+                                        ? "bg-[#C96B62] text-white shadow-lg shadow-[#C96B62]/20"
+                                        : "bg-[#202020] text-[#8A8A85] hover:bg-[#C96B62] hover:text-white"
+                                        }`}
                                 >
-                                    <div className="pr-2">
-                                        <div className="flex items-center gap-2">
-                                            <strong className="text-sm font-medium text-white group-hover:text-[#C96B62]">
-                                                {item.word}
-                                            </strong>
-                                            <span className="rounded bg-[#222222] px-1.5 py-0.2 font-mono text-[9px] text-[#8A8A85]">
-                                                {item.level}
-                                            </span>
-                                        </div>
-                                        <p className="mt-0.5 text-xs text-[#8A8A85] line-clamp-1">{item.translation}</p>
-                                        <span className="text-[10px] text-[#555]">{item.category}</span>
-                                    </div>
-
-                                    <ChevronRight size={14} className="shrink-0 text-[#444] group-hover:text-white transition-colors" />
+                                    <Volume2 size={18} />
                                 </button>
-                            ))}
+
+                                <button
+                                    type="button"
+                                    onClick={handleCopy}
+                                    disabled={!translatedText.trim()}
+                                    title="Copiar resultado"
+                                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#202020] text-[#8A8A85] transition-all duration-150 hover:bg-[#C96B62] hover:text-white active:scale-95 disabled:cursor-not-allowed disabled:opacity-30"
+                                >
+                                    {copied ? <Check size={16} className="text-[#55BA82]" /> : <Copy size={16} />}
+                                </button>
+                            </div>
+
+                            {translatedText && (
+                                <span className="flex items-center gap-1.5 rounded-lg bg-[#251A19] px-3 py-1 font-mono text-[10px] text-[#C96B62] transition-all">
+                                    <Sparkles size={13} />
+                                    <span>Análise em tempo real</span>
+                                </span>
+                            )}
                         </div>
                     </div>
-                </aside>
+                </div>
             </div>
+
+            <WordInsightsCard
+                quickData={quickResult}
+                onSelectWord={(word) => setInputText(word)}
+            />
         </section>
     )
 }

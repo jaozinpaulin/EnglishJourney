@@ -24,7 +24,7 @@ export default function Layout() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#151515] text-[#E7E5E1]">
+        <div className="min-h-screen bg-[#0E0E10] text-[#E7E5E1]">
             <Header isMenuOpen={isMenuOpen} onMenuToggle={() => setIsMenuOpen((prev) => !prev)} />
 
             <div className="flex pt-16 md:pt-0">
@@ -36,8 +36,7 @@ export default function Layout() {
                 />
 
                 <main
-                    className={`min-w-0 flex-1 p-4 md:p-6 ${asideMode === "hover" ? "md:ml-16" : "md:ml-56"}`}
-                >
+                    className={`min-w-0 flex-1 p-4 md:p-6 ${asideMode === "hover" ? "md:ml-16" : "md:ml-56"}`}>
                     <Outlet />
                 </main>
             </div>

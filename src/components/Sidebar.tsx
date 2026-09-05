@@ -12,6 +12,7 @@ interface NavigationItem {
     label: string;
     path: string;
     icon: any;
+    enabled: boolean;
 }
 
 interface NavigationSection {
@@ -29,27 +30,27 @@ interface SidebarProps {
 const navSections: NavigationSection[] = [
     {
         items: [
-            { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-            { label: "Vocabulary", path: "/vocabulary", icon: BookOpen },
-            { label: "Grammar", path: "/grammar", icon: Type },
-            { label: "Listening", path: "/listening", icon: Headphones },
-            { label: "Speaking", path: "/speaking", icon: Mic },
-            { label: "Reading", path: "/reading", icon: BookMarked },
-            { label: "Writing", path: "/writing", icon: PenLine },
-            { label: "Review", path: "/review", icon: RotateCcw },
+            { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard, enabled: true },
+            { label: "Vocabulary", path: "/vocabulary", icon: BookOpen, enabled: true },
+            { label: "Grammar", path: "/grammar", icon: Type, enabled: true },
+            { label: "Listening", path: "/listening", icon: Headphones, enabled: false },
+            { label: "Speaking", path: "/speaking", icon: Mic, enabled: false },
+            { label: "Reading", path: "/reading", icon: BookMarked, enabled: false },
+            { label: "Writing", path: "/writing", icon: PenLine, enabled: false },
+            { label: "Review", path: "/review", icon: RotateCcw, enabled: true },
         ],
     },
     {
         title: "JOURNEY",
         items: [
-            { label: "Units", path: "/units", icon: Layers },
-            { label: "Levels", path: "/levels", icon: Trophy },
+            { label: "Units", path: "/units", icon: Layers, enabled: false },
+            { label: "Levels", path: "/levels", icon: Trophy, enabled: false },
         ],
     },
     {
         title: "PROGRESS",
         items: [
-            { label: "My Progress", path: "/progress", icon: TrendingUp },
+            { label: "My Progress", path: "/progress", icon: TrendingUp, enabled: false },
         ],
     },
 ];
@@ -106,8 +107,7 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                     {navSections.map((section, idx) => (
                         <div
                             key={idx}
-                            className={`space-y-0.5 ${idx !== navSections.length - 1 ? "border-b border-[#1F1F1F]/60 pb-2" : ""
-                                }`}
+                            className={`space-y-0.5 ${idx !== navSections.length - 1 ? "border-b border-[#1F1F1F]/60 pb-2" : ""}`}
                         >
                             {section.title && (
                                 <p
@@ -123,12 +123,40 @@ export default function Sidebar({ isMenuOpen, onClose, mode, setAsideMode }: Sid
                             <ul className="space-y-0.5">
                                 {section.items.map((item) => {
                                     const Icon = item.icon;
+
+                                    if (!item.enabled) {
+                                        return (
+                                            <li key={item.path}>
+                                                <div
+                                                    title={`${item.label} (Em breve)`}
+                                                    className="flex h-9 w-full cursor-not-allowed select-none items-center rounded-lg text-sm text-zinc-600 opacity-40 transition-colors"
+                                                >
+                                                    <div className="flex h-full w-[52px] shrink-0 items-center justify-center">
+                                                        <Icon size={17} strokeWidth={1.8} className="shrink-0" />
+                                                    </div>
+
+                                                    <div
+                                                        className={`flex flex-1 items-center justify-between overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out ${isHover
+                                                            ? "max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100"
+                                                            : "max-w-xs opacity-100"
+                                                            }`}
+                                                    >
+                                                        <span className="text-xs">{item.label}</span>
+                                                        <span className="mr-2 rounded bg-[#171719] px-1.5 py-0.5 font-mono text-[9px] text-zinc-500 border border-[#222]">
+                                                            Em breve
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        );
+                                    }
+
                                     return (
                                         <li key={item.path}>
                                             <NavLink
                                                 to={item.path}
                                                 className={({ isActive }) =>
-                                                    `flex h-9 items-center rounded-lg text-sm font-medium transition-colors ${isActive
+                                                    `flex h-9 w-full items-center rounded-lg text-sm font-medium transition-colors ${isActive
                                                         ? "bg-[#251A18] text-[#C96B62]"
                                                         : "text-zinc-400 hover:bg-[#18181B] hover:text-zinc-200"
                                                     }`

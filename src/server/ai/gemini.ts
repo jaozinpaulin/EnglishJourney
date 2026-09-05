@@ -1,6 +1,15 @@
 import { GoogleGenAI } from '@google/genai';
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+if (!apiKey) {
+    console.error("ERRO: VITE_GEMINI_API_KEY está indefinida! Verifique o arquivo .env na raiz do projeto.");
+}
+
+const ai = new GoogleGenAI({ apiKey: apiKey || "" });
 
 export default ai;
+
+if (!apiKey) {
+    console.error("ERRO: VITE_GEMINI_API_KEY está indefinida! Verifique o arquivo .env na raiz do projeto.");
+}
