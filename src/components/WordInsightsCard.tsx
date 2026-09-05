@@ -14,6 +14,11 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
     const [saved, setSaved] = useState(false)
 
     useEffect(() => {
+        if (!quickData || !quickData.word.trim()) {
+            setAiData(null);
+            return;
+        }
+
         const word = quickData?.word?.trim()
         if (!word || word.split(/\s+/).length > 3) {
             setAiData(null)
