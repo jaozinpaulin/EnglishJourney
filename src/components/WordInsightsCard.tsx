@@ -15,12 +15,12 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
 
     useEffect(() => {
         if (!quickData || !quickData.word.trim()) {
-            setAiData(null);
-            return;
+            setAiData(null)
+            return
         }
 
-        const word = quickData?.word?.trim()
-        if (!word || word.split(/\s+/).length > 3) {
+        const word = quickData.word.trim()
+        if (word.split(/\s+/).length > 3) {
             setAiData(null)
             return
         }
@@ -48,34 +48,37 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
     if (!quickData?.word) return null
 
     return (
-        <div className="rounded-2xl border border-[#242424] bg-[#161616] p-6 shadow-2xl transition-all sm:p-7">
-            <div className="flex flex-col justify-between gap-4 border-b border-[#222222] pb-5 sm:flex-row sm:items-start">
-                <div>
-                    <div className="flex items-center gap-3">
-                        <h2 className="text-3xl font-bold tracking-tight text-white capitalize md:text-4xl">
+        <div className="w-full max-w-full overflow-hidden rounded-2xl border border-[#242424] bg-[#161616] p-4 shadow-2xl transition-all sm:p-6 md:p-7">
+            {/* Topo com Título Quebrável */}
+            <div className="flex flex-col justify-between gap-3 border-b border-[#222222] pb-4 sm:flex-row sm:items-start">
+                <div className="min-w-0 max-w-full">
+                    <div className="flex items-center gap-2.5">
+                        <h2 className="text-2xl font-bold tracking-tight text-white capitalize break-all sm:text-3xl md:text-4xl">
                             {quickData.word}
                         </h2>
                         <button
                             type="button"
                             onClick={() => speakWord(quickData.word)}
                             title="Ouvir pronúncia"
-                            className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#202020] text-[#8A8A85] transition-all hover:bg-[#C96B62] hover:text-white active:scale-90"
+                            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#202020] text-[#8A8A85] transition-all hover:bg-[#C96B62] hover:text-white active:scale-90 sm:h-9 sm:w-9"
                         >
-                            <Volume2 size={18} />
+                            <Volume2 size={16} />
                         </button>
                     </div>
 
-                    <div className="mt-2.5 flex items-center gap-2.5">
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
                         {aiData ? (
                             <>
-                                <span className="font-mono text-sm font-semibold text-[#C96B62]">{aiData.phonetic}</span>
-                                <span className="rounded-md bg-[#202020] px-2 py-0.5 text-xs text-[#8A8A85]">
+                                <span className="font-mono text-xs font-semibold text-[#C96B62] break-all sm:text-sm">
+                                    {aiData.phonetic}
+                                </span>
+                                <span className="rounded-md bg-[#202020] px-2 py-0.5 text-[11px] text-[#8A8A85]">
                                     {aiData.partOfSpeech}
                                 </span>
                             </>
                         ) : loadingAi ? (
                             <div className="flex items-center gap-2 font-mono text-xs text-[#777]">
-                                <Loader2 size={13} className="animate-spin text-[#C96B62]" />
+                                <Loader2 size={12} className="animate-spin text-[#C96B62]" />
                                 <span>Consultando IA...</span>
                             </div>
                         ) : null}
@@ -85,21 +88,24 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                 <button
                     type="button"
                     onClick={() => setSaved(!saved)}
-                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition-all active:scale-95 ${saved
+                    className={`flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition-all active:scale-95 ${saved
                         ? "border border-[#1F3D2C] bg-[#14261B] text-[#55BA82]"
                         : "border border-[#2B2B2B] bg-[#202020] text-white hover:border-[#3D3D3D]"
                         }`}
                 >
-                    {saved ? <><Check size={15} /> Salvo no Deck</> : <><Plus size={15} /> Salvar Palavra</>}
+                    {saved ? <><Check size={14} /> Salvo no Deck</> : <><Plus size={14} /> Salvar Palavra</>}
                 </button>
             </div>
 
-            <div className="mt-6 space-y-5">
-                <div>
+            {/* Conteúdo com Quebra de Linha Automática */}
+            <div className="mt-5 space-y-4 sm:space-y-5">
+                <div className="min-w-0 max-w-full">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
                         Tradução
                     </span>
-                    <p className="mt-1 text-2xl font-bold text-white capitalize">{quickData.translation}</p>
+                    <p className="mt-1 text-xl font-bold text-white capitalize break-all sm:text-2xl">
+                        {quickData.translation}
+                    </p>
 
                     {quickData.alternativeTranslations.length > 0 && (
                         <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
@@ -107,7 +113,7 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                             {quickData.alternativeTranslations.map((alt, idx) => (
                                 <span
                                     key={`${alt}-${idx}`}
-                                    className="rounded-md border border-[#242424] bg-[#1B1B1D] px-2.5 py-0.5 text-xs text-[#A0A09B]"
+                                    className="max-w-full truncate rounded-md border border-[#242424] bg-[#1B1B1D] px-2 py-0.5 text-xs text-[#A0A09B]"
                                 >
                                     {alt}
                                 </span>
@@ -117,7 +123,7 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                 </div>
 
                 {quickData.synonyms.length > 0 && (
-                    <div className="rounded-xl border border-[#222222] bg-[#121212] p-4">
+                    <div className="rounded-xl border border-[#222222] bg-[#121212] p-3.5 sm:p-4">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
                             Palavras Parecidas & Sinônimos
                         </span>
@@ -127,7 +133,7 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                                     key={`${syn}-${idx}`}
                                     type="button"
                                     onClick={() => onSelectWord?.(syn)}
-                                    className="rounded-lg border border-[#262626] bg-[#1A1A1A] px-2.5 py-1 text-xs text-[#B0B0AA] transition-all hover:border-[#C96B62] hover:text-white"
+                                    className="max-w-full truncate rounded-lg border border-[#262626] bg-[#1A1A1A] px-2.5 py-1 text-xs text-[#B0B0AA] transition-all hover:border-[#C96B62] hover:text-white"
                                 >
                                     {syn}
                                 </button>
@@ -137,21 +143,25 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                 )}
 
                 {aiData?.example && (
-                    <div className="rounded-xl border border-[#222222] bg-[#111111] p-4">
+                    <div className="rounded-xl border border-[#222222] bg-[#111111] p-3.5 sm:p-4">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
                             Exemplo de Uso
                         </span>
-                        <p className="mt-1 text-sm italic text-[#E5E5E0]">"{aiData.example}"</p>
+                        <p className="mt-1 text-xs sm:text-sm italic text-[#E5E5E0] break-words">
+                            "{aiData.example}"
+                        </p>
                     </div>
                 )}
 
                 {aiData?.conceptTip && (
-                    <div className="rounded-xl border border-[#331C1A] bg-[#1A1414] p-4">
+                    <div className="rounded-xl border border-[#331C1A] bg-[#1A1414] p-3.5 sm:p-4">
                         <div className="flex items-center gap-2 text-xs font-semibold text-[#C96B62]">
-                            <Sparkles size={15} />
+                            <Sparkles size={14} />
                             <span>Dica de Uso Real</span>
                         </div>
-                        <p className="mt-1.5 text-xs leading-relaxed text-[#B8AAA8]">{aiData.conceptTip}</p>
+                        <p className="mt-1.5 text-xs leading-relaxed text-[#B8AAA8] break-words">
+                            {aiData.conceptTip}
+                        </p>
                     </div>
                 )}
             </div>

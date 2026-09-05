@@ -142,10 +142,10 @@ export default function Vocabulary() {
                     </p>
                 </div>
 
-                <div className="flex w-fit items-center gap-2 rounded-xl border border-[#242424] bg-[#161616] px-3.5 py-2 text-xs text-[#C96B62]">
+                {/* <div className="flex w-fit items-center gap-2 rounded-xl border border-[#242424] bg-[#161616] px-3.5 py-2 text-xs text-[#C96B62]">
                     <Flame size={16} />
                     <span className="font-mono font-semibold">6 dias de prática</span>
-                </div>
+                </div> */}
             </div>
 
             <div className="w-full rounded-2xl border border-[#242424] bg-[#161616] shadow-2xl">
