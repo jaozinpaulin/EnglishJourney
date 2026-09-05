@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Volume2, Sparkles, Check, Plus, Loader2 } from "lucide-react"
+import { Volume2, Sparkles, Check, Plus, Loader2, ArrowRightLeft, Bookmark } from "lucide-react"
 import { enrichWordWithAI, speakWord } from "../services/dictionaryAi"
 import type { AIEnrichment, QuickTranslationResult } from "../services/dictionaryAi"
 
@@ -49,7 +49,6 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
 
     return (
         <div className="w-full max-w-full overflow-hidden rounded-2xl border border-[#242424] bg-[#161616] p-4 shadow-2xl transition-all sm:p-6 md:p-7">
-            {/* Topo com Título Quebrável */}
             <div className="flex flex-col justify-between gap-3 border-b border-[#222222] pb-4 sm:flex-row sm:items-start">
                 <div className="min-w-0 max-w-full">
                     <div className="flex items-center gap-2.5">
@@ -79,7 +78,7 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                         ) : loadingAi ? (
                             <div className="flex items-center gap-2 font-mono text-xs text-[#777]">
                                 <Loader2 size={12} className="animate-spin text-[#C96B62]" />
-                                <span>Consultando IA...</span>
+                                <span>Gerando exemplos e comparações com IA...</span>
                             </div>
                         ) : null}
                     </div>
@@ -97,8 +96,8 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                 </button>
             </div>
 
-            {/* Conteúdo com Quebra de Linha Automática */}
             <div className="mt-5 space-y-4 sm:space-y-5">
+                {/* Traduções */}
                 <div className="min-w-0 max-w-full">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
                         Tradução
@@ -122,6 +121,7 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                     )}
                 </div>
 
+                {/* Sinônimos */}
                 {quickData.synonyms.length > 0 && (
                     <div className="rounded-xl border border-[#222222] bg-[#121212] p-3.5 sm:p-4">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
@@ -142,17 +142,72 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                     </div>
                 )}
 
-                {aiData?.example && (
+                {/* Exemplos */}
+                {aiData?.examples && aiData.examples.length > 0 && (
                     <div className="rounded-xl border border-[#222222] bg-[#111111] p-3.5 sm:p-4">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
-                            Exemplo de Uso
+                            Exemplos Práticos em Contexto
                         </span>
-                        <p className="mt-1 text-xs sm:text-sm italic text-[#E5E5E0] break-words">
-                            "{aiData.example}"
+                        <div className="mt-3 space-y-3">
+                            {aiData.examples.map((item, idx) => (
+                                <div
+                                    key={idx}
+                                    className="flex items-start justify-between gap-3 border-b border-[#1C1C1C] pb-2.5 last:border-0 last:pb-0"
+                                >
+                                    <div className="min-w-0 flex-1 space-y-0.5">
+                                        <p className="text-xs sm:text-sm font-medium text-[#F0F0EE]">
+                                            "{item.en}"
+                                        </p>
+                                        <p className="text-xs text-[#7E7E7A]">
+                                            {item.pt}
+                                        </p>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        onClick={() => speakWord(item.en)}
+                                        title="Ouvir exemplo"
+                                        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#1D1D1F] text-[#80807C] transition-all hover:bg-[#C96B62] hover:text-white active:scale-95"
+                                    >
+                                        <Volume2 size={13} />
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {aiData?.comparison && (
+                    <div className="rounded-xl border border-[#262217] bg-[#17140E] p-3.5 sm:p-4">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-[#E5A84B]">
+                            <ArrowRightLeft size={14} />
+                            <span>Comparação: {quickData.word} vs {aiData.comparison.similarWord}</span>
+                        </div>
+                        <p className="mt-1.5 text-xs leading-relaxed text-[#C2B59D] break-words">
+                            {aiData.comparison.difference}
                         </p>
                     </div>
                 )}
 
+                {aiData?.collocations && aiData.collocations.length > 0 && (
+                    <div className="rounded-xl border border-[#1A2228] bg-[#101519] p-3.5 sm:p-4">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-[#5DA5D9]">
+                            <Bookmark size={14} />
+                            <span>Combinações Comuns (Collocations)</span>
+                        </div>
+                        <div className="mt-2.5 flex flex-wrap gap-1.5">
+                            {aiData.collocations.map((col, idx) => (
+                                <span
+                                    key={idx}
+                                    className="rounded-md border border-[#202E38] bg-[#141C22] px-2.5 py-1 text-xs text-[#A8C3D8]"
+                                >
+                                    {col}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Dica de Uso */}
                 {aiData?.conceptTip && (
                     <div className="rounded-xl border border-[#331C1A] bg-[#1A1414] p-3.5 sm:p-4">
                         <div className="flex items-center gap-2 text-xs font-semibold text-[#C96B62]">

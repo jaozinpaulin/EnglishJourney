@@ -32,9 +32,9 @@ const navSections: NavigationSection[] = [
         items: [
             { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard, enabled: true },
             { label: "Vocabulary", path: "/vocabulary", icon: BookOpen, enabled: true },
-            { label: "Grammar", path: "/grammar", icon: Type, enabled: true },
-            { label: "Listening", path: "/listening", icon: Headphones, enabled: false },
-            { label: "Speaking", path: "/speaking", icon: Mic, enabled: false },
+            { label: "Grammar", path: "/grammar", icon: Type, enabled: false },
+            { label: "Listening", path: "/listening", icon: Headphones, enabled: true },
+            { label: "Speaking", path: "/speaking", icon: Mic, enabled: true },
             { label: "Reading", path: "/reading", icon: BookMarked, enabled: false },
             { label: "Writing", path: "/writing", icon: PenLine, enabled: false },
             { label: "Review", path: "/review", icon: RotateCcw, enabled: true },
