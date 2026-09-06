@@ -8,6 +8,24 @@ interface WordInsightsCardProps {
     onSelectWord?: (word: string) => void
 }
 
+function highlightWord(text: string, targetWord: string) {
+    if (!targetWord || !text) return text
+
+    const cleanTarget = targetWord.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    const regex = new RegExp(`(${cleanTarget})`, "gi")
+    const parts = text.split(regex)
+
+    return parts.map((part, index) =>
+        regex.test(part) ? (
+            <span key={index} className="font-semibold text-[#C96B62]">
+                {part}
+            </span>
+        ) : (
+            part
+        )
+    )
+}
+
 export default function WordInsightsCard({ quickData, onSelectWord }: WordInsightsCardProps) {
     const [aiData, setAiData] = useState<AIEnrichment | null>(null)
     const [loadingAi, setLoadingAi] = useState(false)
@@ -97,7 +115,6 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
             </div>
 
             <div className="mt-5 space-y-4 sm:space-y-5">
-                {/* Traduções */}
                 <div className="min-w-0 max-w-full">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
                         Tradução
@@ -121,7 +138,6 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                     )}
                 </div>
 
-                {/* Sinônimos */}
                 {quickData.synonyms.length > 0 && (
                     <div className="rounded-xl border border-[#222222] bg-[#121212] p-3.5 sm:p-4">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
@@ -142,7 +158,6 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                     </div>
                 )}
 
-                {/* Exemplos */}
                 {aiData?.examples && aiData.examples.length > 0 && (
                     <div className="rounded-xl border border-[#222222] bg-[#111111] p-3.5 sm:p-4">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A7A75]">
@@ -156,7 +171,7 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                                 >
                                     <div className="min-w-0 flex-1 space-y-0.5">
                                         <p className="text-xs sm:text-sm font-medium text-[#F0F0EE]">
-                                            "{item.en}"
+                                            "{highlightWord(item.en, quickData.word)}"
                                         </p>
                                         <p className="text-xs text-[#7E7E7A]">
                                             {item.pt}
@@ -177,28 +192,28 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                 )}
 
                 {aiData?.comparison && (
-                    <div className="rounded-xl border border-[#262217] bg-[#17140E] p-3.5 sm:p-4">
-                        <div className="flex items-center gap-2 text-xs font-semibold text-[#E5A84B]">
-                            <ArrowRightLeft size={14} />
+                    <div className="rounded-xl border border-[#222222] bg-[#121212] p-3.5 sm:p-4">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-[#D4D4D8]">
+                            <ArrowRightLeft size={14} className="text-[#C96B62]" />
                             <span>Comparação: {quickData.word} vs {aiData.comparison.similarWord}</span>
                         </div>
-                        <p className="mt-1.5 text-xs leading-relaxed text-[#C2B59D] break-words">
+                        <p className="mt-1.5 text-xs leading-relaxed text-[#A1A1AA] break-words">
                             {aiData.comparison.difference}
                         </p>
                     </div>
                 )}
 
                 {aiData?.collocations && aiData.collocations.length > 0 && (
-                    <div className="rounded-xl border border-[#1A2228] bg-[#101519] p-3.5 sm:p-4">
-                        <div className="flex items-center gap-2 text-xs font-semibold text-[#5DA5D9]">
-                            <Bookmark size={14} />
+                    <div className="rounded-xl border border-[#222222] bg-[#121212] p-3.5 sm:p-4">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-[#D4D4D8]">
+                            <Bookmark size={14} className="text-[#C96B62]" />
                             <span>Combinações Comuns (Collocations)</span>
                         </div>
                         <div className="mt-2.5 flex flex-wrap gap-1.5">
                             {aiData.collocations.map((col, idx) => (
                                 <span
                                     key={idx}
-                                    className="rounded-md border border-[#202E38] bg-[#141C22] px-2.5 py-1 text-xs text-[#A8C3D8]"
+                                    className="rounded-lg border border-[#262626] bg-[#1A1A1A] px-2.5 py-1 text-xs text-[#B0B0AA]"
                                 >
                                     {col}
                                 </span>
@@ -207,14 +222,13 @@ export default function WordInsightsCard({ quickData, onSelectWord }: WordInsigh
                     </div>
                 )}
 
-                {/* Dica de Uso */}
                 {aiData?.conceptTip && (
-                    <div className="rounded-xl border border-[#331C1A] bg-[#1A1414] p-3.5 sm:p-4">
+                    <div className="rounded-xl border border-[#965650] p-3.5 sm:p-4">
                         <div className="flex items-center gap-2 text-xs font-semibold text-[#C96B62]">
                             <Sparkles size={14} />
                             <span>Dica de Uso Real</span>
                         </div>
-                        <p className="mt-1.5 text-xs leading-relaxed text-[#B8AAA8] break-words">
+                        <p className="mt-1.5 text-xs leading-relaxed text-[#BFA6A4] break-words">
                             {aiData.conceptTip}
                         </p>
                     </div>
