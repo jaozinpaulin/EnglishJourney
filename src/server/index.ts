@@ -15,6 +15,67 @@ app.get("/api/health", (_req, res) => {
     res.json({ status: "ok" });
 });
 
+app.get("/api/translate", async (req, res) => {
+    try {
+        const { q, sl = "en", tl = "pt" } = req.query;
+
+        if (!q || typeof q !== "string") {
+            return res.status(400).json({ error: "Texto não informado." });
+        }
+
+        const cleanText = q.trim();
+
+        try {
+            const myMemoryUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(cleanText)}&langpair=${sl}|${tl}`;
+            const mmRes = await fetch(myMemoryUrl);
+            if (mmRes.ok) {
+                const mmData = await mmRes.json();
+                const translation = mmData?.responseData?.translatedText;
+                if (translation) {
+                    const matches = mmData?.matches || [];
+                    const altList = matches
+                        .map((m: any) => m.translation)
+                        .filter((t: string) => t && t.toLowerCase() !== translation.toLowerCase())
+                        .slice(0, 4);
+
+                    return res.json({
+                        word: cleanText,
+                        translation,
+                        alternativeTranslations: altList,
+                        synonyms: [],
+                    });
+                }
+            }
+        } catch (e) {
+            console.warn("MyMemory falhou, tentando fallback...");
+        }
+
+        const googleUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&dt=at&q=${encodeURIComponent(cleanText)}`;
+        const gRes = await fetch(googleUrl, {
+            headers: {
+                "User-Agent":
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            },
+        });
+
+        if (!gRes.ok) {
+            throw new Error(`Serviço de tradução indisponível (${gRes.status})`);
+        }
+
+        const gData = await gRes.json();
+        const mainTranslation = gData?.[0]?.map((item: any) => item[0]).join("") || "";
+
+        return res.json({
+            word: cleanText,
+            translation: mainTranslation,
+            alternativeTranslations: [],
+            synonyms: [],
+        });
+    } catch (error: any) {
+        console.error("Erro na tradução:", error);
+        res.status(500).json({ error: error?.message || "Falha ao traduzir." });
+    }
+});
 app.post("/api/dictionary/enrich", async (req, res) => {
     try {
         const { term, translation } = req.body;
@@ -84,6 +145,7 @@ app.post("/api/dictionary/enrich", async (req, res) => {
     }
 });
 
+// Jornada
 app.post("/api/journey", async (req, res) => {
     try {
         const profile = req.body;

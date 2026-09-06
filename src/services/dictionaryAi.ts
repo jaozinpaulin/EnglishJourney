@@ -34,49 +34,22 @@ export async function quickTranslate(
         return { word: "", translation: "", alternativeTranslations: [], synonyms: [] };
     }
 
-    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&dt=at&dt=ss&q=${encodeURIComponent(clean)}`;
+    const url = `http://localhost:3000/api/translate?sl=${sourceLang}&tl=${targetLang}&q=${encodeURIComponent(clean)}`;
     const res = await fetch(url);
-    if (!res.ok) throw new Error("Erro no Google Translate");
+
+    if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        console.error("Status da tradução:", res.status, errorData);
+        throw new Error(errorData.error || `Erro de tradução: status ${res.status}`);
+    }
 
     const data = await res.json();
-    const mainTranslation = data?.[0]?.map((item: any) => item[0]).join("") || "";
-
-    const altList: string[] = [];
-    if (Array.isArray(data?.[5])) {
-        data[5].forEach((entry: any) => {
-            if (Array.isArray(entry?.[2])) {
-                entry[2].forEach((item: any) => {
-                    const word = item?.[0];
-                    if (word && !altList.includes(word) && word.toLowerCase() !== mainTranslation.toLowerCase()) {
-                        altList.push(word);
-                    }
-                });
-            }
-        });
-    }
-
-    const synonymsList: string[] = [];
-    if (Array.isArray(data?.[11])) {
-        data[11].forEach((group: any) => {
-            if (Array.isArray(group?.[1])) {
-                group[1].forEach((item: any) => {
-                    if (Array.isArray(item?.[0])) {
-                        item[0].forEach((syn: string) => {
-                            if (syn && !synonymsList.includes(syn) && syn.toLowerCase() !== clean.toLowerCase()) {
-                                synonymsList.push(syn);
-                            }
-                        });
-                    }
-                });
-            }
-        });
-    }
 
     return {
-        word: clean,
-        translation: mainTranslation,
-        alternativeTranslations: altList.slice(0, 5),
-        synonyms: synonymsList.slice(0, 6),
+        word: data.word || clean,
+        translation: data.translation || "",
+        alternativeTranslations: data.alternativeTranslations || [],
+        synonyms: data.synonyms || [],
     };
 }
 
@@ -102,6 +75,6 @@ export function speakWord(text: string, lang = "en-US") {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = lang;
-    utterance.rate = 0.9;
+    utterance.rate = 0.8;
     window.speechSynthesis.speak(utterance);
 }
