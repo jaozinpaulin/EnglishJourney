@@ -396,8 +396,7 @@ export default function Vocabulary() {
 
             <WordInsightsCard
                 quickData={quickResult}
-                onSelectWord={(word) => setInputText(word)}
-            />
+                onSelectWord={(word) => setInputText(word)} />
         </section>
     )
 }
