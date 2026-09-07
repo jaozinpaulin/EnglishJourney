@@ -155,10 +155,8 @@ export default function Vocabulary() {
                 </div>
             </div>
 
-            {/* Caixa de Tradução Principal */}
             <div className="w-full rounded-2xl border border-[#242424] bg-[#161616] shadow-2xl transition-all">
                 <div className="flex flex-wrap items-center justify-between gap-2 rounded-t-2xl border-b border-[#222222] bg-[#131313] px-3 py-2.5 sm:px-7 sm:py-3">
-                    {/* Idioma de Origem */}
                     <div className="relative min-w-[120px] sm:min-w-[140px]" ref={sourceRef}>
                         <button
                             type="button"
@@ -205,7 +203,6 @@ export default function Vocabulary() {
                         <ArrowLeftRight size={15} />
                     </button>
 
-                    {/* Idioma de Destino */}
                     <div className="relative min-w-[120px] sm:min-w-[140px]" ref={targetRef}>
                         <button
                             type="button"
@@ -213,14 +210,12 @@ export default function Vocabulary() {
                                 setOpenTargetMenu(!openTargetMenu)
                                 setOpenSourceMenu(false)
                             }}
-                            className="group flex w-full items-center justify-between gap-2 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] px-3 py-2 text-xs font-semibold text-white transition-all hover:border-[#C96B62] focus:border-[#C96B62] sm:px-4 sm:py-2.5"
-                        >
+                            className="group flex w-full items-center justify-between gap-2 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] px-3 py-2 text-xs font-semibold text-white transition-all hover:border-[#C96B62] focus:border-[#C96B62] sm:px-4 sm:py-2.5">
                             <span className="truncate">{currentTarget.label}</span>
                             <ChevronDown
                                 size={14}
                                 className={`shrink-0 text-[#7A7A75] transition-transform duration-200 group-hover:text-white ${openTargetMenu ? "rotate-180 text-[#C96B62]" : ""
-                                    }`}
-                            />
+                                    }`} />
                         </button>
 
                         {openTargetMenu && (

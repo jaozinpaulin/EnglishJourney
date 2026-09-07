@@ -17,7 +17,6 @@ interface AudioEpisode {
     transcript: string
 }
 
-// Histórias com textos reais para o Edge TTS sintetizar
 const audioEpisodes: AudioEpisode[] = [
     {
         id: "a1",
@@ -73,7 +72,6 @@ const audioEpisodes: AudioEpisode[] = [
     }
 ]
 
-// Gera a URL do endpoint Express passando o texto e o sotaque
 function getAudioUrl(text: string, accent: string) {
     return `http://localhost:3001/api/tts?accent=${encodeURIComponent(accent)}&text=${encodeURIComponent(text)}`
 }
@@ -140,7 +138,6 @@ export default function Listening() {
 
     return (
         <section className="mx-auto w-full max-w-[1500px] space-y-6">
-            {/* Elemento de Áudio HTML5 nativo */}
             <audio
                 ref={audioRef}
                 onCanPlay={() => setIsLoadingAudio(false)}
@@ -149,16 +146,13 @@ export default function Listening() {
                 onEnded={() => setIsPlaying(false)}
             />
 
-            {/* Header */}
             <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C96B62]">Audio & Comprehension</p>
                 <h1 className="mt-1 text-2xl font-bold tracking-tight text-white md:text-3xl">Listening Lab</h1>
                 <p className="mt-1 text-sm text-[#999994]">Train your ear to natural cadences, native accents and live dialogues.</p>
             </div>
 
-            {/* Card do Player Principal */}
             <div className="overflow-hidden rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D]">
-                {/* Top bar do player */}
                 <div className="flex flex-col gap-3 border-b border-[#2B2B2B] px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-center gap-2.5">
                         <span
@@ -202,7 +196,6 @@ export default function Listening() {
                             <p className="text-xs text-[#999994]">{selectedEpisode.subtitle}</p>
                         </div>
 
-                        {/* Controles de Reprodução */}
                         <div className="flex items-center gap-3">
                             <button
                                 type="button"
