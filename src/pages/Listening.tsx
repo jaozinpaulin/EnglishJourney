@@ -1,15 +1,12 @@
 import { useState, useRef, useEffect } from "react"
-import {
-    ChevronRight, Eye, EyeOff, FastForward, Mic2, Pause, Play,
-    RotateCcw, SlidersHorizontal, Sparkles, Volume2
-} from "lucide-react"
+import { ChevronRight, Eye, EyeOff, FastForward, Headphones, Lightbulb, Pause, Play, RotateCcw, Sparkles, Volume2, VolumeX } from "lucide-react"
 
 interface AudioEpisode {
     id: string
     title: string
     subtitle: string
     durationEstimate: string
-    level: "A1" | "A2" | "B1" | "B2"
+    level: "A1"
     accent: "US" | "UK" | "AUS"
     category: string
     accuracy: number
@@ -20,55 +17,55 @@ interface AudioEpisode {
 const audioEpisodes: AudioEpisode[] = [
     {
         id: "a1",
-        title: "Standup Meeting & Sprint Goals",
-        subtitle: "Listen to a team discussing task blockers and API integrations.",
-        durationEstimate: "0:20 min",
-        level: "B1",
+        title: "Cumprimentos no Hotel",
+        subtitle: "Ouça uma interação simples de check-in na recepção.",
+        durationEstimate: "0:15 min",
+        level: "A1",
         accent: "US",
-        category: "Tech & Work",
-        accuracy: 92,
+        category: "Viagem & Hotel",
+        accuracy: 90,
         completed: true,
         transcript:
-            "Good morning team. Let's begin our daily standup. Are there any critical blockers on the API pipeline before we proceed with the staging deployment today?"
+            "Hello! Good morning. Welcome to our hotel. May I have your name and passport, please?"
     },
     {
         id: "a2",
-        title: "Ordering Coffee in London",
-        subtitle: "A quick interaction ordering a flat white with oat milk.",
+        title: "Pedindo Café em Londres",
+        subtitle: "Um pedido básico e direto em uma cafeteria.",
         durationEstimate: "0:15 min",
-        level: "A2",
+        level: "A1",
         accent: "UK",
-        category: "Daily Life",
-        accuracy: 78,
+        category: "Dia a Dia",
+        accuracy: 75,
         completed: false,
         transcript:
-            "Good afternoon! Could I please get a flat white with oat milk, and one warm croissant to take away?"
+            "Hi there! Good afternoon. Could I have one cup of hot coffee and a croissant, please?"
     },
     {
         id: "a3",
-        title: "Rainy Coding Routine",
-        subtitle: "A software developer talks about their morning habits.",
-        durationEstimate: "0:18 min",
-        level: "A2",
+        title: "Chegando ao Aeroporto",
+        subtitle: "Conversa rápida com o atendente no portão de embarque.",
+        durationEstimate: "0:15 min",
+        level: "A1",
         accent: "US",
-        category: "Routine",
+        category: "Aeroporto",
         accuracy: 0,
         completed: false,
         transcript:
-            "Leo woke up early today. He brewed fresh black coffee, turned on his desk lamp, and spent the rainy morning building React components."
+            "Good morning! Please have your boarding pass ready. Have a safe and pleasant flight!"
     },
     {
         id: "a4",
-        title: "Exploring Sydney Harbour",
-        subtitle: "Casual travel plan discussion near the iconic opera house.",
-        durationEstimate: "0:18 min",
-        level: "B1",
+        title: "Informação Turística em Sydney",
+        subtitle: "Perguntando o caminho para a estação de trem.",
+        durationEstimate: "0:15 min",
+        level: "A1",
         accent: "AUS",
-        category: "Travel",
+        category: "Turismo",
         accuracy: 0,
         completed: false,
         transcript:
-            "G'day mate! The ferry across the harbour leaves in fifteen minutes. Let's grab some water and catch the morning breeze by the bridge."
+            "Hello mate! The train station is just down the street on your right. Have a wonderful day!"
     }
 ]
 
@@ -83,11 +80,12 @@ export default function Listening() {
     const [hideTranscript, setHideTranscript] = useState(false)
     const [currentTime, setCurrentTime] = useState(0)
     const [duration, setDuration] = useState(0)
+    const [volume, setVolume] = useState(1)
+    const [isMuted, setIsMuted] = useState(false)
     const [isLoadingAudio, setIsLoadingAudio] = useState(false)
 
     const audioRef = useRef<HTMLAudioElement | null>(null)
 
-    // Recarrega o áudio quando troca o episódio
     useEffect(() => {
         if (!audioRef.current) return
         setIsPlaying(false)
@@ -117,6 +115,27 @@ export default function Listening() {
         if (audioRef.current) audioRef.current.playbackRate = speed
     }
 
+    const handleVolumeChange = (newVolume: number) => {
+        setVolume(newVolume)
+        setIsMuted(newVolume === 0)
+        if (audioRef.current) {
+            audioRef.current.volume = newVolume
+            audioRef.current.muted = newVolume === 0
+        }
+    }
+
+    const toggleMute = () => {
+        if (!audioRef.current) return
+        if (isMuted) {
+            audioRef.current.muted = false
+            audioRef.current.volume = volume || 0.5
+            setIsMuted(false)
+        } else {
+            audioRef.current.muted = true
+            setIsMuted(true)
+        }
+    }
+
     const skipTime = (seconds: number) => {
         if (!audioRef.current) return
         const target = Math.max(0, Math.min(duration || 0, audioRef.current.currentTime + seconds))
@@ -124,9 +143,19 @@ export default function Listening() {
         setCurrentTime(target)
     }
 
-    const handleSelectEpisode = (ep: AudioEpisode) => {
-        if (ep.id === selectedEpisode.id) return
-        setSelectedEpisode(ep)
+    const handleEpisodePlayToggle = (ep: AudioEpisode) => {
+        if (ep.id === selectedEpisode.id) {
+            togglePlay()
+        } else {
+            setSelectedEpisode(ep)
+            setTimeout(() => {
+                if (audioRef.current) {
+                    audioRef.current.play()
+                        .then(() => setIsPlaying(true))
+                        .catch(console.error)
+                }
+            }, 150)
+        }
     }
 
     const formatTime = (time: number) => {
@@ -146,12 +175,14 @@ export default function Listening() {
                 onEnded={() => setIsPlaying(false)}
             />
 
+            {/* Header em Português */}
             <div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C96B62]">Audio & Comprehension</p>
-                <h1 className="mt-1 text-2xl font-bold tracking-tight text-white md:text-3xl">Listening Lab</h1>
-                <p className="mt-1 text-sm text-[#999994]">Train your ear to natural cadences, native accents and live dialogues.</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C96B62]">Áudio & Compreensão</p>
+                <h1 className="mt-1 text-2xl font-bold tracking-tight text-white md:text-3xl">Laboratório de Listening</h1>
+                <p className="mt-1 text-sm text-[#999994]">Treine seu ouvido para cadências naturais, sotaques nativos e diálogos do dia a dia.</p>
             </div>
 
+            {/* Player Principal */}
             <div className="overflow-hidden rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D]">
                 <div className="flex flex-col gap-3 border-b border-[#2B2B2B] px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-center gap-2.5">
@@ -160,16 +191,37 @@ export default function Listening() {
                                 }`}
                         />
                         <span className="font-mono text-xs font-semibold uppercase tracking-wider text-white">
-                            Now Playing • {selectedEpisode.id.toUpperCase()}
+                            Tocando Agora • {selectedEpisode.id.toUpperCase()}
                         </span>
                         <span className="rounded bg-[#292929] px-2 py-0.5 font-mono text-[10px] text-[#A78BC7]">
-                            {selectedEpisode.level}
+                            {selectedEpisode.level} Iniciante
                         </span>
                     </div>
 
-                    <div className="flex items-center gap-2">
-                        <div className="rounded-lg border border-[#2B2B2B] bg-[#171717] px-2.5 py-0.5 font-mono text-[10px] text-white">
-                            {selectedEpisode.accent}
+                    <div className="flex items-center gap-3">
+                        {/* Controle de Volume */}
+                        <div className="group relative flex items-center gap-2 rounded-lg border border-[#2B2B2B] bg-[#171717] px-2.5 py-1">
+                            <button
+                                type="button"
+                                onClick={toggleMute}
+                                title={isMuted ? "Ativar som" : "Mutar"}
+                                className="text-[#999994] transition-colors hover:text-white"
+                            >
+                                {isMuted || volume === 0 ? <VolumeX size={15} /> : <Volume2 size={15} />}
+                            </button>
+                            <input
+                                type="range"
+                                min={0}
+                                max={1}
+                                step="0.05"
+                                value={isMuted ? 0 : volume}
+                                onChange={(e) => handleVolumeChange(Number(e.target.value))}
+                                className="h-1 w-16 cursor-pointer appearance-none rounded bg-[#292929] accent-[#C96B62]"
+                            />
+                        </div>
+
+                        <div className="rounded-lg border border-[#2B2B2B] bg-[#171717] px-2.5 py-1 font-mono text-[10px] text-white">
+                            Sotaque {selectedEpisode.accent}
                         </div>
 
                         <div className="flex rounded-lg border border-[#2B2B2B] bg-[#171717] p-1">
@@ -200,6 +252,7 @@ export default function Listening() {
                             <button
                                 type="button"
                                 onClick={() => skipTime(-5)}
+                                title="Voltar 5 segundos"
                                 className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#2B2B2B] bg-[#171717] text-[#999994] transition-colors hover:text-white active:scale-95"
                             >
                                 <RotateCcw size={15} />
@@ -210,14 +263,15 @@ export default function Listening() {
                                 onClick={togglePlay}
                                 disabled={isLoadingAudio}
                                 className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C96B62] text-white shadow-lg transition-transform active:scale-95 hover:bg-[#B85C55] ${isLoadingAudio ? "opacity-60 cursor-not-allowed" : ""
-                                    }`}>
-
+                                    }`}
+                            >
                                 {isPlaying ? <Pause size={20} /> : <Play size={20} className="ml-0.5" fill="currentColor" />}
                             </button>
 
                             <button
                                 type="button"
                                 onClick={() => skipTime(5)}
+                                title="Avançar 5 segundos"
                                 className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#2B2B2B] bg-[#171717] text-[#999994] transition-colors hover:text-white active:scale-95"
                             >
                                 <FastForward size={15} />
@@ -225,6 +279,7 @@ export default function Listening() {
                         </div>
                     </div>
 
+                    {/* Waveform Interativa */}
                     <div className="mt-6 rounded-xl border border-[#262626] bg-[#151515] p-4">
                         <div className="group relative flex h-14 w-full cursor-pointer items-center">
                             <div className="pointer-events-none flex h-full w-full items-center justify-between gap-1">
@@ -234,50 +289,58 @@ export default function Listening() {
                                     const isPassed = i / 48 <= progressRatio
 
                                     return (
-                                        <div key={i}
+                                        <div
+                                            key={i}
                                             style={{ height: `${height}px` }}
-                                            className={`w-full rounded-full transition-all duration-150 ${isPassed ? "bg-[#C96B62]" : "bg-[#292929] group-hover:bg-[#383838]"}`} />
+                                            className={`w-full rounded-full transition-all duration-150 ${isPassed ? "bg-[#C96B62]" : "bg-[#292929] group-hover:bg-[#383838]"
+                                                }`}
+                                        />
                                     )
                                 })}
                             </div>
 
-                            <input type="range" min={0} max={duration || 100} step="0.1"
+                            <input
+                                type="range"
+                                min={0}
+                                max={duration || 100}
+                                step="0.1"
                                 value={currentTime}
                                 onChange={(e) => {
                                     const newTime = Number(e.target.value)
-
                                     setCurrentTime(newTime)
                                     if (audioRef.current) audioRef.current.currentTime = newTime
                                 }}
-                                className="absolute inset-0 h-full w-full cursor-pointer opacity-0" />
+                                className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+                            />
                         </div>
 
                         <div className="mt-2 flex items-center justify-between font-mono text-[11px] text-[#777770]">
                             <span>{formatTime(currentTime)}</span>
                             <span className="flex items-center gap-1">
-                                <Volume2 size={13} /> Natural Tempo ({playbackSpeed})
+                                <Volume2 size={13} /> Ritmo Natural ({playbackSpeed})
                             </span>
                             <span>{formatTime(duration)}</span>
                         </div>
                     </div>
 
+                    {/* Transcrição com Revelação */}
                     <div className="mt-5 rounded-xl border border-[#2B2B2B] bg-[#191919] p-4">
                         <div className="flex items-center justify-between border-b border-[#242424] pb-2.5">
-                            <span className="text-[11px] font-semibold text-[#999994]">Real-time Transcript Sync</span>
+                            <span className="text-[11px] font-semibold text-[#999994]">Sincronização de Transcrição</span>
                             <button
                                 type="button"
                                 onClick={() => setHideTranscript(!hideTranscript)}
                                 className="flex items-center gap-1.5 text-[11px] text-[#777770] hover:text-white"
                             >
                                 {hideTranscript ? <Eye size={13} /> : <EyeOff size={13} />}
-                                {hideTranscript ? "Reveal Text" : "Dictation Mode (Hide)"}
+                                {hideTranscript ? "Mostrar Texto" : "Modo Ditado (Ocultar)"}
                             </button>
                         </div>
 
                         <div className="mt-3 leading-relaxed">
                             {hideTranscript ? (
                                 <p className="font-mono text-xs italic text-[#555]">
-                                    [Transcript hidden for comprehension practice.]
+                                    [Transcrição oculta para você praticar a audição. Ouça com atenção!]
                                 </p>
                             ) : (
                                 <p className="text-sm text-[#B7B7B2]">
@@ -289,13 +352,14 @@ export default function Listening() {
                 </div>
             </div>
 
-            {/*  Lateral */}
+            {/* Grid: Biblioteca e Painel Lateral */}
             <div className="grid grid-cols-1 gap-5 xl:grid-cols-[minmax(0,1fr)_330px]">
+                {/* Biblioteca de Lições */}
                 <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                        <h2 className="text-base font-semibold text-white">Audio Library</h2>
+                        <h2 className="text-base font-semibold text-white">Biblioteca de Áudios</h2>
                         <span className="rounded-lg border border-[#2B2B2B] bg-[#171717] px-2.5 py-1 font-mono text-[11px] text-[#999994]">
-                            {audioEpisodes.length} Episodes Available
+                            {audioEpisodes.length} Lições Disponíveis
                         </span>
                     </div>
 
@@ -306,7 +370,7 @@ export default function Listening() {
                             return (
                                 <div
                                     key={ep.id}
-                                    onClick={() => handleSelectEpisode(ep)}
+                                    onClick={() => setSelectedEpisode(ep)}
                                     className={`cursor-pointer rounded-2xl border p-4.5 transition-all hover:border-[#3A3A3A] ${isSelected
                                         ? "border-[#C96B62]/60 bg-[#241F1F]"
                                         : ep.completed
@@ -318,8 +382,12 @@ export default function Listening() {
                                         <div className="flex items-center gap-3.5">
                                             <button
                                                 type="button"
-                                                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${isSelected
-                                                    ? "bg-[#C96B62] text-white"
+                                                onClick={(e) => {
+                                                    e.stopPropagation()
+                                                    handleEpisodePlayToggle(ep)
+                                                }}
+                                                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-all ${isSelected
+                                                    ? "bg-[#C96B62] text-white shadow-md shadow-[#C96B62]/20"
                                                     : "bg-[#2A2020] text-[#C96B62] hover:bg-[#C96B62] hover:text-white"
                                                     }`}
                                             >
@@ -348,7 +416,7 @@ export default function Listening() {
                                             <div className="text-left sm:text-right">
                                                 <span className="block font-mono text-xs text-[#999994]">{ep.durationEstimate}</span>
                                                 {ep.completed && (
-                                                    <span className="font-mono text-[10px] text-[#62C99B]">{ep.accuracy}% Accuracy</span>
+                                                    <span className="font-mono text-[10px] text-[#62C99B]">{ep.accuracy}% Precisão</span>
                                                 )}
                                             </div>
                                             <ChevronRight size={16} className={isSelected ? "text-[#C96B62]" : "text-[#555]"} />
@@ -360,90 +428,71 @@ export default function Listening() {
                     </div>
                 </div>
 
-                {/* Lateral */}
-                <aside className="space-y-5">
+                {/* Painel Lateral em Português */}
+                <aside className="space-y-4">
                     <div className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D] p-5">
-                        <div className="flex items-center justify-between">
-                            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#C96B62]">Ear Warmup</p>
-                            <Mic2 size={16} className="text-[#C96B62]" />
-                        </div>
-                        <p className="mt-1 text-xs text-[#999994]">2-minute minimal pairs auditory test.</p>
-
-                        <div className="mt-4 rounded-xl border border-[#242424] bg-[#171717] p-3 text-center">
-                            <span className="text-xs text-[#777770]">Which word did you hear?</span>
-                            <div className="mt-3 grid grid-cols-2 gap-2">
-                                <button
-                                    type="button"
-                                    className="rounded-lg border border-[#2B2B2B] bg-[#1F1F1F] py-2 font-mono text-xs text-white transition-colors hover:border-[#C96B62]"
-                                >
-                                    Ship
-                                </button>
-                                <button
-                                    type="button"
-                                    className="rounded-lg border border-[#2B2B2B] bg-[#1F1F1F] py-2 font-mono text-xs text-white transition-colors hover:border-[#C96B62]"
-                                >
-                                    Sheep
-                                </button>
+                        <div className="flex items-center justify-between border-b border-[#262626] pb-3">
+                            <div className="flex items-center gap-2">
+                                <Headphones size={16} className="text-[#C96B62]" />
+                                <h3 className="text-xs font-semibold uppercase tracking-wider text-white">Sessão Atual</h3>
                             </div>
+                            <span className="font-mono text-[10px] text-[#62C99B]">Pronto</span>
                         </div>
 
-                        <button
-                            type="button"
-                            className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-xl bg-[#C96B62] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#B85C55]"
-                        >
-                            <Play size={13} fill="currentColor" /> Play Audio Sample
-                        </button>
-                    </div>
-
-                    <div className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D] p-5">
-                        <div className="flex items-center justify-between">
-                            <h2 className="text-sm font-semibold text-white">Accent Recognition</h2>
-                            <SlidersHorizontal size={15} className="text-[#777770]" />
-                        </div>
-
-                        <div className="mt-4 space-y-3">
-                            <div>
-                                <div className="flex items-center justify-between text-[11px]">
-                                    <span className="text-[#999994]">American (General US)</span>
-                                    <span className="font-mono text-[#62C99B]">94%</span>
-                                </div>
-                                <div className="mt-1 h-1 overflow-hidden rounded-full bg-[#2B2B2B]">
-                                    <div className="h-full rounded-full bg-[#62C99B]" style={{ width: "94%" }} />
-                                </div>
+                        <div className="mt-3 space-y-2.5 font-mono text-xs">
+                            <div className="flex items-center justify-between">
+                                <span className="text-[#777770]">Nível</span>
+                                <span className="text-white">A1 Iniciante</span>
                             </div>
-
-                            <div>
-                                <div className="flex items-center justify-between text-[11px]">
-                                    <span className="text-[#999994]">British (RP / Estuary)</span>
-                                    <span className="font-mono text-[#C96B62]">72%</span>
-                                </div>
-                                <div className="mt-1 h-1 overflow-hidden rounded-full bg-[#2B2B2B]">
-                                    <div className="h-full rounded-full bg-[#C96B62]" style={{ width: "72%" }} />
-                                </div>
+                            <div className="flex items-center justify-between">
+                                <span className="text-[#777770]">Sotaque</span>
+                                <span className="text-[#A78BC7]">Inglês {selectedEpisode.accent}</span>
                             </div>
-
-                            <div>
-                                <div className="flex items-center justify-between text-[11px]">
-                                    <span className="text-[#999994]">Australian</span>
-                                    <span className="font-mono text-[#A78BC7]">50%</span>
-                                </div>
-                                <div className="mt-1 h-1 overflow-hidden rounded-full bg-[#2B2B2B]">
-                                    <div className="h-full rounded-full bg-[#A78BC7]" style={{ width: "50%" }} />
-                                </div>
+                            <div className="flex items-center justify-between">
+                                <span className="text-[#777770]">Velocidade</span>
+                                <span className="text-white">{playbackSpeed}</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                                <span className="text-[#777770]">Modo</span>
+                                <span className={hideTranscript ? "text-[#C96B62]" : "text-emerald-400"}>
+                                    {hideTranscript ? "Ditado (Oculto)" : "Leitura Ativa"}
+                                </span>
                             </div>
                         </div>
                     </div>
 
-                    {/* <div className="rounded-2xl border border-[#3D2624] bg-gradient-to-b from-[#211717] to-[#1D1D1D] p-5">
+                    <div className="rounded-2xl border border-[#2B2B2B] bg-[#1D1D1D] p-5 space-y-3">
+                        <div className="flex items-center gap-2 text-[#C96B62]">
+                            <Lightbulb size={16} />
+                            <h3 className="text-xs font-semibold uppercase tracking-wider text-white">Dicas de Escuta</h3>
+                        </div>
+
+                        <ul className="space-y-2 text-xs text-[#999994]">
+                            <li className="flex items-start gap-2">
+                                <span className="text-[#C96B62]">•</span>
+                                <span>Ouça a primeira vez sem ler o texto para tentar captar a ideia geral.</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-[#C96B62]">•</span>
+                                <span>Reduza para 0.75x se as palavras parecerem rápidas demais.</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-[#C96B62]">•</span>
+                                <span>Repita as frases em voz alta imitando a entonação do falante.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="rounded-2xl border border-[#3D2624] bg-gradient-to-b from-[#211717] to-[#1D1D1D] p-5">
                         <div className="flex items-center gap-2 text-[#C96B62]">
                             <Sparkles size={16} />
-                            <span className="text-xs font-semibold">Connected Speech Tip</span>
+                            <span className="text-xs font-semibold">Fala Conectada</span>
                         </div>
                         <p className="mt-2 text-xs leading-relaxed text-[#B7B7B2]">
-                            Native speakers often blend words: <code className="font-mono text-white">"Want to"</code> sounds like{" "}
-                            <code className="font-mono text-white">"Wanna"</code>.
+                            Falantes nativos unem os sons: em vez de dizer pausadamente <code className="font-mono text-white">"Check in"</code>, o som flui como{" "}
+                            <code className="font-mono text-white">"Che-kin"</code>.
                         </p>
-                    </div> */}
+                    </div>
                 </aside>
             </div>
         </section>
