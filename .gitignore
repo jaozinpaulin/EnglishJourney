@@ -53,5 +53,4 @@ coverage/
 cypress/videos/
 cypress/screenshots/
 
-src/curriculum/
 test-journey.html
