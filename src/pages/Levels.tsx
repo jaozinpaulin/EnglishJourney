@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight, Award, CheckCircle2, ChevronRight, Compass, Flame, Gauge, Globe2, Lock, Play, ShieldAlert, ShieldCheck, Sparkles, Star, Target, Terminal, Trophy, Zap } from "lucide-react"
+import { Award, CheckCircle2, Gauge, Globe2, Lock, Play, ShieldCheck, Sparkles, Target, Terminal, Trophy, } from "lucide-react"
 
 interface CEFRLevel {
     id: string

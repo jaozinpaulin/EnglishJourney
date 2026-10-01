@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight, CheckCircle2, ChevronRight, Copy, Edit3, FileCode, MessageSquare, PenTool, RotateCcw, Send, Sparkles, Wand2, Zap } from "lucide-react"
+import { ArrowRight, CheckCircle2, ChevronRight, Copy, Edit3, FileCode, PenTool, RotateCcw, Send, Sparkles, Wand2, Zap } from "lucide-react"
 
 interface WritingPrompt {
     id: string

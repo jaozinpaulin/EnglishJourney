@@ -1,4 +1,3 @@
-import { data, redirect } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 
 export async function signUp(email: string, password: string, name: string) {

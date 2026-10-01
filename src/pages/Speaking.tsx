@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight, Bot, CheckCircle2, ChevronRight, Flame, Mic, Play, RefreshCw, Sparkles, Square, Volume2, Waves, Zap } from "lucide-react"
+import { ArrowRight, Bot, ChevronRight, Flame, Mic, Play, RefreshCw, Sparkles, Square, Volume2, Waves, Zap } from "lucide-react"
 
 interface Scenario {
     id: string
@@ -20,7 +20,7 @@ const scenarios: Scenario[] = [
 
 export default function Speaking() {
     const [isRecording, setIsRecording] = useState(false)
-    const [recorded, setRecorded] = useState(true)
+    // const [recorded, setRecorded] = useState(true)
 
     return (
         <section className="mx-auto w-full max-w-[1500px] space-y-6">
@@ -98,7 +98,7 @@ export default function Speaking() {
                     </div>
 
                     {/* feedback fonetico palavra por palavra */}
-                    {recorded && (
+                    {/* {recorded && (
                         <div className="mt-5 rounded-xl border border-[#262626] bg-[#151515] p-4">
                             <span className="text-[10px] uppercase tracking-wider text-[#777770]">Speech Accuracy Breakdown</span>
                             <div className="mt-2.5 flex flex-wrap gap-2 text-sm font-medium">
@@ -113,7 +113,7 @@ export default function Speaking() {
                                 💡 <strong className="text-white">Tip:</strong> Stress the first syllable on <span className="font-mono text-[#C96B62]">OP-ti-mi-zing</span> rather than the third.
                             </p>
                         </div>
-                    )}
+                    )} */}
 
                     {/* microfone / controles de gravacao */}
                     <div className="mt-6 flex flex-col items-center justify-between gap-4 rounded-xl border border-[#2B2B2B] bg-[#1A1A1A] p-4 sm:flex-row">

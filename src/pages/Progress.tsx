@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight, Award, Calendar, CheckCircle2, ChevronRight, Clock3, Flame, Gauge, Layers, LineChart, Sparkles, Star, Target, TrendingUp, Trophy, Zap } from "lucide-react"
+import { Award, Calendar, Clock3, Flame, Sparkles, TrendingUp, Trophy, Zap } from "lucide-react"
 
 interface SkillMetric {
     label: string

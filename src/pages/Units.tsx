@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight, Award, BookOpen, CheckCircle2, ChevronRight, Compass, Flame, Headphones, Lock, MapPin, Play, Sparkles, SpellCheck, Star, Trophy, Zap } from "lucide-react"
+import { Award, BookOpen, CheckCircle2, ChevronRight, Compass, Headphones, Lock, MapPin, Play, SpellCheck, Star, Trophy, Zap } from "lucide-react"
 
 interface UnitLesson {
     id: string
@@ -267,7 +267,7 @@ export default function Units() {
 
                         {/* lista de aulas internas */}
                         <div className="mt-5 space-y-2.5">
-                            {activeUnit.lessons.map((lesson, idx) => {
+                            {activeUnit.lessons.map((lesson) => {
                                 const Icon =
                                     lesson.type === "vocabulary"
                                         ? BookOpen

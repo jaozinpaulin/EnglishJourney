@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { AlertCircle, ArrowRight, CheckCircle2, ChevronRight, Flame, Layers, Play, RefreshCw, RotateCcw, ShieldAlert, Sparkles, Timer, Zap } from "lucide-react"
+import { AlertCircle, ChevronRight, Flame, Layers, Play, RotateCcw, ShieldAlert, Sparkles, Timer, } from "lucide-react"
 
 interface ReviewQueueItem {
     id: string
@@ -20,7 +20,7 @@ const queueItems: ReviewQueueItem[] = [
 
 export default function Review() {
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
-    const [isSubmitted, setIsSubmitted] = useState(false)
+    // const [isSubmitted, setIsSubmitted] = useState(false)
 
     return (
         <section className="mx-auto w-full max-w-[1500px] space-y-6">
@@ -128,13 +128,13 @@ export default function Review() {
                             <Sparkles size={14} className="text-[#C96B62]" />
                             <span>Rule hint: Specific days and day parts always take <strong>"on"</strong>.</span>
                         </div>
-                        <button
+                        {/* <button
                             type="button"
                             onClick={() => setIsSubmitted(true)}
                             className="flex items-center gap-2 rounded-xl bg-[#C96B62] px-5 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#B85C55]"
                         >
                             Verify & Next <ArrowRight size={14} />
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>
