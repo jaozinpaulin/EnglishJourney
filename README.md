@@ -10,9 +10,19 @@ The application is being developed as a long-term project and will evolve alongs
 
 ---
 
-## Preview
+## 📸 Preview da Interface
 
-![English Journey Dashboard](public/images/EJdashboard.webp)
+|                  Landing Page                  |      Tela de Bem-vindo (Welcome)       |
+| :--------------------------------------------: | :------------------------------------: |
+| ![Landing Page](public/images/landingPage.png) | ![Welcome](public/images/wellcome.png) |
+
+|       Autenticação (Auth)       |            Dashboard Principal            |
+| :-----------------------------: | :---------------------------------------: |
+| ![Auth](public/images/auth.png) | ![Dashboard](public/images/dashboard.png) |
+
+|           Módulo de Listener            |     Módulo de Tradução / Atividades      |
+| :-------------------------------------: | :--------------------------------------: |
+| ![Listener](public/images/listener.png) | ![Translate](public/images/traslete.png) |
 
 ---
 
@@ -229,8 +239,8 @@ The learning experience will progressively evolve according to the user's level,
 
 - [ ] User registration
 - [ ] User login
-- [ ] Firebase Authentication
-- [ ] Firestore integration
+- [ ] Supabase Authentication
+- [ ] Supabase Database integration
 - [ ] User-specific progress
 - [ ] Persistent study history
 - [ ] Streak system
@@ -262,36 +272,9 @@ The project is currently built with:
 
 Future technologies may include:
 
-- Firebase Authentication
-- Firebase Firestore
+- Supabase Authentication
+- Supabase Database
 - Dictionary APIs
 - AI APIs
 
 ---
-
-## Project Structure
-
-```text
-src/
-
-├── components/
-
-│   ├── Header/
-│   └── Sidebar/
-
-├── layouts/
-
-│   └── Layout.tsx
-
-├── pages/
-
-│   ├── Dashboard/
-│   ├── Vocabulary/
-│   ├── Grammar/
-│   ├── Listening/
-│   ├── Speaking/
-│   └── Progress/
-
-├── App.tsx
-└── main.tsx
-```
